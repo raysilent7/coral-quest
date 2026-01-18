@@ -1,0 +1,128 @@
+[gd_scene load_steps=17 format=3 uid="uid://cgskhua4x4gwv"]
+
+[ext_resource type="Script" uid="uid://f8acrxxycyqn" path="res://scripts/movement.gd" id="1_tgtyk"]
+[ext_resource type="Texture2D" uid="uid://djuofujru37qj" path="res://diver/diver walking.png" id="2_0n5qm"]
+[ext_resource type="Texture2D" uid="uid://cc3bboifatiqn" path="res://diver/diver swiming.png" id="3_0n5qm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jew3a"]
+atlas = ExtResource("2_0n5qm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8g3x"]
+atlas = ExtResource("3_0n5qm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhwlq"]
+atlas = ExtResource("2_0n5qm")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tneul"]
+atlas = ExtResource("3_0n5qm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88d0t"]
+atlas = ExtResource("3_0n5qm")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6oxc"]
+atlas = ExtResource("3_0n5qm")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r51kq"]
+atlas = ExtResource("3_0n5qm")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0e48y"]
+atlas = ExtResource("2_0n5qm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epypp"]
+atlas = ExtResource("2_0n5qm")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hol4"]
+atlas = ExtResource("2_0n5qm")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6r6c"]
+atlas = ExtResource("2_0n5qm")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kdubu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jew3a")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8g3x")
+}],
+"loop": true,
+"name": &"idleSwim",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hhwlq")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tneul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88d0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w6oxc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r51kq")
+}],
+"loop": true,
+"name": &"swim",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0e48y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epypp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hol4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6r6c")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hol4"]
+size = Vector2(14, 30)
+
+[node name="player" type="Node2D"]
+
+[node name="diver" type="CharacterBody2D" parent="."]
+script = ExtResource("1_tgtyk")
+
+[node name="diverAnimation" type="AnimatedSprite2D" parent="diver"]
+position = Vector2(-1, -1)
+sprite_frames = SubResource("SpriteFrames_kdubu")
+animation = &"walk"
+frame = 3
+frame_progress = 0.8221449
+
+[node name="diverCollision" type="CollisionShape2D" parent="diver"]
+shape = SubResource("RectangleShape2D_0hol4")
