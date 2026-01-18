@@ -9,7 +9,7 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 		updateAnimation(getSwimAnimation())
 	else:
-		moveCharacter(200, delta)
+		moveCharacter(150, delta)
 		jump(-280, is_on_floor())
 		move_and_slide()
 		updateAnimation(getGroundAnimation())
@@ -25,12 +25,12 @@ func moveCharacter(velValue: int, delta: float) -> void:
 		velocity.x = 0
 
 	if not is_on_floor():
-		velocity.y += velValue * (delta * 2)
+		velocity.y += velValue * (delta * 4)
 	else:
 		velocity.y = 0
 
-func jump(jumpForce: int, canDoubleJump: bool) -> void:
-	if Input.is_action_just_pressed("jump") and canDoubleJump:
+func jump(jumpForce: int, canJumpAgain: bool) -> void:
+	if Input.is_action_just_pressed("jump") and canJumpAgain:
 		velocity.y = jumpForce
 
 func isInWater() -> bool:
