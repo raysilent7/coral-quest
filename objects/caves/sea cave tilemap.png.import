@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddlbvnh72bytc"
-path="res://.godot/imported/sea cave bg.png-c7003db148f6c16facc5794eba8a694d.ctex"
+uid="uid://cv0iehaul1bop"
+path="res://.godot/imported/sea cave tilemap.png-4a3ad39e5ab793343e04b61670aa6870.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/sea cave bg.png"
-dest_files=["res://.godot/imported/sea cave bg.png-c7003db148f6c16facc5794eba8a694d.ctex"]
+source_file="res://objects/caves/sea cave tilemap.png"
+dest_files=["res://.godot/imported/sea cave tilemap.png-4a3ad39e5ab793343e04b61670aa6870.ctex"]
 
 [params]
 

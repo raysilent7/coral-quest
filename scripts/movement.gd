@@ -9,6 +9,7 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 		updateAnimation(getSwimAnimation())
 	else:
+		apply_floor_snap()
 		moveCharacter(150, delta)
 		jump(-280, is_on_floor())
 		move_and_slide()

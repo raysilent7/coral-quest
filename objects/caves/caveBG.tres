@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://b3a180v8l8v85"]
 
-[ext_resource type="Texture2D" uid="uid://cv0iehaul1bop" path="res://objects/sea cave tilemap.png" id="1_ri2e8"]
+[ext_resource type="Texture2D" uid="uid://cv0iehaul1bop" path="res://objects/caves/sea cave tilemap.png" id="1_ri2e8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eq5gc"]
 resource_name = "sea cave platforms"

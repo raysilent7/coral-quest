@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://m1uwr74ovk15"]
+
+[ext_resource type="Texture2D" uid="uid://dni65krd8rpfd" path="res://objects/islands/barco.png" id="1_pwrfp"]
+
+[node name="barco" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Barco" type="Sprite2D" parent="StaticBody2D"]
+scale = Vector2(2.415625, 2.415625)
+texture = ExtResource("1_pwrfp")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-298, 114, -298, 128, 88, 127, 338, 89, 344, 81, 86, 113)

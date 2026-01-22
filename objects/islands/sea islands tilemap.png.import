@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc2krpk3h2l5l"
-path="res://.godot/imported/dock.png-c48abf2d4bbe89e71a087e83a1694e18.ctex"
+uid="uid://drbtt86mwqr6k"
+path="res://.godot/imported/sea islands tilemap.png-ce8b7596a02a2bc075b78fa516e91bbe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/dock.png"
-dest_files=["res://.godot/imported/dock.png-c48abf2d4bbe89e71a087e83a1694e18.ctex"]
+source_file="res://objects/islands/sea islands tilemap.png"
+dest_files=["res://.godot/imported/sea islands tilemap.png-ce8b7596a02a2bc075b78fa516e91bbe.ctex"]
 
 [params]
 

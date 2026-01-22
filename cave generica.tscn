@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=4 uid="uid://cm1aw3jikcdi"]
 
 [ext_resource type="PackedScene" uid="uid://cgskhua4x4gwv" path="res://diver/diver.tscn" id="1_tapbb"]
-[ext_resource type="Texture2D" uid="uid://ddlbvnh72bytc" path="res://objects/sea cave bg.png" id="2_pr44g"]
-[ext_resource type="TileSet" uid="uid://b3a180v8l8v85" path="res://objects/caveBG.tres" id="3_pr44g"]
+[ext_resource type="Texture2D" uid="uid://ddlbvnh72bytc" path="res://objects/caves/sea cave bg.png" id="2_pr44g"]
+[ext_resource type="TileSet" uid="uid://b3a180v8l8v85" path="res://objects/caves/caveBG.tres" id="3_pr44g"]
 
 [node name="cave generica" type="Node2D"]
 
