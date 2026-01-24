@@ -4,11 +4,12 @@ extends Area2D
 @export var spawnId: String
 
 func _ready():
-	body_entered.connect(_on_body_entered)
+	body_entered.connect(onBodyEntered)
 
-func _on_body_entered(body):
+func onBodyEntered(body):
 	if body is CharacterBody2D:
 		GameState.lastSpawnId = spawnId
+		GameState.fromPortal = true
 		call_deferred("changeScene")
 
 func changeScene():

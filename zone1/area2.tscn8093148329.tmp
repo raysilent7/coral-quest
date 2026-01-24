@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://c5n6xisi3rrqu"]
+[gd_scene load_steps=11 format=4 uid="uid://c5n6xisi3rrqu"]
 
 [ext_resource type="TileSet" uid="uid://duq0eqpaarj7b" path="res://objects/islands/sea islands tilemap.tres" id="1_eq7it"]
 [ext_resource type="Script" uid="uid://blvg0ujg2vm2i" path="res://scripts/area.gd" id="1_sv72n"]
@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://d0jy5rwijm04x" path="res://scripts/portal.gd" id="3_kelwv"]
 [ext_resource type="Texture2D" uid="uid://bd76h7l25faro" path="res://icon.svg" id="5_kelwv"]
 [ext_resource type="Script" uid="uid://d26etb7naen5k" path="res://scripts/shrine.gd" id="5_nkc80"]
-[ext_resource type="PackedScene" uid="uid://fxswuvla0yar" path="res://objects/popups/instructionsScene.tscn" id="6_v5mfe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qpp5n"]
 size = Vector2(31, 67)
@@ -31,8 +30,7 @@ tile_map_data = PackedByteArray("AAAAACYAAgABAA0AAAAAACcAAgABAA4AAAAAACgAAgABAA8
 tile_set = ExtResource("1_eq7it")
 
 [node name="diver" parent="." instance=ExtResource("2_sv72n")]
-z_index = 10
-position = Vector2(1081, 113)
+position = Vector2(26, 613)
 
 [node name="previousArea" type="Area2D" parent="."]
 position = Vector2(-45, 594)
@@ -45,7 +43,7 @@ position = Vector2(29.5, 0)
 shape = SubResource("RectangleShape2D_qpp5n")
 
 [node name="nextArea" type="Area2D" parent="."]
-position = Vector2(1319, 553)
+position = Vector2(1319, 554)
 script = ExtResource("3_kelwv")
 nextScenePath = "res://zone1/area3.tscn"
 
@@ -53,11 +51,12 @@ nextScenePath = "res://zone1/area3.tscn"
 position = Vector2(-22, 40)
 shape = SubResource("RectangleShape2D_eq7it")
 
+[node name="area2Entrance" type="Marker2D" parent="."]
+position = Vector2(17, 601)
+
 [node name="shrine" type="Area2D" parent="."]
 position = Vector2(1155, 106)
 script = ExtResource("5_nkc80")
-instructionsScene = ExtResource("6_v5mfe")
-shrineId = "shrine"
 
 [node name="shrineCol" type="CollisionShape2D" parent="shrine"]
 position = Vector2(1.5, -7.5)
@@ -69,13 +68,9 @@ scale = Vector2(0.64453113, 0.49218753)
 texture = ExtResource("5_kelwv")
 
 [node name="pressE" type="Label" parent="shrine"]
-visible = false
 offset_left = -42.0
 offset_top = -31.0
 offset_right = 19.0
 offset_bottom = -15.0
 text = "Pressione E"
 label_settings = SubResource("LabelSettings_nkc80")
-
-[node name="area2Entrance" type="Marker2D" parent="."]
-position = Vector2(17, 601)

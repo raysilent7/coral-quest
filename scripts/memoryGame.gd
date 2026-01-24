@@ -76,7 +76,7 @@ func compareCards():
 		canClick = true
 		points += 1
 		if points == 8:
-			print("Parabens! Voce venceu.")
+			get_tree().change_scene_to_file(GameState.lastMapPath)
 	else:
 		await get_tree().create_timer(1.0).timeout
 		firstCard.playUnflipAnimation()

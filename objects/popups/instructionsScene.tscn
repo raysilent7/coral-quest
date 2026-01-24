@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=3 uid="uid://fxswuvla0yar"]
+
+[ext_resource type="Script" uid="uid://b4x76ys3kh4hq" path="res://scripts/instructionsScene.gd" id="1_kqdj5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4hf28"]
+font_size = 13
+
+[node name="InstructionsScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kqdj5")
+
+[node name="instructions" type="Panel" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 405.0
+offset_top = 360.0
+offset_right = 677.0
+offset_bottom = 517.0
+
+[node name="Label" type="Label" parent="instructions"]
+z_index = 2
+layout_mode = 0
+offset_left = 20.0
+offset_top = 18.0
+offset_right = 263.0
+offset_bottom = 78.0
+text = "Clique nas cartas para revela-las, encontre todos os pares antes que o tempo acabe para vencer o jogo."
+label_settings = SubResource("LabelSettings_4hf28")
+autowrap_mode = 2
+
+[node name="yes" type="Button" parent="instructions"]
+z_index = 2
+layout_mode = 0
+offset_left = 20.0
+offset_top = 103.0
+offset_right = 99.0
+offset_bottom = 137.0
+text = "Sim"
+
+[node name="no" type="Button" parent="instructions"]
+z_index = 2
+layout_mode = 0
+offset_left = 163.0
+offset_top = 104.0
+offset_right = 242.0
+offset_bottom = 138.0
+text = "Não"
+
+[connection signal="pressed" from="instructions/yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="instructions/no" to="." method="_on_no_pressed"]
