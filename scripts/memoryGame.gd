@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var cardScene: PackedScene
+@export var genericScene: PackedScene
 @export var rows: int = 4
 @export var cols: int = 4
 @export var spacing: Vector2 = Vector2(120, 120)
@@ -76,7 +77,9 @@ func compareCards():
 		canClick = true
 		points += 1
 		if points == 8:
-			get_tree().change_scene_to_file(GameState.lastMapPath)
+			GameState.beatFirstPuzzle = true
+			var popup = genericScene.instantiate()
+			get_tree().root.add_child(popup)
 	else:
 		await get_tree().create_timer(1.0).timeout
 		firstCard.playUnflipAnimation()

@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://2iqyxxisd5v2"]
+
+[ext_resource type="Script" uid="uid://cxe8hcqybrh7t" path="res://scripts/genericPopup.gd" id="1_6b3fx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6b3fx"]
+font_size = 12
+
+[node name="GenericPopup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6b3fx")
+
+[node name="genericPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 245.0
+offset_bottom = 148.0
+
+[node name="OK" type="Button" parent="genericPanel"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 110.0
+offset_right = 144.0
+offset_bottom = 141.0
+text = "OK"
+
+[node name="text" type="Label" parent="genericPanel"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 15.0
+offset_right = 229.0
+offset_bottom = 103.0
+label_settings = SubResource("LabelSettings_6b3fx")
+autowrap_mode = 2
+
+[connection signal="pressed" from="genericPanel/OK" to="." method="_on_ok_pressed"]

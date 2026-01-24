@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3m25nmj4co84"]
+
+[ext_resource type="Script" uid="uid://cxpryfyp5calt" path="res://scripts/platformMove.gd" id="1_rmbar"]
+[ext_resource type="Texture2D" uid="uid://dcgl3x7vqdh6o" path="res://objects/islands/stone.png" id="2_xsg8o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5a8ai"]
+size = Vector2(32, 32)
+
+[node name="stonePlatform" type="Node2D"]
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+script = ExtResource("1_rmbar")
+
+[node name="stoneSpr" type="Sprite2D" parent="AnimatableBody2D"]
+texture = ExtResource("2_xsg8o")
+
+[node name="stoneCol" type="CollisionShape2D" parent="AnimatableBody2D"]
+shape = SubResource("RectangleShape2D_5a8ai")

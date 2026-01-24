@@ -8,5 +8,5 @@ func _ready() -> void:
 	var fromPortal = GameState.fromPortal
 	if fromPortal and spawnPoint:
 		player.global_position = spawnPoint.global_position
-	elif shrinePoint:
-		player.global_position = shrinePoint.global_positiond
+	elif not fromPortal and shrinePoint:
+		player.global_position = shrinePoint.global_position
