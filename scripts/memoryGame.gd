@@ -11,7 +11,7 @@ var canClick: bool = true
 var points: int = 0
 
 var flipAnimations = [
-	"flipNababa", "flipStar", "flipNababa", "flipNababa", "flipNababa", "flipNababa", "flipNababa", "flipNababa"
+	"flipNababa", "flipStar", "flipKiko", "flipGrubble", "flipTrident", "flipComb", "flipFish", "flipClamp"
 ]
 var deck = []
 
@@ -42,6 +42,18 @@ func resolveUnflipAnimation(flipAnim: String) -> String:
 		return "unflipNababa"
 	elif "flipStar" == flipAnim:
 		return "unflipStar"
+	elif "flipKiko" == flipAnim:
+		return "unflipKiko"
+	elif "flipGrubble" == flipAnim:
+		return "unflipGrubble"
+	elif "flipTrident" == flipAnim:
+		return "unflipTrident"
+	elif "flipComb" == flipAnim:
+		return "unflipComb"
+	elif "flipFish" == flipAnim:
+		return "unflipFish"
+	elif "flipClamp" == flipAnim:
+		return "unflipClamp"
 	return "default"
 
 func onCardRevealed(card: Node2D):

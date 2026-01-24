@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dni65krd8rpfd"
-path="res://.godot/imported/barco.png-fb7b29986817f4618c570f196cb487d9.ctex"
+uid="uid://dseskjkigstxy"
+path="res://.godot/imported/card fish.png-35ba0584e7501edc85ae94b5459f5564.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/islands/barco.png"
-dest_files=["res://.godot/imported/barco.png-fb7b29986817f4618c570f196cb487d9.ctex"]
+source_file="res://objects/cards/card fish.png"
+dest_files=["res://.godot/imported/card fish.png-35ba0584e7501edc85ae94b5459f5564.ctex"]
 
 [params]
 

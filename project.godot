@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="lost under the waves"
-run/main_scene="uid://cm1aw3jikcdi"
+run/main_scene="uid://s5miu17xmqpb"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameState="*res://scripts/gameState.gd"
 
 [display]
 
