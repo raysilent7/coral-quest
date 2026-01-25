@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var anim: AnimatedSprite2D = $diverAnimation
 
 func _physics_process(delta: float) -> void:
-	if isInWater():
+	if GameState.isInWater:
 		moveCharacter(80, delta)
 		jump(-80, true)
 		move_and_slide()
@@ -33,9 +33,6 @@ func moveCharacter(velValue: int, delta: float) -> void:
 func jump(jumpForce: int, canJumpAgain: bool) -> void:
 	if Input.is_action_just_pressed("jump") and canJumpAgain:
 		velocity.y = jumpForce
-
-func isInWater() -> bool:
-	return false;
 	
 func updateAnimation(state: String) -> void:
 	if anim.animation != state:

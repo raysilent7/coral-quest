@@ -1,13 +1,14 @@
-[gd_scene load_steps=13 format=4 uid="uid://c5n6xisi3rrqu"]
+[gd_scene load_steps=15 format=4 uid="uid://c5n6xisi3rrqu"]
 
 [ext_resource type="TileSet" uid="uid://duq0eqpaarj7b" path="res://objects/islands/sea islands tilemap.tres" id="1_eq7it"]
 [ext_resource type="Script" uid="uid://blvg0ujg2vm2i" path="res://scripts/area.gd" id="1_sv72n"]
 [ext_resource type="PackedScene" uid="uid://cgskhua4x4gwv" path="res://diver/diver.tscn" id="2_sv72n"]
 [ext_resource type="Script" uid="uid://d0jy5rwijm04x" path="res://scripts/portal.gd" id="3_kelwv"]
-[ext_resource type="Texture2D" uid="uid://bd76h7l25faro" path="res://icon.svg" id="5_kelwv"]
 [ext_resource type="Script" uid="uid://d26etb7naen5k" path="res://scripts/shrine.gd" id="5_nkc80"]
 [ext_resource type="PackedScene" uid="uid://fxswuvla0yar" path="res://objects/popups/instructionsScene.tscn" id="6_v5mfe"]
+[ext_resource type="Texture2D" uid="uid://oegwmqlrwihg" path="res://objects/islands/shrine11.png" id="7_6ybbc"]
 [ext_resource type="PackedScene" uid="uid://b3m25nmj4co84" path="res://objects/islands/stonePlatform.tscn" id="8_6ybbc"]
+[ext_resource type="Texture2D" uid="uid://brbcv3gthdikm" path="res://objects/islands/forest bg.png" id="9_me05n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qpp5n"]
 size = Vector2(31, 67)
@@ -16,13 +17,16 @@ size = Vector2(31, 67)
 size = Vector2(32, 66)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kelwv"]
-size = Vector2(83, 65)
+size = Vector2(53, 42.5)
 
 [sub_resource type="LabelSettings" id="LabelSettings_nkc80"]
 font_size = 11
 font_color = Color(1, 0.6901961, 0, 1)
 outline_size = 3
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_me05n"]
+size = Vector2(323, 30)
 
 [node name="Area2" type="Node2D"]
 script = ExtResource("1_sv72n")
@@ -33,7 +37,7 @@ tile_set = ExtResource("1_eq7it")
 
 [node name="diver" parent="." instance=ExtResource("2_sv72n")]
 z_index = 10
-position = Vector2(926, 417)
+position = Vector2(1074, 115)
 
 [node name="previousArea" type="Area2D" parent="."]
 position = Vector2(-45, 594)
@@ -49,6 +53,7 @@ shape = SubResource("RectangleShape2D_qpp5n")
 position = Vector2(1319, 553)
 script = ExtResource("3_kelwv")
 nextScenePath = "res://zone1/area3.tscn"
+spawnId = "area3Entrance"
 
 [node name="next" type="CollisionShape2D" parent="nextArea"]
 position = Vector2(-22, 40)
@@ -61,13 +66,13 @@ instructionsScene = ExtResource("6_v5mfe")
 shrineId = "shrine"
 
 [node name="shrineCol" type="CollisionShape2D" parent="shrine"]
-position = Vector2(1.5, -7.5)
+position = Vector2(-0.5, 1.25)
 shape = SubResource("RectangleShape2D_kelwv")
 
 [node name="shrineSpr" type="Sprite2D" parent="shrine"]
-position = Vector2(1.7499924, -7.499998)
+position = Vector2(-1.0000076, 1.0000019)
 scale = Vector2(0.64453113, 0.49218753)
-texture = ExtResource("5_kelwv")
+texture = ExtResource("7_6ybbc")
 
 [node name="pressE" type="Label" parent="shrine"]
 visible = false
@@ -81,6 +86,9 @@ label_settings = SubResource("LabelSettings_nkc80")
 [node name="area2Entrance" type="Marker2D" parent="."]
 position = Vector2(17, 601)
 
+[node name="area2Exit" type="Marker2D" parent="."]
+position = Vector2(1257, 596)
+
 [node name="stonePlatform1" parent="." instance=ExtResource("8_6ybbc")]
 position = Vector2(1010, 800)
 pointA = Vector2(1010, 468)
@@ -90,3 +98,18 @@ pointB = Vector2(1010, 800)
 position = Vector2(1110, 338)
 pointA = Vector2(1110, 468)
 pointB = Vector2(1110, 800)
+
+[node name="ForestBg" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(640, 360)
+texture = ExtResource("9_me05n")
+metadata/_edit_lock_ = true
+
+[node name="outOfMap" type="Area2D" parent="."]
+position = Vector2(945, 732)
+script = ExtResource("3_kelwv")
+spawnId = "area2Entrance"
+
+[node name="detector" type="CollisionShape2D" parent="outOfMap"]
+position = Vector2(174.5, 3)
+shape = SubResource("RectangleShape2D_me05n")
