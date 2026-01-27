@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://ed0ebn7s7nww"]
+
+[ext_resource type="Script" uid="uid://do1nbqbd8q3j6" path="res://scripts/fruitGame.gd" id="1_rsnmq"]
+[ext_resource type="Texture2D" uid="uid://cb1hirieksuhx" path="res://objects/islands/fruits/grubble fruit.png" id="2_3ixbb"]
+[ext_resource type="Texture2D" uid="uid://dkuems22848jr" path="res://objects/islands/fruits/kiko fruit.png" id="3_xrf8n"]
+[ext_resource type="Texture2D" uid="uid://batjyikyq5kf5" path="res://objects/islands/fruits/nababa fruit.png" id="4_gvxq4"]
+[ext_resource type="Texture2D" uid="uid://cmx5r6xqyqnm5" path="res://objects/islands/fruits/star fruit.png" id="5_rsnaf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jq8r0"]
+atlas = ExtResource("2_3ixbb")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3cqiq"]
+atlas = ExtResource("3_xrf8n")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rlej6"]
+atlas = ExtResource("4_gvxq4")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbe8j"]
+atlas = ExtResource("5_rsnaf")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_02nsq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jq8r0")
+}],
+"loop": true,
+"name": &"grubble",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3cqiq")
+}],
+"loop": true,
+"name": &"kiko",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rlej6")
+}],
+"loop": true,
+"name": &"nababa",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbe8j")
+}],
+"loop": true,
+"name": &"star",
+"speed": 5.0
+}]
+
+[node name="FruitScene" type="Node2D" unique_id=1125452185]
+script = ExtResource("1_rsnmq")
+
+[node name="fruitButton" type="TextureButton" parent="." unique_id=2081183165]
+offset_left = -23.0
+offset_top = -22.0
+offset_right = 12.0
+offset_bottom = 26.0
+
+[node name="fruitsAnim" type="AnimatedSprite2D" parent="." unique_id=42862929]
+sprite_frames = SubResource("SpriteFrames_02nsq")
+animation = &"grubble"

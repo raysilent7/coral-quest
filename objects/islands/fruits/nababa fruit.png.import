@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcgl3x7vqdh6o"
-path="res://.godot/imported/stone.png-57cf77eb160a526dc2f9a632e5c67889.ctex"
+uid="uid://batjyikyq5kf5"
+path="res://.godot/imported/nababa fruit.png-c8bf629cd0cbed4bfd3df47b00a51cc8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/islands/stone.png"
-dest_files=["res://.godot/imported/stone.png-57cf77eb160a526dc2f9a632e5c67889.ctex"]
+source_file="res://objects/islands/fruits/nababa fruit.png"
+dest_files=["res://.godot/imported/nababa fruit.png-c8bf629cd0cbed4bfd3df47b00a51cc8.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctvmuyjya0i3n"
-path="res://.godot/imported/blue sky.png-4bf8e15fe5357f5dce166c348a7d52e4.ctex"
+uid="uid://cmx5r6xqyqnm5"
+path="res://.godot/imported/star fruit.png-565b6c11f9343f773d26330f8d444f01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/islands/blue sky.png"
-dest_files=["res://.godot/imported/blue sky.png-4bf8e15fe5357f5dce166c348a7d52e4.ctex"]
+source_file="res://objects/islands/fruits/star fruit.png"
+dest_files=["res://.godot/imported/star fruit.png-565b6c11f9343f773d26330f8d444f01.ctex"]
 
 [params]
 

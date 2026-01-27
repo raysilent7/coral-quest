@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://m1uwr74ovk15"]
+[gd_scene format=3 uid="uid://m1uwr74ovk15"]
 
-[ext_resource type="Texture2D" uid="uid://dni65krd8rpfd" path="res://objects/islands/ship.png" id="1_pwrfp"]
+[ext_resource type="Texture2D" uid="uid://dni65krd8rpfd" path="res://objects/islands/mapObjects/ship.png" id="1_pwrfp"]
 
 [node name="barco" type="Node2D"]
 

@@ -11,3 +11,5 @@ var bonusSpeed: float = 0.0
 
 var beatFirstPuzzle: bool = false
 var beatSecondPuzzle: bool = false
+var beatThirdPuzzle: bool = false
+ 

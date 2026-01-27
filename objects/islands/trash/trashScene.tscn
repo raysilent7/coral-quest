@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://b5or0djd0edgc"]
+
+[ext_resource type="Script" uid="uid://d2j6mppbud8v5" path="res://scripts/trashGame.gd" id="1_8sg5j"]
+[ext_resource type="Texture2D" uid="uid://1f0p46qnnws8" path="res://objects/islands/trash/bottle.png" id="2_pstx6"]
+[ext_resource type="Texture2D" uid="uid://6cjhut6r1yla" path="res://objects/islands/trash/can.png" id="3_kd6cp"]
+[ext_resource type="Texture2D" uid="uid://cc4511gi4cyvi" path="res://objects/islands/trash/hook.png" id="4_ca7db"]
+[ext_resource type="Texture2D" uid="uid://b2arcoyrtbwc5" path="res://objects/islands/trash/straw.png" id="5_ghpng"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilrb5"]
+atlas = ExtResource("2_pstx6")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1i0o"]
+atlas = ExtResource("3_kd6cp")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hglg"]
+atlas = ExtResource("4_ca7db")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kj15"]
+atlas = ExtResource("5_ghpng")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0mv42"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ilrb5")
+}],
+"loop": true,
+"name": &"bottle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1i0o")
+}],
+"loop": true,
+"name": &"can",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hglg")
+}],
+"loop": true,
+"name": &"hook",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kj15")
+}],
+"loop": true,
+"name": &"straw",
+"speed": 5.0
+}]
+
+[node name="TrashScene" type="Node2D" unique_id=1195375327]
+script = ExtResource("1_8sg5j")
+
+[node name="trashButton" type="TextureButton" parent="." unique_id=1102495018]
+offset_left = -20.0
+offset_top = -29.0
+offset_right = 17.0
+offset_bottom = 28.0
+
+[node name="trashCan" type="AnimatedSprite2D" parent="." unique_id=1177064884]
+sprite_frames = SubResource("SpriteFrames_0mv42")
+animation = &"straw"

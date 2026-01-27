@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://botoufs37tuaw"]
+[gd_scene format=3 uid="uid://botoufs37tuaw"]
 
-[ext_resource type="Texture2D" uid="uid://dc2krpk3h2l5l" path="res://objects/islands/dock.png" id="1_722bd"]
+[ext_resource type="Texture2D" uid="uid://dc2krpk3h2l5l" path="res://objects/islands/mapObjects/dock.png" id="1_722bd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bqt26"]
 size = Vector2(407, 9)

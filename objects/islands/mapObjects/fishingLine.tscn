@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c0pu2thn1iv7r" path="res://scripts/fishingLine.gd" id="1_4o3wt"]
 [ext_resource type="PackedScene" uid="uid://2iqyxxisd5v2" path="res://objects/popups/genericPopup.tscn" id="2_7o7eh"]
-[ext_resource type="Texture2D" uid="uid://dqmkakvujfje8" path="res://objects/islands/fishing line1.png" id="2_y10n6"]
+[ext_resource type="Texture2D" uid="uid://dqmkakvujfje8" path="res://objects/islands/mapObjects/fishing line1.png" id="2_y10n6"]
 [ext_resource type="Script" uid="uid://du0prtp34lvar" path="res://scripts/hook.gd" id="3_7o7eh"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_s4lox"]

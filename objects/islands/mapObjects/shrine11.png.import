@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://oegwmqlrwihg"
-path="res://.godot/imported/shrine11.png-f9a556ebc138e5096598666ba436f88e.ctex"
+path="res://.godot/imported/shrine11.png-51545c3f97fe85da213b084a7a25a873.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/islands/shrine11.png"
-dest_files=["res://.godot/imported/shrine11.png-f9a556ebc138e5096598666ba436f88e.ctex"]
+source_file="res://objects/islands/mapObjects/shrine11.png"
+dest_files=["res://.godot/imported/shrine11.png-51545c3f97fe85da213b084a7a25a873.ctex"]
 
 [params]
 

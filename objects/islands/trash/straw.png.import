@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brbcv3gthdikm"
-path="res://.godot/imported/forest bg.png-6a9e230fb03077a148f449ea4eb2c928.ctex"
+uid="uid://b2arcoyrtbwc5"
+path="res://.godot/imported/straw.png-faab2976a4c27b7dd41a8044011ca03e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/islands/forest bg.png"
-dest_files=["res://.godot/imported/forest bg.png-6a9e230fb03077a148f449ea4eb2c928.ctex"]
+source_file="res://objects/islands/trash/straw.png"
+dest_files=["res://.godot/imported/straw.png-faab2976a4c27b7dd41a8044011ca03e.ctex"]
 
 [params]
 

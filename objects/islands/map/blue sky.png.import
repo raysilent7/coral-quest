@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqmkakvujfje8"
-path="res://.godot/imported/fishing line1.png-8da0341668fe822cf77c285b716c52b9.ctex"
+uid="uid://ctvmuyjya0i3n"
+path="res://.godot/imported/blue sky.png-2772a6ce915eb09e679353d7b40fda8f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/islands/fishing line1.png"
-dest_files=["res://.godot/imported/fishing line1.png-8da0341668fe822cf77c285b716c52b9.ctex"]
+source_file="res://objects/islands/map/blue sky.png"
+dest_files=["res://.godot/imported/blue sky.png-2772a6ce915eb09e679353d7b40fda8f.ctex"]
 
 [params]
 

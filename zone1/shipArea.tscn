@@ -1,11 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://s5miu17xmqpb"]
+[gd_scene format=4 uid="uid://s5miu17xmqpb"]
 
-[ext_resource type="Texture2D" uid="uid://ctvmuyjya0i3n" path="res://objects/islands/blue sky.png" id="1_33yf8"]
+[ext_resource type="Texture2D" uid="uid://ctvmuyjya0i3n" path="res://objects/islands/map/blue sky.png" id="1_33yf8"]
 [ext_resource type="Script" uid="uid://blvg0ujg2vm2i" path="res://scripts/area.gd" id="1_xrb7n"]
-[ext_resource type="TileSet" uid="uid://duq0eqpaarj7b" path="res://objects/islands/sea islands tilemap.tres" id="2_xrb7n"]
+[ext_resource type="TileSet" uid="uid://duq0eqpaarj7b" path="res://objects/islands/map/sea islands tilemap.tres" id="2_xrb7n"]
 [ext_resource type="PackedScene" uid="uid://cgskhua4x4gwv" path="res://diver/diver.tscn" id="3_xjjo3"]
-[ext_resource type="PackedScene" uid="uid://botoufs37tuaw" path="res://objects/islands/dock.tscn" id="4_r58mx"]
-[ext_resource type="PackedScene" uid="uid://m1uwr74ovk15" path="res://objects/islands/ship.tscn" id="5_d5fn5"]
+[ext_resource type="PackedScene" uid="uid://botoufs37tuaw" path="res://objects/islands/mapObjects/dock.tscn" id="4_r58mx"]
+[ext_resource type="PackedScene" uid="uid://m1uwr74ovk15" path="res://objects/islands/mapObjects/ship.tscn" id="5_d5fn5"]
 [ext_resource type="Script" uid="uid://d0jy5rwijm04x" path="res://scripts/portal.gd" id="6_tj27n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_loq4k"]

@@ -1,14 +1,14 @@
-[gd_scene load_steps=15 format=4 uid="uid://c5n6xisi3rrqu"]
+[gd_scene format=4 uid="uid://c5n6xisi3rrqu"]
 
-[ext_resource type="TileSet" uid="uid://duq0eqpaarj7b" path="res://objects/islands/sea islands tilemap.tres" id="1_eq7it"]
+[ext_resource type="TileSet" uid="uid://duq0eqpaarj7b" path="res://objects/islands/map/sea islands tilemap.tres" id="1_eq7it"]
 [ext_resource type="Script" uid="uid://blvg0ujg2vm2i" path="res://scripts/area.gd" id="1_sv72n"]
 [ext_resource type="PackedScene" uid="uid://cgskhua4x4gwv" path="res://diver/diver.tscn" id="2_sv72n"]
 [ext_resource type="Script" uid="uid://d0jy5rwijm04x" path="res://scripts/portal.gd" id="3_kelwv"]
 [ext_resource type="Script" uid="uid://d26etb7naen5k" path="res://scripts/shrine.gd" id="5_nkc80"]
 [ext_resource type="PackedScene" uid="uid://fxswuvla0yar" path="res://objects/popups/instructionsScene.tscn" id="6_v5mfe"]
-[ext_resource type="Texture2D" uid="uid://oegwmqlrwihg" path="res://objects/islands/shrine11.png" id="7_6ybbc"]
-[ext_resource type="PackedScene" uid="uid://b3m25nmj4co84" path="res://objects/islands/stonePlatform.tscn" id="8_6ybbc"]
-[ext_resource type="Texture2D" uid="uid://brbcv3gthdikm" path="res://objects/islands/forest bg.png" id="9_me05n"]
+[ext_resource type="Texture2D" uid="uid://oegwmqlrwihg" path="res://objects/islands/mapObjects/shrine11.png" id="7_6ybbc"]
+[ext_resource type="PackedScene" uid="uid://b3m25nmj4co84" path="res://objects/islands/mapObjects/stonePlatform.tscn" id="8_6ybbc"]
+[ext_resource type="Texture2D" uid="uid://brbcv3gthdikm" path="res://objects/islands/map/forest bg.png" id="9_me05n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qpp5n"]
 size = Vector2(31, 67)

@@ -1,51 +1,55 @@
 extends Node2D
 
-@export var fishingLineScene: PackedScene
-@export var obstacleScene: PackedScene
+@export var trashScene: PackedScene
+@export var fruitScene: PackedScene
 @export var nextScenePath: String = "res://zone1/area2.tscn"
 
 var popupVictory = preload("res://objects/popups/genericPopup.tscn")
-var spawnInterval: float = 2.0
+var spawnInterval: float = 1.0
 var timer: float = 0.0
 var maxCount: int = 0
 var gameEnded: bool = false
+var fruits = ["grubble", "nababa", "star", "kiko"]
+var trashs = ["bottle", "can", "hook", "straw"]
 
-func _process(delta):
+func _process(delta: float) -> void:
 	if gameEnded:
 		return
-	
+
 	timer += delta
 	if timer >= spawnInterval:
 		timer = 0
 		spawnRandom()
+		spawnRandom()
 
-	if GameState.bonusSpeed > 0:
-		GameState.bonusSpeed -= delta * 5
+	GameState.bonusSpeed += delta * 5
 
-	if GameState.points >= 30:
-		GameState.beatSecondPuzzle = true
-		GameState.isInFishingLinesGame = false
+	if GameState.points >= 50:
+		GameState.beatThirdPuzzle = true
 		endGame()
 		showPopup()
 
 func spawnRandom():
 	var choice = randi_range(0, 1)
+	var animChoice = randi_range(0, 3)
 	var obj
 	
 	if choice == 0 or maxCount > 4:
-		obj = fishingLineScene.instantiate()
+		obj = trashScene.instantiate()
+		obj.trash = trashs[animChoice]
 		maxCount = 0
 	else:
-		obj = obstacleScene.instantiate()
+		obj = fruitScene.instantiate()
+		obj.fruit = fruits[animChoice]
 		maxCount += 1
 
-	obj.position = Vector2(1200, randf_range(-100, 300))
+	obj.position = Vector2(randf_range(300, 900), randf_range(-100, 0))
 	add_child(obj)
 
 func showPopup():
 	var popup = popupVictory.instantiate()
 	add_child(popup)
-	popup.setMessage("Parabens, voce venceu o segundo desafio. Voce está cada vez mais proximo de salvar o arquipelago, mas ainda há muito a fazer, continue sua jornada.")
+	popup.setMessage("Parabens voce venceu")
 	popup.setButtonText("OK")
 	popup.setButtonAction(
 		func():
