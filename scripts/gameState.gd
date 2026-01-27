@@ -5,7 +5,7 @@ var lastMapPath: String = ""
 var lastShrineId: String = ""
 var fromPortal: bool = true
 var isInWater: bool = false
-var isInFishingLinesGame: bool = true
+var isInFishingLinesGame: bool = false
 var points: int = 0
 var bonusSpeed: float = 0.0
 

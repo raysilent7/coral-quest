@@ -22,7 +22,7 @@ func _process(delta):
 	if GameState.bonusSpeed > 0:
 		GameState.bonusSpeed -= delta * 5
 
-	if GameState.points >= 1:
+	if GameState.points >= 30:
 		GameState.beatSecondPuzzle = true
 		GameState.isInFishingLinesGame = false
 		endGame()
