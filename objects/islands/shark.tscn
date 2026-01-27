@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cudik4wpcd4xa"]
+
+[ext_resource type="Texture2D" uid="uid://baijq2r0le5sg" path="res://objects/islands/shark.png" id="1_c2y2a"]
+[ext_resource type="Script" uid="uid://dm4sf7r1krxb2" path="res://scripts/shark.gd" id="1_msmsb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_msmsb"]
+radius = 17.999998
+height = 108.0
+
+[node name="Shark" type="Node2D" unique_id=1835356205]
+
+[node name="shark" type="Area2D" parent="." unique_id=991240400]
+script = ExtResource("1_msmsb")
+
+[node name="sharkollision" type="CollisionShape2D" parent="shark" unique_id=1804774525]
+position = Vector2(1, 0)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_msmsb")
+
+[node name="sharkSprite" type="Sprite2D" parent="shark" unique_id=179065105]
+texture = ExtResource("1_c2y2a")

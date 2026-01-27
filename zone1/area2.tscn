@@ -37,7 +37,7 @@ tile_set = ExtResource("1_eq7it")
 
 [node name="diver" parent="." instance=ExtResource("2_sv72n")]
 z_index = 10
-position = Vector2(1074, 115)
+position = Vector2(20, 606)
 
 [node name="previousArea" type="Area2D" parent="."]
 position = Vector2(-45, 594)

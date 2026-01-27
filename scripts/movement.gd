@@ -4,16 +4,29 @@ extends CharacterBody2D
 
 func _physics_process(delta: float) -> void:
 	if GameState.isInWater:
-		moveCharacter(80, delta)
-		jump(-80, true)
-		move_and_slide()
-		updateAnimation(getSwimAnimation())
+		moveInWater(delta)
+	elif GameState.isInFishingLinesGame:
+		moveInMinigame(delta)
 	else:
-		apply_floor_snap()
-		moveCharacter(150, delta)
-		jump(-280, is_on_floor())
-		move_and_slide()
-		updateAnimation(getGroundAnimation())
+		moveOnGround(delta)
+
+func moveOnGround(delta: float):
+	moveCharacter(150, delta)
+	jump(-280, is_on_floor())
+	move_and_slide()
+	updateAnimation(getGroundAnimation())
+
+func moveInMinigame(delta: float):
+	applyGravity(80, delta)
+	jump(-120, true)
+	move_and_slide()
+	updateAnimation(getSwimAnimation())
+
+func moveInWater(delta: float):
+	moveCharacter(80, delta)
+	jump(-120, true)
+	move_and_slide()
+	updateAnimation(getSwimAnimation())
 
 func moveCharacter(velValue: int, delta: float) -> void:
 	if Input.is_action_pressed("moveRight"):
@@ -25,6 +38,9 @@ func moveCharacter(velValue: int, delta: float) -> void:
 	else:
 		velocity.x = 0
 
+	applyGravity(velValue, delta)
+
+func applyGravity(velValue: int, delta: float):
 	if not is_on_floor():
 		velocity.y += velValue * (delta * 4)
 	else:
@@ -33,15 +49,13 @@ func moveCharacter(velValue: int, delta: float) -> void:
 func jump(jumpForce: int, canJumpAgain: bool) -> void:
 	if Input.is_action_just_pressed("jump") and canJumpAgain:
 		velocity.y = jumpForce
-	
+
 func updateAnimation(state: String) -> void:
 	if anim.animation != state:
 		anim.play(state)
 
 func getGroundAnimation() -> String:
-	if velocity.x > 0 and is_on_floor():
-		return "walk"
-	if velocity.x < 0 and is_on_floor():
+	if velocity.x != 0 and is_on_floor():
 		return "walk"
 	elif not is_on_floor():
 		return "jump"

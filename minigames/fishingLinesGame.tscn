@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://nq3u0hrmy7d2"]
+
+[ext_resource type="Script" uid="uid://cfcphyft7n8yx" path="res://scripts/fishingLinesGame.gd" id="1_h58ws"]
+[ext_resource type="PackedScene" uid="uid://cgskhua4x4gwv" path="res://diver/diver.tscn" id="1_hfchc"]
+[ext_resource type="Texture2D" uid="uid://ctvmuyjya0i3n" path="res://objects/islands/blue sky.png" id="2_pxb8m"]
+[ext_resource type="PackedScene" uid="uid://cudik4wpcd4xa" path="res://objects/islands/shark.tscn" id="2_y6xvl"]
+[ext_resource type="PackedScene" uid="uid://c6idcr427agqs" path="res://objects/islands/fishingLine.tscn" id="3_d1nal"]
+
+[node name="fishingLinesGame" type="Node2D" unique_id=417538369]
+script = ExtResource("1_h58ws")
+fishingLineScene = ExtResource("2_y6xvl")
+obstacleScene = ExtResource("3_d1nal")
+
+[node name="diver" parent="." unique_id=1169786233 instance=ExtResource("1_hfchc")]
+z_index = 10
+position = Vector2(97, 129)
+
+[node name="BlueSky" type="Sprite2D" parent="." unique_id=3624803]
+z_index = -1
+position = Vector2(640, 360)
+rotation = 3.1415927
+texture = ExtResource("2_pxb8m")
+metadata/_edit_lock_ = true

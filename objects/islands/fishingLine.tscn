@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://c6idcr427agqs"]
+
+[ext_resource type="Script" uid="uid://c0pu2thn1iv7r" path="res://scripts/fishingLine.gd" id="1_4o3wt"]
+[ext_resource type="Texture2D" uid="uid://dqmkakvujfje8" path="res://objects/islands/fishing line1.png" id="2_y10n6"]
+[ext_resource type="Script" uid="uid://du0prtp34lvar" path="res://scripts/hook.gd" id="3_7o7eh"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_s4lox"]
+a = Vector2(-1, 199)
+b = Vector2(-1, -360)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w7cvu"]
+size = Vector2(38, 50)
+
+[node name="Node2D" type="Node2D" unique_id=1333642119]
+
+[node name="fishingLine" type="Area2D" parent="." unique_id=466704425]
+position = Vector2(5, 0)
+script = ExtResource("1_4o3wt")
+
+[node name="lineDetector" type="CollisionShape2D" parent="fishingLine" unique_id=1601061340]
+position = Vector2(-5, 0)
+shape = SubResource("SegmentShape2D_s4lox")
+
+[node name="fishingLineSpr" type="Sprite2D" parent="fishingLine" unique_id=308838683]
+position = Vector2(-5, 0)
+texture = ExtResource("2_y10n6")
+
+[node name="hook" type="Area2D" parent="fishingLine" unique_id=1375015654]
+position = Vector2(-5, 0)
+script = ExtResource("3_7o7eh")
+
+[node name="hookDetector" type="CollisionShape2D" parent="fishingLine/hook" unique_id=283872724]
+position = Vector2(-1, 230)
+shape = SubResource("RectangleShape2D_w7cvu")

@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://duq0eqpaarj7b"]
+[gd_resource type="TileSet" format=3 uid="uid://duq0eqpaarj7b"]
 
 [ext_resource type="Texture2D" uid="uid://drbtt86mwqr6k" path="res://objects/islands/sea islands tilemap.png" id="1_4pbjn"]
 
