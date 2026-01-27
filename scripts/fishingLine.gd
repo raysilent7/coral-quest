@@ -1,7 +1,6 @@
 extends Area2D
 
 @export var speed: float = 80.0
-@export var nextScenePath: String = "res://zone1/area2.tscn"
 
 func _ready() -> void:
 	body_entered.connect(onBodyEntered)
@@ -19,8 +18,3 @@ func onBodyEntered(body):
 		GameState.bonusSpeed = 50
 		queue_free()
 		print(GameState.points)
-
-		if GameState.points >= 50:
-			GameState.beatSecondPuzzle = true
-			get_tree().change_scene_to_file(nextScenePath)
-			GameState.isInFishingLinesGame = false

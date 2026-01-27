@@ -13,7 +13,7 @@ obstacleScene = ExtResource("3_d1nal")
 
 [node name="diver" parent="." unique_id=1169786233 instance=ExtResource("1_hfchc")]
 z_index = 10
-position = Vector2(97, 129)
+position = Vector2(651, 229)
 
 [node name="BlueSky" type="Sprite2D" parent="." unique_id=3624803]
 z_index = -1

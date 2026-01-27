@@ -1,6 +1,7 @@
 extends Control
 
 @onready var label: Label = $genericPanel/text
+@onready var button: Button = $genericPanel/button
 
 func _ready():
 	var screenSize = get_viewport_rect().size
@@ -9,6 +10,15 @@ func _ready():
 	
 	label.text = "Parabens! Voce venceu o primeiro quebra cabeça. Continue para desvendar mais mistérios do arquipelago e salva-lo da extinção."
 
-func _on_ok_pressed() -> void:
+func onButtonPressed() -> void:
 	get_tree().change_scene_to_file(GameState.lastMapPath)
 	queue_free()
+
+func setMessage(text: String):
+	label.text = text
+
+func setButtonText(text: String):
+	button.text = text
+
+func setButtonAction(callback: Callable):
+	button.pressed.connect(callback)
