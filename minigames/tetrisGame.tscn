@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b8qdlw28n7ro6"]
+
+[ext_resource type="Script" uid="uid://c8lth2m8iqmth" path="res://scripts/tetrisGame.gd" id="1_ua18b"]
+[ext_resource type="Script" uid="uid://hr2ng0pinsfv" path="res://scripts/currentPiece.gd" id="2_e6ufj"]
+[ext_resource type="Script" uid="uid://qxs52pnj4lyl" path="res://scripts/board.gd" id="3_1xa0r"]
+
+[node name="TetrisGame" type="Node2D" unique_id=489202917]
+script = ExtResource("1_ua18b")
+
+[node name="board" type="Node2D" parent="." unique_id=1517738671]
+script = ExtResource("3_1xa0r")
+
+[node name="currentPiece" type="Node2D" parent="board" unique_id=1422034233]
+script = ExtResource("2_e6ufj")

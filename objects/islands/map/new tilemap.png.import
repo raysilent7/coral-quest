@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkuems22848jr"
-path="res://.godot/imported/kiko fruit.png-9125a2e5606f430b5a9b57283bea7156.ctex"
+uid="uid://bytmspgn7bijq"
+path="res://.godot/imported/new tilemap.png-aa6be5fc4702537965c5b905e73d5278.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/islands/fruits/kiko fruit.png"
-dest_files=["res://.godot/imported/kiko fruit.png-9125a2e5606f430b5a9b57283bea7156.ctex"]
+source_file="res://objects/islands/map/new tilemap.png"
+dest_files=["res://.godot/imported/new tilemap.png-aa6be5fc4702537965c5b905e73d5278.ctex"]
 
 [params]
 

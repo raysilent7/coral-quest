@@ -3,6 +3,10 @@ extends Node2D
 @export var pointA: Vector2
 @export var pointB: Vector2
 @export var speed: float = 0.7
+@export var fromFirstMinigame: bool
+@export var fromSecondMinigame: bool
+@export var fromThirdMinigame: bool
+@export var fromFourthMinigame: bool
 
 var movingToB: bool = true
 var lastPosition: Vector2
@@ -18,15 +22,30 @@ func _process(delta):
 
 	if player:
 		player.global_position += movement
+	
+	moveFromFirstMinigame()
 
-	if movingToB and GameState.beatFirstPuzzle:
-		global_position = global_position.move_toward(pointB, speed)
-		if global_position == pointB:
-			movingToB = false
-	elif not movingToB and GameState.beatFirstPuzzle:
-		global_position = global_position.move_toward(pointA, speed)
-		if global_position == pointA:
-			movingToB = true
+func moveFromFirstMinigame():
+	if fromFirstMinigame:
+		if movingToB and GameState.beatFirstPuzzle:
+			global_position = global_position.move_toward(pointB, speed)
+			if global_position == pointB:
+				movingToB = false
+		elif not movingToB and GameState.beatFirstPuzzle:
+			global_position = global_position.move_toward(pointA, speed)
+			if global_position == pointA:
+				movingToB = true
+
+func moveFromSecondMinigame():
+	if fromSecondMinigame:
+		if movingToB and GameState.beatSecondPuzzle:
+			global_position = global_position.move_toward(pointB, speed)
+			if global_position == pointB:
+				movingToB = false
+		elif not movingToB and GameState.beatFirstPuzzle:
+			global_position = global_position.move_toward(pointA, speed)
+			if global_position == pointA:
+				movingToB = true
 
 func _onBodyEntered(body):
 	if body is CharacterBody2D:

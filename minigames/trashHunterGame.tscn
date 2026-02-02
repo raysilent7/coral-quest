@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://xt0vrhhwvv6q"]
+
+[ext_resource type="Script" uid="uid://cfekgcruji7gh" path="res://scripts/trashHunterGame.gd" id="1_lpwh6"]
+[ext_resource type="PackedScene" uid="uid://b5or0djd0edgc" path="res://objects/trash/trashScene.tscn" id="2_r402h"]
+[ext_resource type="PackedScene" uid="uid://ed0ebn7s7nww" path="res://objects/fruits/fruitScene.tscn" id="3_g6td1"]
+[ext_resource type="Texture2D" uid="uid://brbcv3gthdikm" path="res://objects/islands/map/forest bg.png" id="4_ub7ew"]
+
+[node name="trashHunter" type="Node2D" unique_id=693953974]
+script = ExtResource("1_lpwh6")
+trashScene = ExtResource("2_r402h")
+fruitScene = ExtResource("3_g6td1")
+
+[node name="ForestBg" type="Sprite2D" parent="." unique_id=707116430]
+position = Vector2(640, 360)
+texture = ExtResource("4_ub7ew")

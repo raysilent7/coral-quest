@@ -17,6 +17,8 @@ var flipAnimations = [
 var deck = []
 
 func _ready():
+	GameState.points = 0
+	
 	for anim in flipAnimations:
 		deck.append(anim)
 		deck.append(anim)

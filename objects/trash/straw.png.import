@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6cjhut6r1yla"
-path="res://.godot/imported/can.png-25fd88b728f588270475b87517d2afc7.ctex"
+uid="uid://b2arcoyrtbwc5"
+path="res://.godot/imported/straw.png-2121b470c18052259fe38637ab97732d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/islands/trash/can.png"
-dest_files=["res://.godot/imported/can.png-25fd88b728f588270475b87517d2afc7.ctex"]
+source_file="res://objects/trash/straw.png"
+dest_files=["res://.godot/imported/straw.png-2121b470c18052259fe38637ab97732d.ctex"]
 
 [params]
 

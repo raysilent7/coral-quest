@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ckl0oa7cog6yd"]
+
+[ext_resource type="Script" uid="uid://c08ae58fp1vw2" path="res://scripts/tetrominoes.gd" id="1_8yicj"]
+
+[node name="Tetrominoes" type="Node2D" unique_id=33646664]
+script = ExtResource("1_8yicj")

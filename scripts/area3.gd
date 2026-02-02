@@ -6,3 +6,5 @@ extends Node2D
 func _process(delta: float) -> void:
 	if player is CharacterBody2D and player.global_position.y > waterLevel.global_position.y:
 		GameState.isInWater = true
+	else:
+		GameState.isInWater = false

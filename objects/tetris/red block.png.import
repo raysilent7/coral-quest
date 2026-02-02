@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc4511gi4cyvi"
-path="res://.godot/imported/hook.png-902285680f5a9a947240a93ce5a199e0.ctex"
+uid="uid://dj1ja1hefxnr2"
+path="res://.godot/imported/red block.png-d13663733c7a6d2ad298ce2ae2e94e55.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/islands/trash/hook.png"
-dest_files=["res://.godot/imported/hook.png-902285680f5a9a947240a93ce5a199e0.ctex"]
+source_file="res://objects/tetris/red block.png"
+dest_files=["res://.godot/imported/red block.png-d13663733c7a6d2ad298ce2ae2e94e55.ctex"]
 
 [params]
 

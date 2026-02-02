@@ -10,6 +10,9 @@ var timer: float = 0.0
 var maxCount: int = 0
 var gameEnded: bool = false
 
+func _ready() -> void:
+	GameState.points = 0
+
 func _process(delta):
 	if gameEnded:
 		return

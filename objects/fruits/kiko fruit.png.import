@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmx5r6xqyqnm5"
-path="res://.godot/imported/star fruit.png-565b6c11f9343f773d26330f8d444f01.ctex"
+uid="uid://dkuems22848jr"
+path="res://.godot/imported/kiko fruit.png-b9869ae2c3990ac9071194aaae16aeb7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/islands/fruits/star fruit.png"
-dest_files=["res://.godot/imported/star fruit.png-565b6c11f9343f773d26330f8d444f01.ctex"]
+source_file="res://objects/fruits/kiko fruit.png"
+dest_files=["res://.godot/imported/kiko fruit.png-b9869ae2c3990ac9071194aaae16aeb7.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb1hirieksuhx"
-path="res://.godot/imported/grubble fruit.png-d98c5b88a1e9f34e3f8e74e568fda45d.ctex"
+uid="uid://6cjhut6r1yla"
+path="res://.godot/imported/can.png-6cd4e2a859b3219dfa06cc97c11a33cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/islands/fruits/grubble fruit.png"
-dest_files=["res://.godot/imported/grubble fruit.png-d98c5b88a1e9f34e3f8e74e568fda45d.ctex"]
+source_file="res://objects/trash/can.png"
+dest_files=["res://.godot/imported/can.png-6cd4e2a859b3219dfa06cc97c11a33cc.ctex"]
 
 [params]
 

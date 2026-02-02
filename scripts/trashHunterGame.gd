@@ -12,6 +12,9 @@ var gameEnded: bool = false
 var fruits = ["grubble", "nababa", "star", "kiko"]
 var trashs = ["bottle", "can", "hook", "straw"]
 
+func _ready() -> void:
+	GameState.points = 0
+
 func _process(delta: float) -> void:
 	if gameEnded:
 		return
