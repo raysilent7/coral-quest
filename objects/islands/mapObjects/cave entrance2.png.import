@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brbcv3gthdikm"
-path="res://.godot/imported/forest bg.png-8f20a7e9ead1122e7f483eae7a032fdd.ctex"
+uid="uid://bkgyifwuqfsve"
+path="res://.godot/imported/cave entrance2.png-ac7c5fd726d97e03061906379a0947b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/islands/map/forest bg.png"
-dest_files=["res://.godot/imported/forest bg.png-8f20a7e9ead1122e7f483eae7a032fdd.ctex"]
+source_file="res://objects/islands/mapObjects/cave entrance2.png"
+dest_files=["res://.godot/imported/cave entrance2.png-ac7c5fd726d97e03061906379a0947b6.ctex"]
 
 [params]
 

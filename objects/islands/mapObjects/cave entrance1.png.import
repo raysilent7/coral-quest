@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drbtt86mwqr6k"
-path="res://.godot/imported/sea islands tilemap.png-9d8de87c9b040b1b03a56569586ffe22.ctex"
+uid="uid://coiuh8ir38ao0"
+path="res://.godot/imported/cave entrance1.png-b5ce91e64ae5e1f551043f939a261ee5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/islands/map/sea islands tilemap.png"
-dest_files=["res://.godot/imported/sea islands tilemap.png-9d8de87c9b040b1b03a56569586ffe22.ctex"]
+source_file="res://objects/islands/mapObjects/cave entrance1.png"
+dest_files=["res://.godot/imported/cave entrance1.png-b5ce91e64ae5e1f551043f939a261ee5.ctex"]
 
 [params]
 

@@ -12,7 +12,7 @@ func _physics_process(delta: float) -> void:
 
 func moveOnGround(delta: float):
 	moveCharacter(150, delta)
-	jump(-280, is_on_floor())
+	jump(-310, is_on_floor())
 	move_and_slide()
 	updateAnimation(getGroundAnimation())
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmyqskwqkv85u"
-path="res://.godot/imported/sea level.png-a16feb3fd14eae544ae9057d3d14354f.ctex"
+uid="uid://bu234kfpwug3u"
+path="res://.godot/imported/bg forest.jpg-7dd6508648d7286ac2b8a51e05c5bf72.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/islands/mapObjects/sea level.png"
-dest_files=["res://.godot/imported/sea level.png-a16feb3fd14eae544ae9057d3d14354f.ctex"]
+source_file="res://objects/islands/map/bg forest.jpg"
+dest_files=["res://.godot/imported/bg forest.jpg-7dd6508648d7286ac2b8a51e05c5bf72.ctex"]
 
 [params]
 
