@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7rfreo7mdb4d"
-path="res://.godot/imported/blue sky.png-2772a6ce915eb09e679353d7b40fda8f.ctex"
+uid="uid://bub266dmxvm8t"
+path="res://.godot/imported/sky.webp-1833190d069887b9c8a2b1d0aae42059.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/islands/map/blue sky.png"
-dest_files=["res://.godot/imported/blue sky.png-2772a6ce915eb09e679353d7b40fda8f.ctex"]
+source_file="res://objects/islands/map/sky.webp"
+dest_files=["res://.godot/imported/sky.webp-1833190d069887b9c8a2b1d0aae42059.ctex"]
 
 [params]
 

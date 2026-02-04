@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cgskhua4x4gwv"]
+[gd_scene format=3 uid="uid://cgskhua4x4gwv"]
 
 [ext_resource type="Script" uid="uid://f8acrxxycyqn" path="res://scripts/movement.gd" id="1_tgtyk"]
 [ext_resource type="Texture2D" uid="uid://djuofujru37qj" path="res://diver/diver walking.png" id="2_0n5qm"]
@@ -112,17 +112,24 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hol4"]
 size = Vector2(14, 30)
 
-[node name="player" type="Node2D"]
+[node name="player" type="Node2D" unique_id=386879663]
 
-[node name="diver" type="CharacterBody2D" parent="."]
+[node name="diver" type="CharacterBody2D" parent="." unique_id=658889326]
 script = ExtResource("1_tgtyk")
 
-[node name="diverAnimation" type="AnimatedSprite2D" parent="diver"]
+[node name="diverAnimation" type="AnimatedSprite2D" parent="diver" unique_id=80841948]
 position = Vector2(-1, -1)
 sprite_frames = SubResource("SpriteFrames_kdubu")
 animation = &"walk"
 frame = 3
 frame_progress = 0.8221449
 
-[node name="diverCollision" type="CollisionShape2D" parent="diver"]
+[node name="diverCollision" type="CollisionShape2D" parent="diver" unique_id=1719258847]
 shape = SubResource("RectangleShape2D_0hol4")
+
+[node name="camera" type="Camera2D" parent="diver" unique_id=708359183]
+zoom = Vector2(1.7, 1.7)
+limit_left = 0
+limit_top = 0
+limit_right = 1280
+limit_bottom = 720

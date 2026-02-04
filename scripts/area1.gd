@@ -1,8 +1,8 @@
 extends Node2D
 
+@onready var player: CharacterBody2D = $diver/diver
 
 func _ready() -> void:
-	var player = $diver/diver
 	var spawnPoint = get_node_or_null(GameState.lastSpawnId)
 	var shrinePoint = get_node_or_null(GameState.lastShrineId)
 	var fromPortal = GameState.fromPortal

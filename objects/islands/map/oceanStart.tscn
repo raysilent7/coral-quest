@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://drkh61h36lf42"]
+
+[ext_resource type="Texture2D" uid="uid://c7rfreo7mdb4d" path="res://objects/islands/map/blue sky.png" id="1_dc6vr"]
+[ext_resource type="Texture2D" uid="uid://cpe6djuxwgimv" path="res://objects/islands/mapObjects/algae.png" id="2_wqx1o"]
+
+[node name="oceanStart" type="Node2D" unique_id=1843404220]
+
+[node name="BG0" type="Parallax2D" parent="." unique_id=1386342365]
+scroll_scale = Vector2(0.3, 0.3)
+
+[node name="BG blue" type="Sprite2D" parent="BG0" unique_id=2004994011]
+position = Vector2(640, 360)
+rotation = 3.1415927
+texture = ExtResource("1_dc6vr")
+metadata/_edit_lock_ = true
+
+[node name="BG1" type="Parallax2D" parent="." unique_id=600968224]
+scroll_scale = Vector2(0.6, 0.6)
+
+[node name="algae" type="Sprite2D" parent="BG1" unique_id=325830252]
+position = Vector2(29, 659)
+texture = ExtResource("2_wqx1o")
+
+[node name="algae2" type="Sprite2D" parent="BG1" unique_id=1310339329]
+position = Vector2(202, 602)
+texture = ExtResource("2_wqx1o")
+
+[node name="algae3" type="Sprite2D" parent="BG1" unique_id=1506929327]
+position = Vector2(114, 778)
+texture = ExtResource("2_wqx1o")
+
+[node name="algae4" type="Sprite2D" parent="BG1" unique_id=1812543008]
+position = Vector2(431, 701)
+texture = ExtResource("2_wqx1o")
+
+[node name="algae5" type="Sprite2D" parent="BG1" unique_id=261643776]
+position = Vector2(577, 617)
+texture = ExtResource("2_wqx1o")
+
+[node name="algae6" type="Sprite2D" parent="BG1" unique_id=1507792063]
+position = Vector2(848, 692)
+texture = ExtResource("2_wqx1o")
+
+[node name="algae7" type="Sprite2D" parent="BG1" unique_id=1213685280]
+position = Vector2(1039, 603)
+texture = ExtResource("2_wqx1o")
+
+[node name="algae8" type="Sprite2D" parent="BG1" unique_id=1304632760]
+position = Vector2(279, 763)
+texture = ExtResource("2_wqx1o")
+
+[node name="algae9" type="Sprite2D" parent="BG1" unique_id=2056052899]
+position = Vector2(694, 811)
+texture = ExtResource("2_wqx1o")
+
+[node name="algae10" type="Sprite2D" parent="BG1" unique_id=1258150401]
+position = Vector2(1199, 719)
+texture = ExtResource("2_wqx1o")

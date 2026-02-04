@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var nextScenePath: String = "res://zone1/area2.tscn"
+@export var nextScenePath: String
 @export var spawnId: String
 
 func _ready():
