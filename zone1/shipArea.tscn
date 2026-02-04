@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://s5miu17xmqpb"]
 
-[ext_resource type="Script" uid="uid://bk3i86e1ekq60" path="res://scripts/shipArea.gd" id="1_33yf8"]
+[ext_resource type="Script" uid="uid://bk3i86e1ekq60" path="res://scripts/areas/Z1shipArea.gd" id="1_33yf8"]
 [ext_resource type="PackedScene" uid="uid://cgskhua4x4gwv" path="res://diver/diver.tscn" id="3_xjjo3"]
 [ext_resource type="PackedScene" uid="uid://m1uwr74ovk15" path="res://objects/islands/mapObjects/ship.tscn" id="5_d5fn5"]
 [ext_resource type="Script" uid="uid://d0jy5rwijm04x" path="res://scripts/portal.gd" id="6_tj27n"]

@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://c5n6xisi3rrqu"]
 
 [ext_resource type="PackedScene" uid="uid://cgskhua4x4gwv" path="res://diver/diver.tscn" id="1_sf2y4"]
-[ext_resource type="Script" uid="uid://c38yqo2xy8mhl" path="res://scripts/area3.gd" id="1_sy81p"]
+[ext_resource type="Script" uid="uid://c38yqo2xy8mhl" path="res://scripts/areas/Z1area3.gd" id="1_sy81p"]
 [ext_resource type="Script" uid="uid://d0jy5rwijm04x" path="res://scripts/portal.gd" id="2_sy81p"]
 [ext_resource type="TileSet" uid="uid://ckt5tk41ienfr" path="res://objects/islands/map/map tileset.tres" id="4_kelwv"]
 [ext_resource type="Texture2D" uid="uid://bub266dmxvm8t" path="res://objects/islands/map/sky.webp" id="5_sy81p"]

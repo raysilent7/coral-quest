@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://d1frlqrq3gigc"]
 
 [ext_resource type="PackedScene" uid="uid://cgskhua4x4gwv" path="res://diver/diver.tscn" id="1_sf2y4"]
-[ext_resource type="Script" uid="uid://cj6ggp4fdd52d" path="res://scripts/area2.gd" id="1_sy81p"]
+[ext_resource type="Script" uid="uid://cj6ggp4fdd52d" path="res://scripts/areas/Z1area2.gd" id="1_sy81p"]
 [ext_resource type="Script" uid="uid://d0jy5rwijm04x" path="res://scripts/portal.gd" id="2_sy81p"]
 [ext_resource type="TileSet" uid="uid://ckt5tk41ienfr" path="res://objects/islands/map/map tileset.tres" id="4_kelwv"]
 [ext_resource type="Texture2D" uid="uid://bu234kfpwug3u" path="res://objects/islands/map/bg forest.jpg" id="5_kelwv"]
