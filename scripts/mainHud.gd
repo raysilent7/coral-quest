@@ -3,13 +3,47 @@ extends Control
 @onready var oxygenBar = $oxygen
 @onready var polutionBar = $polution
 @onready var oxygenTimer = $oxygenTimer
+@onready var polutionTimer = $polutionTimer
 
 func _ready():
 	oxygenTimer.timeout.connect(onOxygenTimerTimeout)
-	oxygenBar.min_value = 0
-	oxygenBar.max_value = 90
-	oxygenBar.value = GameState.oxygenTime
+	polutionTimer.timeout.connect(onPolutionTimerTimeout)
 
+func _process(delta: float) -> void:
+	updatePolution()
+
+func onPolutionTimerTimeout():
+	if GameState.polutionValue <= GameState.totalPolution:
+		GameState.polutionValue += GameState.polutionFactor
+
+func updatePolution():	
+	if GameState.beatFirstPuzzle and GameState.executeFirst:
+		GameState.totalPolution = 71
+		GameState.polutionValue -= 25
+		polutionBar.value = GameState.polutionValue
+		GameState.executeFirst = false
+		GameState.polutionFactor = 4
+	if GameState.beatSecondPuzzle and GameState.executeSecond:
+		GameState.totalPolution = 47
+		GameState.polutionValue -= 25
+		polutionBar.value = GameState.polutionValue
+		GameState.executeSecond = false
+		GameState.polutionFactor = 3
+	if GameState.beatThirdPuzzle and GameState.executeThird:
+		GameState.totalPolution = 23
+		if GameState.polutionValue < 40:
+			GameState.polutionValue = 15
+		else:
+			GameState.polutionValue -= 25
+		polutionBar.value = GameState.polutionValue
+		GameState.executeThird = false
+		GameState.polutionFactor = 2
+	if GameState.beatFourthPuzzle and GameState.executeFourth:
+		GameState.totalPolution = 0
+		polutionBar.value = GameState.polutionValue
+		GameState.executeFourth = false
+		GameState.updateFourth = false
+		GameState.polutionFactor = 0
 
 func onOxygenTimerTimeout():
 	if GameState.isInWater and GameState.oxygenTime > 0:
@@ -17,7 +51,6 @@ func onOxygenTimerTimeout():
 	elif not GameState.isInWater and GameState.oxygenTime < 90:
 		GameState.oxygenTime += 1
 
-	print(GameState.oxygenTime)
 	oxygenBar.value = GameState.oxygenTime
 	updateBarColor(GameState.oxygenTime)
 
@@ -31,8 +64,8 @@ func updateBarColor(value: int):
 		oxygenBar.add_theme_stylebox_override("fill", style)
 
 	if value > 60:
-		style.bg_color = Color(0, 1, 0) # verde
+		style.bg_color = Color(0, 1, 0)
 	elif value > 30:
-		style.bg_color = Color(1, 1, 0) # amarelo
+		style.bg_color = Color(1, 1, 0)
 	else:
-		style.bg_color = Color(1, 0, 0) # vermelho
+		style.bg_color = Color(1, 0, 0)

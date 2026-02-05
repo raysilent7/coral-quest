@@ -19,6 +19,10 @@ texture = ExtResource("1_7gufm")
 [node name="oxygenTimer" type="Timer" parent="." unique_id=1208061184]
 autostart = true
 
+[node name="polutionTimer" type="Timer" parent="." unique_id=1177898568]
+wait_time = 60.0
+autostart = true
+
 [node name="oxygen" type="ProgressBar" parent="." unique_id=729955708]
 layout_mode = 0
 offset_left = 769.0
@@ -39,6 +43,6 @@ offset_top = 639.0
 offset_right = 511.0
 offset_bottom = 706.0
 step = 0.1
-value = 100.0
+value = 85.0
 rounded = true
 fill_mode = 3
