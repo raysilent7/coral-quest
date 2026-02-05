@@ -1,6 +1,6 @@
-[gd_scene load_steps=92 format=3 uid="uid://cyedf2p5hsf5k"]
+[gd_scene format=3 uid="uid://cyedf2p5hsf5k"]
 
-[ext_resource type="Script" uid="uid://beou1woy8gbnh" path="res://scripts/cardFlipping.gd" id="1_e7lgl"]
+[ext_resource type="Script" uid="uid://beou1woy8gbnh" path="res://scripts/minigames/cardFlipping.gd" id="1_e7lgl"]
 [ext_resource type="Texture2D" uid="uid://cbh7706qqjdp2" path="res://objects/cards/card nababa.png" id="2_jaq78"]
 [ext_resource type="Texture2D" uid="uid://nrvvlg4dd271" path="res://objects/cards/card clamp.png" id="3_i0lsu"]
 [ext_resource type="Texture2D" uid="uid://bx0ikk7yoiaxd" path="res://objects/cards/card star.png" id="3_jaq78"]

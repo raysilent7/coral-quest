@@ -1,11 +1,16 @@
 extends Node2D
 
+@onready var player: CharacterBody2D = $diver/diver
+@onready var waterLevel: Marker2D = $waterLevel
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	var spawnPoint = get_node_or_null(GameState.lastSpawnId)
+	var fromPortal = GameState.fromPortal
+	if fromPortal and spawnPoint:
+		player.global_position = spawnPoint.global_position
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if player is CharacterBody2D and player.global_position.y > waterLevel.global_position.y:
+		GameState.isInWater = true
+	else:
+		GameState.isInWater = false

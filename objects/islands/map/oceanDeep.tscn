@@ -20,10 +20,9 @@ texture = ExtResource("1_jqp5h")
 metadata/_edit_lock_ = true
 
 [node name="rocks" type="Parallax2D" parent="." unique_id=179129627]
-scroll_scale = Vector2(0.8, 0.8)
 
 [node name="rock1" type="Sprite2D" parent="rocks" unique_id=1960896767]
-position = Vector2(603, 525)
+position = Vector2(585, 439)
 scale = Vector2(1.4333334, 1.4333333)
 texture = ExtResource("2_t16dp")
 
@@ -33,7 +32,8 @@ scale = Vector2(0.47916666, 0.47916666)
 texture = ExtResource("3_bb58t")
 
 [node name="rock3" type="Sprite2D" parent="rocks" unique_id=21180303]
-position = Vector2(177, 570)
+position = Vector2(271.00003, 557)
+scale = Vector2(0.81640625, 0.7847222)
 texture = ExtResource("3_bb58t")
 
 [node name="algaes" type="Parallax2D" parent="." unique_id=1903887742]
@@ -52,7 +52,7 @@ position = Vector2(891, 263)
 texture = ExtResource("4_5sye7")
 
 [node name="BigAlgae4" type="Sprite2D" parent="algaes" unique_id=1462388378]
-position = Vector2(507, 263)
+position = Vector2(642, 272)
 texture = ExtResource("4_5sye7")
 
 [node name="BigAlgae" type="Sprite2D" parent="algaes" unique_id=157270299]
@@ -70,7 +70,7 @@ texture = ExtResource("4_5sye7")
 
 [node name="BigAlgae5" type="Sprite2D" parent="algaes" unique_id=1846730876]
 z_index = -1
-position = Vector2(567, 261)
+position = Vector2(530, 263)
 texture = ExtResource("4_5sye7")
 
 [node name="BigAlgae6" type="Sprite2D" parent="algaes" unique_id=248068095]

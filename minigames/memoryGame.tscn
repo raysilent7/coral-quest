@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dqivvjstf52u2"]
+[gd_scene format=3 uid="uid://dqivvjstf52u2"]
 
-[ext_resource type="Script" uid="uid://c6ud8ebuv6uln" path="res://scripts/memoryGame.gd" id="1_sxs6g"]
+[ext_resource type="Script" uid="uid://c6ud8ebuv6uln" path="res://scripts/minigames/memoryGame.gd" id="1_sxs6g"]
 [ext_resource type="PackedScene" uid="uid://cyedf2p5hsf5k" path="res://objects/cards/card.tscn" id="2_upmcs"]
 [ext_resource type="PackedScene" uid="uid://2iqyxxisd5v2" path="res://objects/popups/genericPopup.tscn" id="3_rs5dw"]
 

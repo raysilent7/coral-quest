@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ed0ebn7s7nww"]
 
-[ext_resource type="Script" uid="uid://do1nbqbd8q3j6" path="res://scripts/fruitGame.gd" id="1_rsnmq"]
+[ext_resource type="Script" uid="uid://do1nbqbd8q3j6" path="res://scripts/minigames/fruitGame.gd" id="1_rsnmq"]
 [ext_resource type="Texture2D" uid="uid://cb1hirieksuhx" path="res://objects/fruits/grubble fruit.png" id="2_3ixbb"]
 [ext_resource type="Texture2D" uid="uid://dkuems22848jr" path="res://objects/fruits/kiko fruit.png" id="3_xrf8n"]
 [ext_resource type="Texture2D" uid="uid://batjyikyq5kf5" path="res://objects/fruits/nababa fruit.png" id="4_gvxq4"]

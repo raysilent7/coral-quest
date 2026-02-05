@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cgskhua4x4gwv"]
 
-[ext_resource type="Script" uid="uid://f8acrxxycyqn" path="res://scripts/movement.gd" id="1_tgtyk"]
+[ext_resource type="Script" uid="uid://f8acrxxycyqn" path="res://scripts/diver.gd" id="1_tgtyk"]
 [ext_resource type="Texture2D" uid="uid://djuofujru37qj" path="res://diver/diver walking.png" id="2_0n5qm"]
 [ext_resource type="Texture2D" uid="uid://cc3bboifatiqn" path="res://diver/diver swiming.png" id="3_0n5qm"]
 

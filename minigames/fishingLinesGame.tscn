@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://nq3u0hrmy7d2"]
 
-[ext_resource type="Script" uid="uid://cfcphyft7n8yx" path="res://scripts/fishingLinesGame.gd" id="1_h58ws"]
+[ext_resource type="Script" uid="uid://cfcphyft7n8yx" path="res://scripts/minigames/fishingLinesGame.gd" id="1_h58ws"]
 [ext_resource type="PackedScene" uid="uid://cgskhua4x4gwv" path="res://diver/diver.tscn" id="1_hfchc"]
-[ext_resource type="Texture2D" uid="uid://ctvmuyjya0i3n" path="res://objects/islands/map/blue sky.png" id="2_pxb8m"]
+[ext_resource type="Texture2D" uid="uid://c7rfreo7mdb4d" path="res://objects/islands/map/blue sky.png" id="2_pxb8m"]
 [ext_resource type="PackedScene" uid="uid://cudik4wpcd4xa" path="res://objects/islands/mapObjects/shark.tscn" id="2_y6xvl"]
 [ext_resource type="PackedScene" uid="uid://c6idcr427agqs" path="res://objects/islands/mapObjects/fishingLine.tscn" id="3_d1nal"]
 
