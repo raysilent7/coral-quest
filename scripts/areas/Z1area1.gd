@@ -6,6 +6,9 @@ func _ready() -> void:
 	var spawnPoint = get_node_or_null(GameState.lastSpawnId)
 	var shrinePoint = get_node_or_null(GameState.lastShrineId)
 	var fromPortal = GameState.fromPortal
+
+	GameState.isDark = false
+
 	if fromPortal and spawnPoint:
 		player.global_position = spawnPoint.global_position
 	elif not fromPortal and shrinePoint:

@@ -6,6 +6,9 @@ extends Node2D
 func _ready() -> void:
 	var spawnPoint = get_node_or_null(GameState.lastSpawnId)
 	var fromPortal = GameState.fromPortal
+
+	GameState.isDark = true
+
 	if fromPortal and spawnPoint:
 		player.global_position = spawnPoint.global_position
 
