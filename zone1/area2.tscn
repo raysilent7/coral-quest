@@ -6,6 +6,7 @@
 [ext_resource type="TileSet" uid="uid://ckt5tk41ienfr" path="res://objects/islands/map/map tileset.tres" id="4_kelwv"]
 [ext_resource type="Texture2D" uid="uid://bu234kfpwug3u" path="res://objects/islands/map/bg forest.jpg" id="5_kelwv"]
 [ext_resource type="Texture2D" uid="uid://coiuh8ir38ao0" path="res://objects/islands/mapObjects/cave entrance1.png" id="6_nkc80"]
+[ext_resource type="PackedScene" uid="uid://bo786ln2pkfef" path="res://HUD/mainHUD.tscn" id="7_v5mfe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b37xf"]
 size = Vector2(31, 67)
@@ -66,3 +67,7 @@ metadata/_edit_lock_ = true
 [node name="CaveEntrance1" type="Sprite2D" parent="." unique_id=412896319]
 position = Vector2(638, 585)
 texture = ExtResource("6_nkc80")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1800697701]
+
+[node name="MainHud" parent="CanvasLayer" unique_id=485201413 instance=ExtResource("7_v5mfe")]

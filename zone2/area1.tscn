@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cgskhua4x4gwv" path="res://diver/diver.tscn" id="3_nxpxy"]
 [ext_resource type="Script" uid="uid://d0jy5rwijm04x" path="res://scripts/portal.gd" id="4_g86er"]
 [ext_resource type="TileSet" uid="uid://ckt5tk41ienfr" path="res://objects/islands/map/map tileset.tres" id="5_g86er"]
+[ext_resource type="PackedScene" uid="uid://bo786ln2pkfef" path="res://HUD/mainHUD.tscn" id="6_o0aj2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o0aj2"]
 size = Vector2(1278.75, 45)
@@ -56,3 +57,7 @@ position = Vector2(644, 33)
 
 [node name="area1Exit" type="Marker2D" parent="." unique_id=2065928977]
 position = Vector2(635.3966, 637.06445)
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=722892761]
+
+[node name="MainHud" parent="HUD" unique_id=485201413 instance=ExtResource("6_o0aj2")]

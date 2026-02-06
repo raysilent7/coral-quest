@@ -1,6 +1,16 @@
 extends CharacterBody2D
 
 @onready var anim: AnimatedSprite2D = $diverAnimation
+@onready var light: PointLight2D = $light
+
+func _process(delta: float) -> void:
+	if GameState.isDark:
+		light.energy = 1.0
+	elif GameState.selectedItem == "starFruit":
+		light.energy = 1.0
+		light.texture_scale = 10
+	else:
+		light.energy = 0.0
 
 func _physics_process(delta: float) -> void:
 	if GameState.isInWater:

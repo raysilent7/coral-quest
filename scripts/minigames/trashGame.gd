@@ -15,7 +15,6 @@ func _process(delta: float) -> void:
 	
 	if position.y >= 720.0:
 		GameState.points -= 1
-		print("aconteci")
 		queue_free()
 
 func changeTrash():

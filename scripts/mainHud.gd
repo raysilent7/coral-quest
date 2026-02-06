@@ -1,49 +1,50 @@
 extends Control
 
 @onready var oxygenBar = $oxygen
-@onready var polutionBar = $polution
+@onready var pollutionBar = $polution
 @onready var oxygenTimer = $oxygenTimer
-@onready var polutionTimer = $polutionTimer
+@onready var pollutionTimer = $polutionTimer
 
 func _ready():
 	oxygenTimer.timeout.connect(onOxygenTimerTimeout)
-	polutionTimer.timeout.connect(onPolutionTimerTimeout)
+	pollutionTimer.timeout.connect(onPollutionTimerTimeout)
 
 func _process(delta: float) -> void:
-	updatePolution()
+	updatePollution()
 
-func onPolutionTimerTimeout():
-	if GameState.polutionValue <= GameState.totalPolution:
-		GameState.polutionValue += GameState.polutionFactor
+func onPollutionTimerTimeout():
+	if GameState.pollutionValue <= GameState.totalPollution:
+		GameState.pollutionValue += GameState.pollutionFactor
+		pollutionBar.value = GameState.pollutionValue
 
-func updatePolution():	
+func updatePollution():	
 	if GameState.beatFirstPuzzle and GameState.executeFirst:
-		GameState.totalPolution = 71
-		GameState.polutionValue -= 25
-		polutionBar.value = GameState.polutionValue
+		GameState.totalPollution = 71
+		GameState.pollutionValue -= 25
+		pollutionBar.value = GameState.pollutionValue
 		GameState.executeFirst = false
-		GameState.polutionFactor = 4
+		GameState.pollutionFactor = 4
 	if GameState.beatSecondPuzzle and GameState.executeSecond:
 		GameState.totalPolution = 47
 		GameState.polutionValue -= 25
-		polutionBar.value = GameState.polutionValue
+		pollutionBar.value = GameState.pollutionValue
 		GameState.executeSecond = false
-		GameState.polutionFactor = 3
+		GameState.pollutionFactor = 3
 	if GameState.beatThirdPuzzle and GameState.executeThird:
 		GameState.totalPolution = 23
-		if GameState.polutionValue < 40:
-			GameState.polutionValue = 15
+		if GameState.pollutionValue < 40:
+			GameState.pollutionValue = 15
 		else:
-			GameState.polutionValue -= 25
-		polutionBar.value = GameState.polutionValue
+			GameState.pollutionValue -= 25
+		pollutionBar.value = GameState.pollutionValue
 		GameState.executeThird = false
 		GameState.polutionFactor = 2
 	if GameState.beatFourthPuzzle and GameState.executeFourth:
-		GameState.totalPolution = 0
-		polutionBar.value = GameState.polutionValue
+		GameState.totallPolution = 0
+		pollutionBar.value = GameState.pollutionValue
 		GameState.executeFourth = false
 		GameState.updateFourth = false
-		GameState.polutionFactor = 0
+		GameState.pollutionFactor = 0
 
 func onOxygenTimerTimeout():
 	if GameState.isInWater and GameState.oxygenTime > 0:
@@ -52,20 +53,18 @@ func onOxygenTimerTimeout():
 		GameState.oxygenTime += 1
 
 	oxygenBar.value = GameState.oxygenTime
-	updateBarColor(GameState.oxygenTime)
+	updateOxygenBarColor()
 
 	if GameState.oxygenTime <= 0:
 		print("voce morreu!")
 
-func updateBarColor(value: int):
-	var style = oxygenBar.get_theme_stylebox("fill")
-	if style == null:
-		style = StyleBoxFlat.new()
-		oxygenBar.add_theme_stylebox_override("fill", style)
+func updateOxygenBarColor():
+	var styleOxygen = oxygenBar.get_theme_stylebox("fill")
+	if styleOxygen == null:
+		styleOxygen = StyleBoxFlat.new()
+		oxygenBar.add_theme_stylebox_override("fill", styleOxygen)
+	styleOxygen.bg_color = Color(0, 1, 0)
 
-	if value > 60:
-		style.bg_color = Color(0, 1, 0)
-	elif value > 30:
-		style.bg_color = Color(1, 1, 0)
-	else:
-		style.bg_color = Color(1, 0, 0)
+func refillOxygen():
+	GameState.oxygenTime += 90
+	oxygenBar.value = GameState.oxygenTime

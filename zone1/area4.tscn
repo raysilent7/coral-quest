@@ -1,3 +1,9 @@
 [gd_scene format=3 uid="uid://b1j04gqub5crh"]
 
+[ext_resource type="PackedScene" uid="uid://bo786ln2pkfef" path="res://HUD/mainHUD.tscn" id="1_vvtme"]
+
 [node name="Area4" type="Node2D" unique_id=865987918]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1810217412]
+
+[node name="MainHud" parent="CanvasLayer" unique_id=485201413 instance=ExtResource("1_vvtme")]
