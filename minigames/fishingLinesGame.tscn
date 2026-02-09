@@ -10,6 +10,7 @@
 script = ExtResource("1_h58ws")
 fishingLineScene = ExtResource("2_y6xvl")
 obstacleScene = ExtResource("3_d1nal")
+nextScenePath = "res://zone1/area1.tscn"
 
 [node name="diver" parent="." unique_id=1169786233 instance=ExtResource("1_hfchc")]
 z_index = 10

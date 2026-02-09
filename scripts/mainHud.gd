@@ -25,20 +25,20 @@ func updatePollution():
 		GameState.executeFirst = false
 		GameState.pollutionFactor = 4
 	if GameState.beatSecondPuzzle and GameState.executeSecond:
-		GameState.totalPolution = 47
-		GameState.polutionValue -= 25
+		GameState.totalPollution = 47
+		GameState.pollutionValue -= 25
 		pollutionBar.value = GameState.pollutionValue
 		GameState.executeSecond = false
 		GameState.pollutionFactor = 3
 	if GameState.beatThirdPuzzle and GameState.executeThird:
-		GameState.totalPolution = 23
+		GameState.totalPollution = 23
 		if GameState.pollutionValue < 40:
 			GameState.pollutionValue = 15
 		else:
 			GameState.pollutionValue -= 25
 		pollutionBar.value = GameState.pollutionValue
 		GameState.executeThird = false
-		GameState.polutionFactor = 2
+		GameState.pollutionFactor = 2
 	if GameState.beatFourthPuzzle and GameState.executeFourth:
 		GameState.totallPolution = 0
 		pollutionBar.value = GameState.pollutionValue

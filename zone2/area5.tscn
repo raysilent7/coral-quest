@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://crl3s4expo2v3" path="res://objects/islands/map/pillars tilemap.png" id="5_egktr"]
 [ext_resource type="Texture2D" uid="uid://b4eylr45tguxj" path="res://objects/islands/map/deep ocean.png" id="5_p4jbe"]
 [ext_resource type="Script" uid="uid://d26etb7naen5k" path="res://scripts/shrine.gd" id="8_uqf38"]
-[ext_resource type="PackedScene" uid="uid://fxswuvla0yar" path="res://objects/popups/instructionsScene.tscn" id="9_3y3ur"]
 [ext_resource type="Texture2D" uid="uid://7ilfyed42x5h" path="res://objects/islands/mapObjects/shrine3.png" id="10_828ot"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhrft"]
@@ -172,7 +171,6 @@ scroll_scale = Vector2(0.6, 0.6)
 [node name="shrine2" type="Area2D" parent="." unique_id=471767086]
 position = Vector2(642, 551)
 script = ExtResource("8_uqf38")
-instructionsScene = ExtResource("9_3y3ur")
 shrineId = "shrine2"
 
 [node name="shrineCol" type="CollisionShape2D" parent="shrine2" unique_id=1971268025]

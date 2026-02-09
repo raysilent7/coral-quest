@@ -5,7 +5,6 @@ func _process(delta: float) -> void:
 
 #environment
 var lastSpawnId: String = ""
-var lastMapPath: String = ""
 var fromPortal: bool = true #padrao TRUE
 var isInWater: bool = false #padrao FALSE
 var oxygenTime: int  = 90
@@ -21,13 +20,14 @@ var executeThird: bool = true
 var executeFourth: bool = true
 
 #minigames
-var isInFishingLinesGame: bool = true #padrao FALSE
+var isInFishingLinesGame: bool = false #padrao FALSE
 var beatFirstPuzzle: bool = false
 var beatSecondPuzzle: bool = false
 var beatThirdPuzzle: bool = false
 var beatFourthPuzzle: bool = false
 var points: int = 0
 var lastShrineId: String = ""
+var lastMapPath: String = ""
 var bonusSpeed: float = 0.0
 
 #inventory

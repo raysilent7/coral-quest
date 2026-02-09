@@ -13,6 +13,8 @@ var gameEnded: bool = false
 
 func _ready() -> void:
 	GameState.points = 0
+	nextScenePath = GameState.lastMapPath
+	print(GameState.lastMapPath)
 	diver.disableCamera()
 
 func _process(delta):
@@ -52,10 +54,6 @@ func showPopup():
 	add_child(popup)
 	popup.setMessage("Parabens, voce venceu o segundo desafio. Voce está cada vez mais proximo de salvar o arquipelago, mas ainda há muito a fazer, continue sua jornada.")
 	popup.setButtonText("OK")
-	popup.setButtonAction(
-		func():
-			get_tree().change_scene_to_file(nextScenePath)
-	)
 
 func endGame():
 	gameEnded = true

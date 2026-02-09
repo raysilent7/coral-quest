@@ -19,6 +19,3 @@ func setMessage(text: String):
 
 func setButtonText(text: String):
 	button.text = text
-
-func setButtonAction(callback: Callable):
-	button.pressed.connect(callback)
