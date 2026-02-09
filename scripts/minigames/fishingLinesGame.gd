@@ -3,6 +3,7 @@ extends Node2D
 @export var fishingLineScene: PackedScene
 @export var obstacleScene: PackedScene
 @export var nextScenePath: String = "res://zone1/area2.tscn"
+@onready var diver: CharacterBody2D = $diver/diver
 
 var popupVictory = preload("res://objects/popups/genericPopup.tscn")
 var spawnInterval: float = 2.0
@@ -12,6 +13,7 @@ var gameEnded: bool = false
 
 func _ready() -> void:
 	GameState.points = 0
+	diver.disableCamera()
 
 func _process(delta):
 	if gameEnded:
@@ -57,5 +59,8 @@ func showPopup():
 
 func endGame():
 	gameEnded = true
+	GameState.isInFishingLinesGame = false
+	GameState.isInWater = true
+	diver.enableCamera()
 	for child in get_children():
 		child.queue_free()

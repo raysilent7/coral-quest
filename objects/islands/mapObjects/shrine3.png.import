@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://baijq2r0le5sg"
-path="res://.godot/imported/shark.png-7a1b29d3ef048d994bf1bc5832b8bc47.ctex"
+uid="uid://7ilfyed42x5h"
+path="res://.godot/imported/shrine3.png-a7ab21e59ebb7ff850400a357d67fbea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/islands/mapObjects/shark.png"
-dest_files=["res://.godot/imported/shark.png-7a1b29d3ef048d994bf1bc5832b8bc47.ctex"]
+source_file="res://objects/islands/mapObjects/shrine3.png"
+dest_files=["res://.godot/imported/shrine3.png-a7ab21e59ebb7ff850400a357d67fbea.ctex"]
 
 [params]
 

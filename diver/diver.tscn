@@ -90,7 +90,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"swim",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -122,8 +122,6 @@ script = ExtResource("1_tgtyk")
 position = Vector2(-1, -1)
 sprite_frames = SubResource("SpriteFrames_kdubu")
 animation = &"walk"
-frame = 3
-frame_progress = 0.8221449
 
 [node name="diverCollision" type="CollisionShape2D" parent="diver" unique_id=1719258847]
 shape = SubResource("RectangleShape2D_0hol4")

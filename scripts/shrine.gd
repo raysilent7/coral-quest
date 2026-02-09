@@ -2,7 +2,7 @@ extends Area2D
 
 @onready var label: Label = $pressE
 @export var instructionsScene: PackedScene
-@export var minigameScenePath: String = "res://minigames/memoryGame.tscn"
+@export var minigameScenePath: String = "res://minigames/fishingLinesGame.tscn"
 @export var shrineId: String
 
 var playerInside: bool = false

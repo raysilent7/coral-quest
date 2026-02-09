@@ -10,7 +10,7 @@ func _process(delta: float) -> void:
 	var bonusSpeed: float = GameState.bonusSpeed
 	position.x -= (speed + bonusSpeed) * delta
 	
-	if position.x <= 0:
+	if position.x <= -1290:
 		queue_free()
 
 func onBodyEntered(body):

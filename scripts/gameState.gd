@@ -21,7 +21,7 @@ var executeThird: bool = true
 var executeFourth: bool = true
 
 #minigames
-var isInFishingLinesGame: bool = false #padrao FALSE
+var isInFishingLinesGame: bool = true #padrao FALSE
 var beatFirstPuzzle: bool = false
 var beatSecondPuzzle: bool = false
 var beatThirdPuzzle: bool = false

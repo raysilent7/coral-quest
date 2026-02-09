@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var anim: AnimatedSprite2D = $diverAnimation
 @onready var light: PointLight2D = $light
+@onready var camera: Camera2D = $camera
 
 func _process(delta: float) -> void:
 	if GameState.isDark:
@@ -81,3 +82,9 @@ func getSwimAnimation() -> String:
 		return "idleSwim"
 	else:
 		return "idle"
+
+func disableCamera():
+	camera.enabled = false
+
+func enableCamera():
+	camera.enabled = true

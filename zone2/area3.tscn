@@ -135,7 +135,7 @@ texture = ExtResource("7_mqi6o")
 
 [node name="BigAlgae9" type="Sprite2D" parent="BG/BG2" unique_id=321321109]
 z_index = -1
-position = Vector2(1108, 253)
+position = Vector2(1101, 267)
 texture = ExtResource("7_wxeuw")
 
 [node name="BigAlgae8" type="Sprite2D" parent="BG/BG2" unique_id=620205333]
@@ -177,16 +177,16 @@ position = Vector2(1199, 287)
 texture = ExtResource("7_wxeuw")
 
 [node name="rock1" type="Sprite2D" parent="BG/BG2" unique_id=1164285060]
-position = Vector2(796.00006, 478)
+position = Vector2(1082, 549)
 scale = Vector2(1.4333334, 1.4333333)
 texture = ExtResource("8_eos1t")
 
 [node name="rock2" type="Sprite2D" parent="BG/BG2" unique_id=1343194185]
-position = Vector2(1168.0001, 603)
+position = Vector2(269.00012, 641)
 scale = Vector2(0.47916666, 0.47916666)
 texture = ExtResource("9_345gc")
 
 [node name="rock3" type="Sprite2D" parent="BG/BG2" unique_id=1098596914]
-position = Vector2(289, 621)
+position = Vector2(589, 567)
 scale = Vector2(0.81640625, 0.7847222)
 texture = ExtResource("9_345gc")
