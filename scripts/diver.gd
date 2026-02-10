@@ -5,11 +5,11 @@ extends CharacterBody2D
 @onready var camera: Camera2D = $camera
 
 func _process(delta: float) -> void:
-	if GameState.isDark:
+	if GameState.isDark and GameState.selectedItem != "starFruit":
 		light.energy = 1.0
 	elif GameState.selectedItem == "starFruit":
 		light.energy = 1.0
-		light.texture_scale = 10
+		light.texture_scale = 5
 	else:
 		light.energy = 0.0
 
