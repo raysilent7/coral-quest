@@ -134,5 +134,4 @@ limit_right = 1280
 limit_bottom = 720
 
 [node name="light" type="PointLight2D" parent="diver" unique_id=1777865819]
-energy = 0.0
 texture = ExtResource("4_jew3a")
