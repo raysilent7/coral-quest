@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c6ud8ebuv6uln" path="res://scripts/minigames/memoryGame.gd" id="1_sxs6g"]
 [ext_resource type="PackedScene" uid="uid://cyedf2p5hsf5k" path="res://objects/cards/card.tscn" id="2_upmcs"]
-[ext_resource type="PackedScene" uid="uid://2iqyxxisd5v2" path="res://objects/popups/genericPopup.tscn" id="3_rs5dw"]
+[ext_resource type="PackedScene" uid="uid://2iqyxxisd5v2" path="res://HUD/genericPopup.tscn" id="3_rs5dw"]
 
 [node name="MemoryGame" type="Node2D"]
 script = ExtResource("1_sxs6g")

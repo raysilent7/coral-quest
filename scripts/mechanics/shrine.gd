@@ -31,7 +31,6 @@ func _process(delta):
 		add_child(popup)
 		popup.setMessage(resolveText())
 		popup.setTitle(resolveTitle())
-		get_tree().root.add_child(popup)
 		popup.setup(minigameScenePath)
 
 func resolveText() -> String:
