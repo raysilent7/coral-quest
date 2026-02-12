@@ -2,12 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://cgskhua4x4gwv" path="res://diver/diver.tscn" id="1_gq7b3"]
 [ext_resource type="Script" uid="uid://deovnt65vuigj" path="res://scripts/areas/Z2area5.gd" id="1_uqf38"]
-[ext_resource type="Script" uid="uid://d0jy5rwijm04x" path="res://scripts/portal.gd" id="2_uqf38"]
+[ext_resource type="Script" uid="uid://d0jy5rwijm04x" path="res://scripts/mechanics/portal.gd" id="2_uqf38"]
 [ext_resource type="TileSet" uid="uid://ckt5tk41ienfr" path="res://objects/islands/map/map tileset.tres" id="3_3y3ur"]
 [ext_resource type="PackedScene" uid="uid://bo786ln2pkfef" path="res://HUD/mainHUD.tscn" id="4_828ot"]
 [ext_resource type="Texture2D" uid="uid://crl3s4expo2v3" path="res://objects/islands/map/pillars tilemap.png" id="5_egktr"]
 [ext_resource type="Texture2D" uid="uid://b4eylr45tguxj" path="res://objects/islands/map/deep ocean.png" id="5_p4jbe"]
-[ext_resource type="Script" uid="uid://d26etb7naen5k" path="res://scripts/shrine.gd" id="8_uqf38"]
+[ext_resource type="Script" uid="uid://d26etb7naen5k" path="res://scripts/mechanics/shrine.gd" id="8_uqf38"]
 [ext_resource type="Texture2D" uid="uid://7ilfyed42x5h" path="res://objects/islands/mapObjects/shrine3.png" id="10_828ot"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhrft"]

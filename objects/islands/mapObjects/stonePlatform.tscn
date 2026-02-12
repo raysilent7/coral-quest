@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b3m25nmj4co84"]
 
-[ext_resource type="Script" uid="uid://cxpryfyp5calt" path="res://scripts/platformMove.gd" id="1_rmbar"]
+[ext_resource type="Script" uid="uid://cxpryfyp5calt" path="res://scripts/mechanics/platformMove.gd" id="1_rmbar"]
 [ext_resource type="Texture2D" uid="uid://dcgl3x7vqdh6o" path="res://objects/islands/mapObjects/stone.png" id="2_xsg8o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5a8ai"]

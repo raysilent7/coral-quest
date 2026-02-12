@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cyaqlpwidoop" path="res://scripts/areas/Z2area1.gd" id="1_0cp64"]
 [ext_resource type="PackedScene" uid="uid://drkh61h36lf42" path="res://objects/islands/map/oceanStart.tscn" id="2_w11a0"]
 [ext_resource type="PackedScene" uid="uid://cgskhua4x4gwv" path="res://diver/diver.tscn" id="3_nxpxy"]
-[ext_resource type="Script" uid="uid://d0jy5rwijm04x" path="res://scripts/portal.gd" id="4_g86er"]
+[ext_resource type="Script" uid="uid://d0jy5rwijm04x" path="res://scripts/mechanics/portal.gd" id="4_g86er"]
 [ext_resource type="TileSet" uid="uid://ckt5tk41ienfr" path="res://objects/islands/map/map tileset.tres" id="5_g86er"]
 [ext_resource type="PackedScene" uid="uid://bo786ln2pkfef" path="res://HUD/mainHUD.tscn" id="6_o0aj2"]
 

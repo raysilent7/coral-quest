@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://birq5k7gspu5p" path="res://scripts/areas/Z3area1.gd" id="1_3xswd"]
 [ext_resource type="PackedScene" uid="uid://cgskhua4x4gwv" path="res://diver/diver.tscn" id="1_yh2cl"]
-[ext_resource type="Script" uid="uid://d0jy5rwijm04x" path="res://scripts/portal.gd" id="2_3xswd"]
+[ext_resource type="Script" uid="uid://d0jy5rwijm04x" path="res://scripts/mechanics/portal.gd" id="2_3xswd"]
 [ext_resource type="TileSet" uid="uid://ckt5tk41ienfr" path="res://objects/islands/map/map tileset.tres" id="3_nq8ku"]
 [ext_resource type="PackedScene" uid="uid://bo786ln2pkfef" path="res://HUD/mainHUD.tscn" id="5_1mgcj"]
 [ext_resource type="Texture2D" uid="uid://b4eylr45tguxj" path="res://objects/islands/map/deep ocean.png" id="6_3xswd"]

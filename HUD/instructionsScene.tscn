@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://fxswuvla0yar"]
 
-[ext_resource type="Script" uid="uid://b4x76ys3kh4hq" path="res://scripts/instructionsScene.gd" id="1_kqdj5"]
+[ext_resource type="Script" uid="uid://b4x76ys3kh4hq" path="res://scripts/HUD/instructionsScene.gd" id="1_kqdj5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4hf28"]
 font_size = 13

@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://blvg0ujg2vm2i" path="res://scripts/areas/Z1area1.gd" id="1_1aodt"]
 [ext_resource type="PackedScene" uid="uid://cgskhua4x4gwv" path="res://diver/diver.tscn" id="3_ipdce"]
-[ext_resource type="Script" uid="uid://d0jy5rwijm04x" path="res://scripts/portal.gd" id="4_jvlkc"]
-[ext_resource type="Script" uid="uid://d26etb7naen5k" path="res://scripts/shrine.gd" id="5_6fl8w"]
+[ext_resource type="Script" uid="uid://d0jy5rwijm04x" path="res://scripts/mechanics/portal.gd" id="4_jvlkc"]
+[ext_resource type="Script" uid="uid://d26etb7naen5k" path="res://scripts/mechanics/shrine.gd" id="5_6fl8w"]
 [ext_resource type="Texture2D" uid="uid://oegwmqlrwihg" path="res://objects/islands/mapObjects/shrine11.png" id="7_tnhkn"]
 [ext_resource type="PackedScene" uid="uid://b3m25nmj4co84" path="res://objects/islands/mapObjects/stonePlatform.tscn" id="8_4exl7"]
 [ext_resource type="TileSet" uid="uid://ckt5tk41ienfr" path="res://objects/islands/map/map tileset.tres" id="9_1aodt"]
