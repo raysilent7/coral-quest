@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" format=3 uid="uid://ckt5tk41ienfr"]
 
-[ext_resource type="Texture2D" uid="uid://c3d1xegf0u0wa" path="res://objects/islands/map/new tilemap.png" id="1_tisqv"]
+[ext_resource type="Texture2D" uid="uid://crkr2cdk0absk" path="res://objects/islands/map/new tilemap.png" id="1_tisqv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tisqv"]
 texture = ExtResource("1_tisqv")
@@ -151,12 +151,14 @@ texture = ExtResource("1_tisqv")
 39:7/0 = 0
 1:8/0 = 0
 2:8/0 = 0
+4:8/0 = 0
 5:8/0 = 0
 7:8/0 = 0
 8:8/0 = 0
 10:8/0 = 0
 11:8/0 = 0
 13:8/0 = 0
+14:8/0 = 0
 16:8/0 = 0
 17:8/0 = 0
 20:8/0 = 0
@@ -439,8 +441,6 @@ texture = ExtResource("1_tisqv")
 35:23/0 = 0
 37:23/0 = 0
 38:23/0 = 0
-14:8/0 = 0
-4:8/0 = 0
 
 [resource]
 physics_layer_0/collision_layer = 1
