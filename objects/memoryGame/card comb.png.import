@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jvejj0ksdu3d"
-path="res://.godot/imported/card comb.png-2fcd3df7cb611f50d3d276db076ff7bc.ctex"
+path="res://.godot/imported/card comb.png-1b6bd64cda46d5419803a789e991e62c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/cards/card comb.png"
-dest_files=["res://.godot/imported/card comb.png-2fcd3df7cb611f50d3d276db076ff7bc.ctex"]
+source_file="res://objects/memoryGame/card comb.png"
+dest_files=["res://.godot/imported/card comb.png-1b6bd64cda46d5419803a789e991e62c.ctex"]
 
 [params]
 

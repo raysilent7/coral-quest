@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dseskjkigstxy"
-path="res://.godot/imported/card fish.png-35ba0584e7501edc85ae94b5459f5564.ctex"
+uid="uid://uxfah2cparr4"
+path="res://.godot/imported/card grubble.png-e51501ecb227342c79b78cb007ae8b52.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/cards/card fish.png"
-dest_files=["res://.godot/imported/card fish.png-35ba0584e7501edc85ae94b5459f5564.ctex"]
+source_file="res://objects/memoryGame/card grubble.png"
+dest_files=["res://.godot/imported/card grubble.png-e51501ecb227342c79b78cb007ae8b52.ctex"]
 
 [params]
 

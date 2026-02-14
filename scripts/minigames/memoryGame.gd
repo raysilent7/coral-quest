@@ -4,7 +4,7 @@ extends Node2D
 @export var genericScene: PackedScene
 @export var rows: int = 4
 @export var cols: int = 4
-@export var spacing: Vector2 = Vector2(120, 120)
+@export var spacing: Vector2 = Vector2(70, 70)
 
 var firstCard: Node2D = null
 var secondCard: Node2D = null
@@ -28,17 +28,43 @@ func _ready():
 
 func buildBoard():
 	var index = 0
+	var cardSize = Vector2(64, 64)
+	var boardSize = Vector2(
+		cols * cardSize.x + (cols + 1) * spacing.x,
+		rows * cardSize.y + (rows) * spacing.y
+	)
+	var screenSize = get_viewport_rect().size
+	var startPos = (screenSize - boardSize) / 2
+
 	for row in range(rows):
 		for col in range(cols):
 			var card = cardScene.instantiate()
-
 			add_child(card)
 
-			card.position = Vector2(col * spacing.x, row * spacing.y)
+			var pos = startPos + Vector2(
+				col * (cardSize.x + spacing.x),
+				row * (cardSize.y + spacing.y)
+			)
+
+			card.position = pos
 			card.flipAnimation = deck[index]
 			card.unflipAnimation = resolveUnflipAnimation(deck[index])
 
 			index += 1
+
+#func buildBoard():
+	#var index = 0
+	#for row in range(rows):
+		#for col in range(cols):
+			#var card = cardScene.instantiate()
+#
+			#add_child(card)
+#
+			#card.position = startPos + Vector2(col * spacing.x, row * spacing.y)
+			#card.flipAnimation = deck[index]
+			#card.unflipAnimation = resolveUnflipAnimation(deck[index])
+#
+			#index += 1
 
 func resolveUnflipAnimation(flipAnim: String) -> String:
 	if "flipNababa" == flipAnim:

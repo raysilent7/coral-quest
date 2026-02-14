@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5b1yk8kt04s5"
-path="res://.godot/imported/card trident.png-4af05136b623e1d2ba360d451d62af18.ctex"
+uid="uid://bx0ikk7yoiaxd"
+path="res://.godot/imported/card star.png-24d913ac5849d936c02f2b7de995f8c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/cards/card trident.png"
-dest_files=["res://.godot/imported/card trident.png-4af05136b623e1d2ba360d451d62af18.ctex"]
+source_file="res://objects/memoryGame/card star.png"
+dest_files=["res://.godot/imported/card star.png-24d913ac5849d936c02f2b7de995f8c1.ctex"]
 
 [params]
 

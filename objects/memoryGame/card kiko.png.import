@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uxfah2cparr4"
-path="res://.godot/imported/card grubble.png-bd2018f4174c764393c95984acda64b9.ctex"
+uid="uid://rk6vcnlfk6xm"
+path="res://.godot/imported/card kiko.png-9c6ab0b7d0a4251fa00bcb50e403aaa5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/cards/card grubble.png"
-dest_files=["res://.godot/imported/card grubble.png-bd2018f4174c764393c95984acda64b9.ctex"]
+source_file="res://objects/memoryGame/card kiko.png"
+dest_files=["res://.godot/imported/card kiko.png-9c6ab0b7d0a4251fa00bcb50e403aaa5.ctex"]
 
 [params]
 
