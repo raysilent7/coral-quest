@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbh7706qqjdp2"
-path="res://.godot/imported/card nababa.png-92fa0a1fddf0849cb1e1aa058c3427a6.ctex"
+path="res://.godot/imported/card nababa.png-dfe8c4e01d8a6db1611bf608d1fe5054.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/cards/card nababa.png"
-dest_files=["res://.godot/imported/card nababa.png-92fa0a1fddf0849cb1e1aa058c3427a6.ctex"]
+source_file="res://objects/memoryGame/card nababa.png"
+dest_files=["res://.godot/imported/card nababa.png-dfe8c4e01d8a6db1611bf608d1fe5054.ctex"]
 
 [params]
 

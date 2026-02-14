@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rk6vcnlfk6xm"
-path="res://.godot/imported/card kiko.png-63d655c798df5e1dd5de3ded2a4b0ab7.ctex"
+uid="uid://dseskjkigstxy"
+path="res://.godot/imported/card fish.png-aaca33fbb439eb454a8d8cc7340674aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/cards/card kiko.png"
-dest_files=["res://.godot/imported/card kiko.png-63d655c798df5e1dd5de3ded2a4b0ab7.ctex"]
+source_file="res://objects/memoryGame/card fish.png"
+dest_files=["res://.godot/imported/card fish.png-aaca33fbb439eb454a8d8cc7340674aa.ctex"]
 
 [params]
 

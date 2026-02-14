@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://cyedf2p5hsf5k"]
 
 [ext_resource type="Script" uid="uid://beou1woy8gbnh" path="res://scripts/minigames/cardFlipping.gd" id="1_e7lgl"]
-[ext_resource type="Texture2D" uid="uid://cbh7706qqjdp2" path="res://objects/cards/card nababa.png" id="2_jaq78"]
-[ext_resource type="Texture2D" uid="uid://nrvvlg4dd271" path="res://objects/cards/card clamp.png" id="3_i0lsu"]
-[ext_resource type="Texture2D" uid="uid://bx0ikk7yoiaxd" path="res://objects/cards/card star.png" id="3_jaq78"]
-[ext_resource type="Texture2D" uid="uid://jvejj0ksdu3d" path="res://objects/cards/card comb.png" id="4_uu24r"]
-[ext_resource type="Texture2D" uid="uid://dseskjkigstxy" path="res://objects/cards/card fish.png" id="5_axxwk"]
-[ext_resource type="Texture2D" uid="uid://uxfah2cparr4" path="res://objects/cards/card grubble.png" id="6_peipo"]
-[ext_resource type="Texture2D" uid="uid://rk6vcnlfk6xm" path="res://objects/cards/card kiko.png" id="7_qohpw"]
-[ext_resource type="Texture2D" uid="uid://c5b1yk8kt04s5" path="res://objects/cards/card trident.png" id="9_k8g0p"]
+[ext_resource type="Texture2D" uid="uid://cbh7706qqjdp2" path="res://objects/memoryGame/card nababa.png" id="2_jaq78"]
+[ext_resource type="Texture2D" uid="uid://nrvvlg4dd271" path="res://objects/memoryGame/card clamp.png" id="3_i0lsu"]
+[ext_resource type="Texture2D" uid="uid://bx0ikk7yoiaxd" path="res://objects/memoryGame/card star.png" id="3_jaq78"]
+[ext_resource type="Texture2D" uid="uid://jvejj0ksdu3d" path="res://objects/memoryGame/card comb.png" id="4_uu24r"]
+[ext_resource type="Texture2D" uid="uid://dseskjkigstxy" path="res://objects/memoryGame/card fish.png" id="5_axxwk"]
+[ext_resource type="Texture2D" uid="uid://uxfah2cparr4" path="res://objects/memoryGame/card grubble.png" id="6_peipo"]
+[ext_resource type="Texture2D" uid="uid://rk6vcnlfk6xm" path="res://objects/memoryGame/card kiko.png" id="7_qohpw"]
+[ext_resource type="Texture2D" uid="uid://c5b1yk8kt04s5" path="res://objects/memoryGame/card trident.png" id="9_k8g0p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jaq78"]
 atlas = ExtResource("2_jaq78")

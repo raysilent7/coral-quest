@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nrvvlg4dd271"
-path="res://.godot/imported/card clamp.png-384ba16a13eb2b08e3a2d0360940c091.ctex"
+uid="uid://br0qijx410ogx"
+path="res://.godot/imported/stone table.png-7dc3ffe40882f99ffc91f79226100f96.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/cards/card clamp.png"
-dest_files=["res://.godot/imported/card clamp.png-384ba16a13eb2b08e3a2d0360940c091.ctex"]
+source_file="res://objects/memoryGame/stone table.png"
+dest_files=["res://.godot/imported/stone table.png-7dc3ffe40882f99ffc91f79226100f96.ctex"]
 
 [params]
 

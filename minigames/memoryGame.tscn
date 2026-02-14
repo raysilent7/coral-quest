@@ -1,10 +1,15 @@
 [gd_scene format=3 uid="uid://dqivvjstf52u2"]
 
 [ext_resource type="Script" uid="uid://c6ud8ebuv6uln" path="res://scripts/minigames/memoryGame.gd" id="1_sxs6g"]
-[ext_resource type="PackedScene" uid="uid://cyedf2p5hsf5k" path="res://objects/cards/card.tscn" id="2_upmcs"]
+[ext_resource type="PackedScene" uid="uid://cyedf2p5hsf5k" path="res://objects/memoryGame/card.tscn" id="2_upmcs"]
 [ext_resource type="PackedScene" uid="uid://2iqyxxisd5v2" path="res://HUD/genericPopup.tscn" id="3_rs5dw"]
+[ext_resource type="Texture2D" uid="uid://br0qijx410ogx" path="res://objects/memoryGame/stone table.png" id="4_em340"]
 
-[node name="MemoryGame" type="Node2D"]
+[node name="MemoryGame" type="Node2D" unique_id=1905146875]
 script = ExtResource("1_sxs6g")
 cardScene = ExtResource("2_upmcs")
 genericScene = ExtResource("3_rs5dw")
+
+[node name="StoneTable" type="Sprite2D" parent="." unique_id=1024414212]
+position = Vector2(640, 360)
+texture = ExtResource("4_em340")
