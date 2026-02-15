@@ -3,12 +3,26 @@
 [ext_resource type="Script" uid="uid://c6ud8ebuv6uln" path="res://scripts/minigames/memoryGame.gd" id="1_sxs6g"]
 [ext_resource type="PackedScene" uid="uid://cyedf2p5hsf5k" path="res://objects/memoryGame/card.tscn" id="2_upmcs"]
 [ext_resource type="PackedScene" uid="uid://2iqyxxisd5v2" path="res://HUD/genericPopup.tscn" id="3_rs5dw"]
-[ext_resource type="Texture2D" uid="uid://br0qijx410ogx" path="res://objects/memoryGame/stone table.png" id="4_em340"]
+[ext_resource type="Shader" uid="uid://bcimpvk2cxg4n" path="res://minigames/memoryGame.gdshader" id="4_d4376"]
+[ext_resource type="Texture2D" uid="uid://cmn5r3r1k2cl8" path="res://objects/memoryGame/stone table.png" id="4_em340"]
+[ext_resource type="Texture2D" uid="uid://djfgbjpp1lmuh" path="res://objects/memoryGame/BG sea floor.png" id="4_yj4p0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n5bg1"]
+shader = ExtResource("4_d4376")
+shader_parameter/waterTint = Vector4(0, 0.2, 0.4, 0.6)
+shader_parameter/waveSpeed = 1.5
+shader_parameter/waveStrength = 0.01
+shader_parameter/waveFrequency = 8.0
 
 [node name="MemoryGame" type="Node2D" unique_id=1905146875]
 script = ExtResource("1_sxs6g")
 cardScene = ExtResource("2_upmcs")
 genericScene = ExtResource("3_rs5dw")
+
+[node name="BgSeaFloor" type="Sprite2D" parent="." unique_id=1113930661]
+material = SubResource("ShaderMaterial_n5bg1")
+position = Vector2(640, 360)
+texture = ExtResource("4_yj4p0")
 
 [node name="StoneTable" type="Sprite2D" parent="." unique_id=1024414212]
 position = Vector2(640, 360)
