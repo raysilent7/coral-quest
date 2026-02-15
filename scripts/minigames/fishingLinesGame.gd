@@ -5,7 +5,7 @@ extends Node2D
 @export var nextScenePath: String = "res://zone1/area2.tscn"
 @onready var diver: CharacterBody2D = $diver/diver
 
-var popupVictory = preload("res://objects/popups/genericPopup.tscn")
+var popupVictory = preload("res://HUD/genericPopup.tscn")
 var spawnInterval: float = 2.0
 var timer: float = 0.0
 var maxCount: int = 0

@@ -9,10 +9,13 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n5bg1"]
 shader = ExtResource("4_d4376")
-shader_parameter/waterTint = Vector4(0, 0.2, 0.4, 0.6)
-shader_parameter/waveSpeed = 1.5
-shader_parameter/waveStrength = 0.01
-shader_parameter/waveFrequency = 8.0
+shader_parameter/water_tint = Vector4(0, 0.4, 0.8, 0.3)
+shader_parameter/wave_speed = 1.5
+shader_parameter/wave_strength = 0.02
+shader_parameter/wave_frequency = 8.0
+shader_parameter/shimmer_intensity = 0.1
+shader_parameter/shimmer_speed = 1.5
+shader_parameter/shimmer_scale = 16.0
 
 [node name="MemoryGame" type="Node2D" unique_id=1905146875]
 script = ExtResource("1_sxs6g")

@@ -4,7 +4,7 @@ extends Area2D
 @export var minigameScenePath: String = "res://minigames/fishingLinesGame.tscn"
 @export var shrineId: String
 
-var instructions = preload("res://objects/popups/instructionsScene.tscn")
+var instructions = preload("res://HUD/instructionsScene.tscn")
 var playerInside: bool = false
 
 func _ready():

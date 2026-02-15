@@ -5,6 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://c7rfreo7mdb4d" path="res://objects/islands/map/blue sky.png" id="2_pxb8m"]
 [ext_resource type="PackedScene" uid="uid://cudik4wpcd4xa" path="res://objects/fishingLine/shark.tscn" id="2_y6xvl"]
 [ext_resource type="PackedScene" uid="uid://c6idcr427agqs" path="res://objects/fishingLine/fishingLine.tscn" id="3_d1nal"]
+[ext_resource type="Script" uid="uid://d2pfr022a3dym" path="res://minigames/outOfMap.gd" id="6_d1nal"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lcjym"]
+size = Vector2(1282.5, 30)
 
 [node name="fishingLinesGame" type="Node2D" unique_id=417538369]
 script = ExtResource("1_h58ws")
@@ -22,3 +26,11 @@ position = Vector2(640, 360)
 rotation = 3.1415927
 texture = ExtResource("2_pxb8m")
 metadata/_edit_lock_ = true
+
+[node name="outOfMap" type="Area2D" parent="." unique_id=555118854]
+position = Vector2(947, 540)
+script = ExtResource("6_d1nal")
+
+[node name="detector" type="CollisionShape2D" parent="outOfMap" unique_id=889448693]
+position = Vector2(-305.75, -22)
+shape = SubResource("RectangleShape2D_lcjym")
