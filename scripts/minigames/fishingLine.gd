@@ -11,7 +11,6 @@ func _process(delta):
 	
 	if position.x <= -1290:
 		print("morri fishingLine.tscn")
-		print(position.x)
 		queue_free()
 
 func onBodyEntered(body):

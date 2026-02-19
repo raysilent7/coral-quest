@@ -2,6 +2,7 @@ extends Node2D
 
 @export var fishingLineScene: PackedScene
 @export var obstacleScene: PackedScene
+@export var backgroundScene: PackedScene
 @export var nextScenePath: String = "res://zone1/area2.tscn"
 @onready var diver: CharacterBody2D = $diver/diver
 
@@ -20,11 +21,6 @@ func _ready() -> void:
 func _process(delta):
 	if gameEnded:
 		return
-	
-	timer += delta
-	if timer >= spawnInterval:
-		timer = 0
-		spawnRandom()
 
 	if GameState.bonusSpeed > 0:
 		GameState.bonusSpeed -= delta * 5
@@ -46,7 +42,29 @@ func spawnRandom():
 		obj = obstacleScene.instantiate()
 		maxCount += 1
 
-	obj.position = Vector2(1200, randf_range(-100, 300))
+	obj.position = Vector2(1300, randf_range(0, 400))
+	add_child(obj)
+
+func spawnBackground():
+	var choice = randi_range(0, 3)
+	var obj
+	
+	print("aconteci: spawn alga")
+	
+	if choice == 0:
+		obj = backgroundScene.instantiate()
+		obj.z_index = -1
+		obj.add_child(Sprite2D.new())
+		obj.get_child(0).texture = load("res://objects/islands/mapObjects/big algae dark.png")
+	elif choice == 1:
+		obj = backgroundScene.instantiate()
+		obj.z_index = 2
+		obj.add_child(Sprite2D.new())
+		obj.get_child(0).texture = load("res://objects/islands/mapObjects/big algae.png")
+	else:
+		obj = backgroundScene.instantiate()
+
+	obj.position = Vector2(1300, randf_range(700, 900))
 	add_child(obj)
 
 func showPopup():
@@ -62,3 +80,9 @@ func endGame():
 	diver.enableCamera()
 	for child in get_children():
 		child.queue_free()
+
+func onTimerSpawnTimeout() -> void:
+	spawnRandom()
+
+func onTimerBackgroundTimeout() -> void:
+	spawnBackground()

@@ -9,10 +9,11 @@ var points = 0
 
 func _ready():
 	var screenSize = get_viewport_rect().size
+	
 	position.x = (screenSize.x - boardWidth * blockSize) / 2
 	position.y = 100
-
 	board.resize(boardHeight)
+	
 	for y in range(boardHeight):
 		board[y] = []
 		board[y].resize(boardWidth)

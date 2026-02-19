@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bo786ln2pkfef" path="res://HUD/mainHUD.tscn" id="10_2tupj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qpp5n"]
-size = Vector2(31, 226.5)
+size = Vector2(31, 224.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eq7it"]
 size = Vector2(32, 177)
@@ -66,7 +66,7 @@ nextScenePath = "res://zone1/area5.tscn"
 spawnId = "area5Entrance"
 
 [node name="next" type="CollisionShape2D" parent="nextArea2" unique_id=1917692972]
-position = Vector2(31, 80)
+position = Vector2(31, 78.875)
 shape = SubResource("RectangleShape2D_qpp5n")
 
 [node name="shrine" type="Area2D" parent="." unique_id=2096573524]

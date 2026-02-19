@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dpug0lmp0ibbd"]
+
+[ext_resource type="Script" uid="uid://jnnmcx2r8un6" path="res://scripts/minigames/algae.gd" id="1_kjy00"]
+
+[node name="Algae" type="Node2D" unique_id=1656632760]
+script = ExtResource("1_kjy00")
