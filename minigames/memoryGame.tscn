@@ -30,3 +30,17 @@ texture = ExtResource("4_yj4p0")
 [node name="StoneTable" type="Sprite2D" parent="." unique_id=1024414212]
 position = Vector2(640, 360)
 texture = ExtResource("4_em340")
+
+[node name="Timer" type="Timer" parent="." unique_id=825058037]
+autostart = true
+
+[node name="Label" type="Label" parent="." unique_id=1573478259]
+offset_left = 318.0
+offset_top = 346.0
+offset_right = 359.0
+offset_bottom = 380.0
+theme_override_colors/font_color = Color(0.85490197, 0.8784314, 0.91764706, 1)
+theme_override_font_sizes/font_size = 24
+text = "2:00"
+
+[connection signal="timeout" from="Timer" to="." method="onTimerTimeout"]

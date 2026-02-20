@@ -5,11 +5,12 @@ extends Node2D
 @export var rows: int = 4
 @export var cols: int = 4
 @export var spacing: Vector2 = Vector2(70, 70)
+@onready var timerLabel: Label = $Label
+@onready var timer: Timer = $Timer
 
 var firstCard: Node2D = null
 var secondCard: Node2D = null
 var canClick: bool = true
-var points: int = 0
 
 var flipAnimations = [
 	"flipNababa", "flipStar", "flipKiko", "flipGrubble", "flipTrident", "flipComb", "flipFish", "flipClamp"
@@ -52,20 +53,6 @@ func buildBoard():
 
 			index += 1
 
-#func buildBoard():
-	#var index = 0
-	#for row in range(rows):
-		#for col in range(cols):
-			#var card = cardScene.instantiate()
-#
-			#add_child(card)
-#
-			#card.position = startPos + Vector2(col * spacing.x, row * spacing.y)
-			#card.flipAnimation = deck[index]
-			#card.unflipAnimation = resolveUnflipAnimation(deck[index])
-#
-			#index += 1
-
 func resolveUnflipAnimation(flipAnim: String) -> String:
 	if "flipNababa" == flipAnim:
 		return "unflipNababa"
@@ -103,9 +90,10 @@ func compareCards():
 		firstCard = null
 		secondCard = null
 		canClick = true
-		points += 1
-		if points == 8:
+		GameState.points += 1
+		if GameState.points == 8:
 			GameState.beatFirstPuzzle = true
+			GameState.points = 0
 			var popup = genericScene.instantiate()
 			get_tree().root.add_child(popup)
 	else:
@@ -117,3 +105,14 @@ func compareCards():
 		firstCard = null
 		secondCard = null
 		canClick = true
+
+func onTimerTimeout() -> void:
+	GameState.gameTime -= 1
+	timerLabel.text = str(GameState.gameTime/60)+":"+str(GameState.gameTime%60)
+	if GameState.gameTime == 0:
+		GameState.beatFirstPuzzle = false
+		GameState.points = 0
+		timer.set_paused(true)
+		var popup = genericScene.instantiate()
+		get_tree().root.add_child(popup)
+		popup.setMessage("Não foi dessa vez, tente novamente.")

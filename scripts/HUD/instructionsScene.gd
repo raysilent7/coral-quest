@@ -8,14 +8,11 @@ func _ready():
 	var screenSize = get_viewport_rect().size
 	var panelSize = $CanvasLayer/instructions.size
 	$CanvasLayer/instructions.position = (screenSize - panelSize) / 2
-	print(label)
-	print(label2)
 
 func setup(scenePath: String):
 	minigameScenePath = scenePath
 
 func _on_yes_pressed() -> void:
-	GameState.isInFishingLinesGame = true
 	GameState.isInWater = false
 	get_tree().change_scene_to_file(minigameScenePath)
 	queue_free()

@@ -3,13 +3,53 @@
 [ext_resource type="Script" uid="uid://cfekgcruji7gh" path="res://scripts/minigames/trashHunterGame.gd" id="1_lpwh6"]
 [ext_resource type="PackedScene" uid="uid://b5or0djd0edgc" path="res://objects/trash/trashScene.tscn" id="2_r402h"]
 [ext_resource type="PackedScene" uid="uid://ed0ebn7s7nww" path="res://objects/fruits/fruitScene.tscn" id="3_g6td1"]
-[ext_resource type="Texture2D" uid="uid://bu234kfpwug3u" path="res://objects/islands/map/bg forest.jpg" id="4_lpwh6"]
+[ext_resource type="Texture2D" uid="uid://bub266dmxvm8t" path="res://objects/islands/map/sky.webp" id="4_r402h"]
+[ext_resource type="PackedScene" uid="uid://2iqyxxisd5v2" path="res://HUD/genericPopup.tscn" id="4_ub7ew"]
+[ext_resource type="Texture2D" uid="uid://kepci8gi7j0j" path="res://objects/trash/big trash can.png" id="5_g6td1"]
+[ext_resource type="Texture2D" uid="uid://bdaqiuoxbj0kj" path="res://objects/trash/HUD trash game.png" id="7_0xkq5"]
 
 [node name="trashHunter" type="Node2D" unique_id=693953974]
 script = ExtResource("1_lpwh6")
 trashScene = ExtResource("2_r402h")
 fruitScene = ExtResource("3_g6td1")
+genericScene = ExtResource("4_ub7ew")
 
-[node name="ForestBg" type="Sprite2D" parent="." unique_id=707116430]
+[node name="BG" type="Sprite2D" parent="." unique_id=707116430]
 position = Vector2(640, 360)
-texture = ExtResource("4_lpwh6")
+texture = ExtResource("4_r402h")
+
+[node name="BigTrashCan" type="Sprite2D" parent="." unique_id=1348528814]
+position = Vector2(657.00006, 653)
+scale = Vector2(2.814453, 2.265625)
+texture = ExtResource("5_g6td1")
+
+[node name="HudTrashGame" type="Sprite2D" parent="." unique_id=30568104]
+position = Vector2(236, 367)
+texture = ExtResource("7_0xkq5")
+
+[node name="timerGame" type="Timer" parent="." unique_id=1815129009]
+autostart = true
+
+[node name="timerSpawn" type="Timer" parent="." unique_id=1222888249]
+autostart = true
+
+[node name="time" type="Label" parent="." unique_id=110363726]
+offset_left = 203.0
+offset_top = 365.0
+offset_right = 275.0
+offset_bottom = 415.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "2:00"
+
+[node name="points" type="Label" parent="." unique_id=945472960]
+offset_left = 229.0
+offset_top = 320.0
+offset_right = 269.0
+offset_bottom = 370.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "0"
+
+[connection signal="timeout" from="timerGame" to="." method="onTimerGameTimeout"]
+[connection signal="timeout" from="timerSpawn" to="." method="onTimerSpawnTimeout"]

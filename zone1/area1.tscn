@@ -37,7 +37,7 @@ script = ExtResource("1_1aodt")
 
 [node name="diver" parent="." unique_id=634985619 instance=ExtResource("3_ipdce")]
 z_index = 10
-position = Vector2(38, 611)
+position = Vector2(1088, 114)
 
 [node name="previousArea" type="Area2D" parent="." unique_id=1344770191]
 position = Vector2(-45, 594)

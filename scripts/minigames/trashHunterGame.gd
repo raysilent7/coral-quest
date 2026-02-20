@@ -2,11 +2,12 @@ extends Node2D
 
 @export var trashScene: PackedScene
 @export var fruitScene: PackedScene
+@export var genericScene: PackedScene
 @export var nextScenePath: String = "res://zone1/area2.tscn"
+@onready var timerLabel: Label = $time
+@onready var pointsLabel: Label = $points
+@onready var timer: Timer = $timerGame
 
-var popupVictory = preload("res://objects/popups/genericPopup.tscn")
-var spawnInterval: float = 1.0
-var timer: float = 0.0
 var maxCount: int = 0
 var gameEnded: bool = false
 var fruits = ["grubble", "nababa", "star", "kiko"]
@@ -19,12 +20,7 @@ func _process(delta: float) -> void:
 	if gameEnded:
 		return
 
-	timer += delta
-	if timer >= spawnInterval:
-		timer = 0
-		spawnRandom()
-		spawnRandom()
-
+	pointsLabel.text = str(GameState.points)
 	GameState.bonusSpeed += delta * 5
 
 	if GameState.points >= 50:
@@ -46,13 +42,13 @@ func spawnRandom():
 		obj.fruit = fruits[animChoice]
 		maxCount += 1
 
-	obj.position = Vector2(randf_range(300, 900), randf_range(-100, 0))
+	obj.position = Vector2(randf_range(350, 950), randf_range(-100, 0))
 	add_child(obj)
 
 func showPopup():
-	var popup = popupVictory.instantiate()
-	add_child(popup)
-	popup.setMessage("Parabens voce venceu")
+	var popup = genericScene.instantiate()
+	get_tree().root.add_child(popup)
+	popup.setMessage("Voce recolheu bastante lixo da praia, os nativos te asdoram! Continue sua aventura, pois ainda há muito a fazer para salvar o arquipelago.")
 	popup.setButtonText("OK")
 	popup.setButtonAction(
 		func():
@@ -63,3 +59,18 @@ func endGame():
 	gameEnded = true
 	for child in get_children():
 		child.queue_free()
+
+func onTimerGameTimeout() -> void:
+	GameState.gameTime -= 1
+	timerLabel.text = str(GameState.gameTime/60)+":"+str(GameState.gameTime%60)
+	if GameState.gameTime == 0:
+		GameState.beatFirstPuzzle = false
+		GameState.points = 0
+		timer.set_paused(true)
+		var popup = genericScene.instantiate()
+		get_tree().root.add_child(popup)
+		popup.setMessage("Não foi dessa vez, tente novamente.")
+
+func onTimerSpawnTimeout() -> void:
+	spawnRandom()
+	spawnRandom()

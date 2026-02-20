@@ -17,23 +17,23 @@ script = ExtResource("1_6b3fx")
 [node name="genericPanel" type="Panel" parent="." unique_id=1612898470]
 layout_mode = 0
 offset_left = 2.0
-offset_right = 245.0
-offset_bottom = 148.0
+offset_right = 279.0
+offset_bottom = 172.0
 
 [node name="button" type="Button" parent="genericPanel" unique_id=51926703]
 layout_mode = 0
-offset_left = 92.0
-offset_top = 110.0
-offset_right = 144.0
-offset_bottom = 141.0
+offset_left = 114.0
+offset_top = 122.0
+offset_right = 166.0
+offset_bottom = 153.0
 text = "OK"
 
 [node name="text" type="Label" parent="genericPanel" unique_id=800436169]
 layout_mode = 0
 offset_left = 13.0
 offset_top = 15.0
-offset_right = 229.0
-offset_bottom = 103.0
+offset_right = 263.0
+offset_bottom = 116.0
 label_settings = SubResource("LabelSettings_6b3fx")
 autowrap_mode = 2
 
