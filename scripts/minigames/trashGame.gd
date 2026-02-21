@@ -17,5 +17,5 @@ func _process(delta: float) -> void:
 		queue_free()
 
 func changeTrash():
-	GameState.points -= 1
+	GameState.subtractScore(1)
 	queue_free()

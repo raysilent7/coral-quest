@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c6idcr427agqs" path="res://objects/fishingLine/fishingLine.tscn" id="3_d1nal"]
 [ext_resource type="PackedScene" uid="uid://dpug0lmp0ibbd" path="res://objects/fishingLine/algae.tscn" id="4_lcjym"]
 [ext_resource type="Script" uid="uid://d2pfr022a3dym" path="res://minigames/outOfMap.gd" id="6_d1nal"]
+[ext_resource type="Texture2D" uid="uid://dke6dhisghfjq" path="res://objects/tetris/blue block.png" id="7_uwlwk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lcjym"]
 size = Vector2(1282.5, 30)
@@ -35,6 +36,19 @@ position = Vector2(640, 360)
 rotation = 3.1415927
 texture = ExtResource("2_pxb8m")
 metadata/_edit_lock_ = true
+
+[node name="BlueBlock" type="Sprite2D" parent="." unique_id=48193183]
+position = Vector2(648, 40)
+texture = ExtResource("7_uwlwk")
+
+[node name="score" type="Label" parent="." unique_id=1086654585]
+offset_left = 633.0
+offset_top = 28.0
+offset_right = 663.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"
+horizontal_alignment = 1
 
 [node name="outOfMap" type="Area2D" parent="." unique_id=555118854]
 position = Vector2(945, 578)

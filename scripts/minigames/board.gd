@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var scoreLabel: Label = $"../score"
+
 const boardWidth = 10
 const boardHeight = 20
 const blockSize = 32
@@ -62,7 +64,10 @@ func clearLine(lineIndex: int):
 	for x in range(boardWidth):
 		board[0][x] = null
 
-
 func addPoints():
-	GameState.points += 100
-	print("Pontuação: ", GameState.points)
+	GameState.addScore(100)
+	scoreLabel.text = str(GameState.getScore())
+	print("Pontuação: ", GameState.getScore())
+	if GameState.getScore() >= 5000:
+		get_parent().endGame()
+		get_parent().showPopup()

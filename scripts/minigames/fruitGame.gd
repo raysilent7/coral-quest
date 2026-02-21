@@ -17,9 +17,9 @@ func _process(delta: float) -> void:
 	position.y += min(actualSpeed, maxSpeed)
 	
 	if position.y >= 500.0:
-		GameState.points -= 1
+		GameState.subtractScore(1)
 		queue_free()
 
 func changeFruit():
-	GameState.points += 1
+	GameState.addScore(1)
 	queue_free()

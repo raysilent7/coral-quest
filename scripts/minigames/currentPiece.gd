@@ -1,8 +1,8 @@
 extends Node2D
 
 const blockSize = 32
-const fallInterval = 0.5
 
+var fallInterval = 1.2
 var fallTimer = 0.0
 var board = null
 var activePiece: Node2D = null
@@ -77,3 +77,9 @@ func isColliding() -> bool:
 		if y >= 0 and board.board[y][x] != null:
 			return true
 	return false
+
+func onTimerTimeout() -> void:
+	print("fiquei mais rapido: tetris")
+	if fallInterval >= 0.2:
+		fallInterval -= 0.05
+		print(fallInterval)

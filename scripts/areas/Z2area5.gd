@@ -6,7 +6,7 @@ extends Node2D
 func _ready() -> void:
 	var spawnPoint = get_node_or_null(GameState.lastSpawnId)
 	var fromPortal = GameState.fromPortal
-
+	get_tree().set_pause(false)
 	GameState.isDark = true
 
 	if fromPortal and spawnPoint:

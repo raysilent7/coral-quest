@@ -5,6 +5,7 @@ extends Node2D
 @export var backgroundScene: PackedScene
 @export var nextScenePath: String = "res://zone1/area2.tscn"
 @onready var diver: CharacterBody2D = $diver/diver
+@onready var scoreLabel: Label = $score
 
 var popupVictory = preload("res://HUD/genericPopup.tscn")
 var spawnInterval: float = 2.0
@@ -13,18 +14,18 @@ var maxCount: int = 0
 
 func _ready() -> void:
 	GameState.isInFishingLinesGame = true
-	GameState.points = 0
+	GameState.setScore(0)
 	nextScenePath = GameState.lastMapPath
 	print(GameState.lastMapPath)
 	diver.disableCamera()
 
 func _process(delta):
+	scoreLabel.text = str(GameState.getScore())
+	
 	if GameState.bonusSpeed > 0:
 		GameState.bonusSpeed -= delta * 5
 
-	if GameState.points >= 3:
-		GameState.beatSecondPuzzle = true
-		GameState.isInFishingLinesGame = false
+	if GameState.getScore() >= 30:
 		endGame()
 		showPopup()
 
@@ -32,7 +33,7 @@ func spawnRandom():
 	var choice = randi_range(0, 1)
 	var obj
 	
-	if choice == 0 or maxCount > 4:
+	if choice == 0 or maxCount == 4:
 		obj = fishingLineScene.instantiate()
 		maxCount = 0
 	else:
@@ -68,14 +69,15 @@ func spawnBackground():
 func showPopup():
 	var popup = popupVictory.instantiate()
 	add_child(popup)
-	popup.setMessage("Parabens, voce venceu o segundo desafio. Voce está cada vez mais proximo de salvar o arquipelago, mas ainda há muito a fazer, continue sua jornada.")
+	popup.setMessage("Parabens, voce venceu o segundo desafio. Voce está cada vez mais proximo de salvar o arquipelago! M as ainda há muito a fazer, continue sua jornada.")
 	popup.setButtonText("OK")
 
 func endGame():
 	GameState.isInFishingLinesGame = false
 	GameState.isInWater = true
+	GameState.beatSecondPuzzle = true
+	get_tree().set_pause(true)
 	diver.enableCamera()
-	get_tree().paused = true
 	for child in get_children():
 		child.queue_free()
 

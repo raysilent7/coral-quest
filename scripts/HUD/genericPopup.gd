@@ -8,7 +8,7 @@ func _ready():
 	var panelSize = $genericPanel.size
 	$genericPanel.position = (screenSize - panelSize) / 2
 	
-	label.text = "Parabens! Voce venceu o primeiro quebra cabeça. Continue para desvendar mais mistérios do arquipelago e salva-lo da extinção."
+	label.text = "Parabens! Voce venceu o quebra cabeça. Continue para desvendar mais mistérios do arquipelago e salva-lo da extinção."
 
 func onButtonPressed() -> void:
 	get_tree().change_scene_to_file(GameState.lastMapPath)

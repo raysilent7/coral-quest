@@ -6,7 +6,6 @@ extends Node2D
 @export var cols: int = 4
 @export var spacing: Vector2 = Vector2(70, 70)
 @onready var timerLabel: Label = $Label
-@onready var timer: Timer = $Timer
 
 var firstCard: Node2D = null
 var secondCard: Node2D = null
@@ -18,7 +17,7 @@ var flipAnimations = [
 var deck = []
 
 func _ready():
-	GameState.points = 0
+	GameState.setScore(0)
 	
 	for anim in flipAnimations:
 		deck.append(anim)
@@ -90,12 +89,10 @@ func compareCards():
 		firstCard = null
 		secondCard = null
 		canClick = true
-		GameState.points += 1
-		if GameState.points == 8:
-			GameState.beatFirstPuzzle = true
-			GameState.points = 0
-			var popup = genericScene.instantiate()
-			get_tree().root.add_child(popup)
+		GameState.addScore(1)
+		if GameState.getScore() == 8:
+			endGame()
+			showPopup()
 	else:
 		await get_tree().create_timer(1.0).timeout
 		firstCard.playUnflipAnimation()
@@ -106,13 +103,24 @@ func compareCards():
 		secondCard = null
 		canClick = true
 
+func showPopup():
+	var popup = genericScene.instantiate()
+	get_tree().root.add_child(popup)
+	popup.setMessage("Voce encontrou todos os pares! Continue sua aventura, pois ainda há muito a fazer para salvar o arquipelago.")
+	popup.setButtonText("OK")
+
+func endGame():
+	get_tree().set_pause(true)
+	GameState.beatFirstPuzzle = true
+	for child in get_children():
+		child.queue_free()
+
 func onTimerTimeout() -> void:
 	GameState.gameTime -= 1
 	timerLabel.text = str(GameState.gameTime/60)+":"+str(GameState.gameTime%60)
 	if GameState.gameTime == 0:
 		GameState.beatFirstPuzzle = false
-		GameState.points = 0
-		timer.set_paused(true)
 		var popup = genericScene.instantiate()
 		get_tree().root.add_child(popup)
+		get_tree().set_pause(true)
 		popup.setMessage("Não foi dessa vez, tente novamente.")

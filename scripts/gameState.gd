@@ -25,11 +25,24 @@ var beatFirstPuzzle: bool = false
 var beatSecondPuzzle: bool = false
 var beatThirdPuzzle: bool = false
 var beatFourthPuzzle: bool = false
-var points: int = 0
+var score: int = 0
 var lastShrineId: String = ""
 var lastMapPath: String = ""
 var bonusSpeed: float = 0.0
 var gameTime: int = 120
+
+#methods
+func setScore(givenScore: int):
+	score = givenScore
+
+func addScore(givenScore: int):
+	score += givenScore
+
+func subtractScore(givenScore: int):
+	score -= givenScore
+
+func getScore() -> int:
+	return score
 
 #inventory
 var selectedItem: String = "nothing"

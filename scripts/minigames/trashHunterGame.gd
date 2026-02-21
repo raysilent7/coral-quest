@@ -5,26 +5,20 @@ extends Node2D
 @export var genericScene: PackedScene
 @export var nextScenePath: String = "res://zone1/area2.tscn"
 @onready var timerLabel: Label = $time
-@onready var pointsLabel: Label = $points
-@onready var timer: Timer = $timerGame
+@onready var scoreLabel: Label = $score
 
 var maxCount: int = 0
-var gameEnded: bool = false
 var fruits = ["grubble", "nababa", "star", "kiko"]
 var trashs = ["bottle", "can", "hook", "straw"]
 
 func _ready() -> void:
-	GameState.points = 0
+	GameState.setScore(0)
 
 func _process(delta: float) -> void:
-	if gameEnded:
-		return
-
-	pointsLabel.text = str(GameState.points)
+	scoreLabel.text = str(GameState.getScore())
 	GameState.bonusSpeed += delta * 5
 
-	if GameState.points >= 50:
-		GameState.beatThirdPuzzle = true
+	if GameState.getScore() >= 50:
 		endGame()
 		showPopup()
 
@@ -48,15 +42,12 @@ func spawnRandom():
 func showPopup():
 	var popup = genericScene.instantiate()
 	get_tree().root.add_child(popup)
-	popup.setMessage("Voce recolheu bastante lixo da praia, os nativos te asdoram! Continue sua aventura, pois ainda há muito a fazer para salvar o arquipelago.")
+	popup.setMessage("Voce recolheu bastante lixo da praia, os nativos te adoram! Continue sua aventura, pois ainda há muito a fazer para salvar o arquipelago.")
 	popup.setButtonText("OK")
-	popup.setButtonAction(
-		func():
-			get_tree().change_scene_to_file(nextScenePath)
-	)
 
 func endGame():
-	gameEnded = true
+	GameState.beatThirdPuzzle = true
+	get_tree().set_pause(true)
 	for child in get_children():
 		child.queue_free()
 
@@ -64,9 +55,9 @@ func onTimerGameTimeout() -> void:
 	GameState.gameTime -= 1
 	timerLabel.text = str(GameState.gameTime/60)+":"+str(GameState.gameTime%60)
 	if GameState.gameTime == 0:
-		GameState.beatFirstPuzzle = false
-		GameState.points = 0
-		timer.set_paused(true)
+		GameState.beatThirdPuzzle = false
+		GameState.setScore(0)
+		get_tree().set_pause(true)
 		var popup = genericScene.instantiate()
 		get_tree().root.add_child(popup)
 		popup.setMessage("Não foi dessa vez, tente novamente.")
