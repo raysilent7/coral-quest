@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmn5r3r1k2cl8"
-path="res://.godot/imported/stone table.png-7dc3ffe40882f99ffc91f79226100f96.ctex"
+uid="uid://kepci8gi7j0j"
+path="res://.godot/imported/big trash can.png-7ad5a88022deb40ad7017fae2d31988b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/memoryGame/stone table.png"
-dest_files=["res://.godot/imported/stone table.png-7dc3ffe40882f99ffc91f79226100f96.ctex"]
+source_file="res://objects/trash/big trash can.png"
+dest_files=["res://.godot/imported/big trash can.png-7ad5a88022deb40ad7017fae2d31988b.ctex"]
 
 [params]
 

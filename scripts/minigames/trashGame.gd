@@ -13,10 +13,9 @@ func _process(delta: float) -> void:
 	var bonusSpeed: float = GameState.bonusSpeed
 	position.y += (speed + bonusSpeed) * delta
 	
-	if position.y >= 720.0:
-		GameState.points -= 1
+	if position.y >= 500.0:
 		queue_free()
 
 func changeTrash():
-	GameState.points += 1
+	GameState.subtractScore(1)
 	queue_free()

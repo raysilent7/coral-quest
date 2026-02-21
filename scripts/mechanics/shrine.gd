@@ -4,7 +4,7 @@ extends Area2D
 @export var minigameScenePath: String = "res://minigames/fishingLinesGame.tscn"
 @export var shrineId: String
 
-var instructions = preload("res://objects/popups/instructionsScene.tscn")
+var instructions = preload("res://HUD/instructionsScene.tscn")
 var playerInside: bool = false
 
 func _ready():
@@ -38,13 +38,14 @@ func resolveText() -> String:
 		return "Clique nas cartas com o botão esquerdo do mouse para revela-las e formar pares de cartas iguais. 
 		Encontre todos os pares de cartas antes do tempo acabar para vencer o jogo."
 	elif shrineId == "shrine2":
-		return "Aperte espaço para nadar para cima. Desvie dos tubarões para não ser mordido e corte o maximo de linhas de pesca ilegal que conseguir, 
+		return "Aperte espaço para nadar para cima. Desvie dos tubarões para não ser mordido e corte 30 linhas de pesca ilegal, 
 		mas cuidado para não encostar nos anzóis, pois eles são bem afiados."
 	elif shrineId == "shrine3":
-		return "Clique com o botão esquerdo do mouse em cima do lixo para coleta-lo, mas cuidado para não acabar clicando nas frutas, pois elas devem ficar na ilha, o lixo não!"
+		return "Clique com o botão esquerdo do mouse em cima de uma fruta para coleta-la e somar pontos, some 50 pontos para vencer, 
+		mas cuidado para não acabar clicando no lixo, voce deve deixa-los vair na lixeira, ou perderá pontos!"
 	elif shrineId == "shrine4":
 		return "Use A e D para mover as peças de um lado a outro, use o Espaço para rotacionar a peça e S para acelerar sua queda. 
-		Forme linhas para fazer pontos, ao chegar em 10.000 pontos, vença o jogo. Não deixe as peças empilharem até o final da tela."
+		Forme linhas para fazer pontos, ao chegar em 5000 pontos voce vence. Não deixe as peças empilharem até o final da tela ou será fim de jogo."
 	else:
 		return ""
 
@@ -52,6 +53,10 @@ func resolveTitle() -> String:
 	if shrineId == "shrine":
 		return "Jogo da memória"
 	elif shrineId == "shrine2":
-		return "Corte as linhas de pesca."
+		return "Corte as linhas de pesca"
+	elif shrineId == "shrine3":
+		return "Salada de frutas"
+	elif shrineId == "shrine4":
+		return "Tetris das joias"
 	else:
 		return ""

@@ -3,19 +3,23 @@ extends Node2D
 @onready var button: TextureButton = $fruitButton
 @onready var anim: AnimatedSprite2D = $fruitsAnim
 @export var fruit: String = "grubble"
-@export var speed: float = 60.0
+
+const speed: float = 60.0
+const maxSpeed: float = 300.0
 
 func _ready() -> void:
 	anim.play(fruit)
 	button.pressed.connect(changeFruit)	
 
 func _process(delta: float) -> void:
-	var bonusSpeed: float = GameState.bonusSpeed
-	position.y += (speed + bonusSpeed) * delta
+	var bonusSpeed = GameState.bonusSpeed
+	var actualSpeed = (speed + bonusSpeed) * delta
+	position.y += min(actualSpeed, maxSpeed)
 	
-	if position.y >= 720.0:
+	if position.y >= 500.0:
+		GameState.subtractScore(1)
 		queue_free()
 
 func changeFruit():
-	GameState.points -= 1
+	GameState.addScore(1)
 	queue_free()

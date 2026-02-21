@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmn5r3r1k2cl8"
-path="res://.godot/imported/stone table.png-7dc3ffe40882f99ffc91f79226100f96.ctex"
+uid="uid://y05s08o0qbay"
+path="res://.godot/imported/treasure room.png-56f9049122fcc5bb93a7066671a72c6b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://objects/memoryGame/stone table.png"
-dest_files=["res://.godot/imported/stone table.png-7dc3ffe40882f99ffc91f79226100f96.ctex"]
+source_file="res://objects/tetris/treasure room.png"
+dest_files=["res://.godot/imported/treasure room.png-56f9049122fcc5bb93a7066671a72c6b.ctex"]
 
 [params]
 

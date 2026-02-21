@@ -3,13 +3,44 @@
 [ext_resource type="Script" uid="uid://c6ud8ebuv6uln" path="res://scripts/minigames/memoryGame.gd" id="1_sxs6g"]
 [ext_resource type="PackedScene" uid="uid://cyedf2p5hsf5k" path="res://objects/memoryGame/card.tscn" id="2_upmcs"]
 [ext_resource type="PackedScene" uid="uid://2iqyxxisd5v2" path="res://HUD/genericPopup.tscn" id="3_rs5dw"]
-[ext_resource type="Texture2D" uid="uid://br0qijx410ogx" path="res://objects/memoryGame/stone table.png" id="4_em340"]
+[ext_resource type="Shader" uid="uid://bcimpvk2cxg4n" path="res://minigames/memoryGame.gdshader" id="4_d4376"]
+[ext_resource type="Texture2D" uid="uid://cmn5r3r1k2cl8" path="res://objects/memoryGame/stone table.png" id="4_em340"]
+[ext_resource type="Texture2D" uid="uid://djfgbjpp1lmuh" path="res://objects/memoryGame/BG sea floor.png" id="4_yj4p0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n5bg1"]
+shader = ExtResource("4_d4376")
+shader_parameter/water_tint = Vector4(0, 0.4, 0.8, 0.3)
+shader_parameter/wave_speed = 1.5
+shader_parameter/wave_strength = 0.02
+shader_parameter/wave_frequency = 8.0
+shader_parameter/shimmer_intensity = 0.1
+shader_parameter/shimmer_speed = 1.5
+shader_parameter/shimmer_scale = 16.0
 
 [node name="MemoryGame" type="Node2D" unique_id=1905146875]
 script = ExtResource("1_sxs6g")
 cardScene = ExtResource("2_upmcs")
 genericScene = ExtResource("3_rs5dw")
 
+[node name="BgSeaFloor" type="Sprite2D" parent="." unique_id=1113930661]
+material = SubResource("ShaderMaterial_n5bg1")
+position = Vector2(640, 360)
+texture = ExtResource("4_yj4p0")
+
 [node name="StoneTable" type="Sprite2D" parent="." unique_id=1024414212]
 position = Vector2(640, 360)
 texture = ExtResource("4_em340")
+
+[node name="Timer" type="Timer" parent="." unique_id=825058037]
+autostart = true
+
+[node name="Label" type="Label" parent="." unique_id=1573478259]
+offset_left = 318.0
+offset_top = 346.0
+offset_right = 359.0
+offset_bottom = 380.0
+theme_override_colors/font_color = Color(0.85490197, 0.8784314, 0.91764706, 1)
+theme_override_font_sizes/font_size = 24
+text = "2:00"
+
+[connection signal="timeout" from="Timer" to="." method="onTimerTimeout"]

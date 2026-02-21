@@ -22,24 +22,24 @@ func _physics_process(delta: float) -> void:
 		moveOnGround(delta)
 
 func moveOnGround(delta: float):
-	moveCharacter(150, delta)
+	moveCharacter(150, delta, 300)
 	jump(-310, is_on_floor())
 	move_and_slide()
 	updateAnimation(getGroundAnimation())
 
 func moveInMinigame(delta: float):
-	applyGravity(80, delta)
+	applyGravity(80, delta, 300)
 	jump(-120, true)
 	move_and_slide()
 	updateAnimation(getSwimAnimation())
 
 func moveInWater(delta: float):
-	moveCharacter(80, delta)
+	moveCharacter(80, delta, 300)
 	jump(-120, true)
 	move_and_slide()
 	updateAnimation(getSwimAnimation())
 
-func moveCharacter(velValue: int, delta: float) -> void:
+func moveCharacter(velValue: int, delta: float, maxFallSpeed: float) -> void:
 	if Input.is_action_pressed("moveRight"):
 		velocity.x = velValue
 		anim.flip_h = false
@@ -49,13 +49,15 @@ func moveCharacter(velValue: int, delta: float) -> void:
 	else:
 		velocity.x = 0
 
-	applyGravity(velValue, delta)
+	applyGravity(velValue, delta, maxFallSpeed)
 
-func applyGravity(velValue: int, delta: float):
+func applyGravity(velValue: int, delta: float, maxFallSpeed: float):
 	if not is_on_floor():
 		velocity.y += velValue * (delta * 4)
+		velocity.y = min(velocity.y, maxFallSpeed)
 	else:
 		velocity.y = 0
+
 
 func jump(jumpForce: int, canJumpAgain: bool) -> void:
 	if Input.is_action_just_pressed("jump") and canJumpAgain:

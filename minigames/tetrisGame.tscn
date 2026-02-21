@@ -2,13 +2,35 @@
 
 [ext_resource type="Script" uid="uid://c8lth2m8iqmth" path="res://scripts/minigames/tetrisGame.gd" id="1_ua18b"]
 [ext_resource type="Script" uid="uid://hr2ng0pinsfv" path="res://scripts/minigames/currentPiece.gd" id="2_e6ufj"]
+[ext_resource type="PackedScene" uid="uid://2iqyxxisd5v2" path="res://HUD/genericPopup.tscn" id="2_j2msi"]
 [ext_resource type="Script" uid="uid://qxs52pnj4lyl" path="res://scripts/minigames/board.gd" id="3_1xa0r"]
+[ext_resource type="Texture2D" uid="uid://y05s08o0qbay" path="res://objects/tetris/treasure room.png" id="4_1xa0r"]
 
 [node name="TetrisGame" type="Node2D" unique_id=489202917]
 script = ExtResource("1_ua18b")
+genericScene = ExtResource("2_j2msi")
+
+[node name="TreasureRoom" type="Sprite2D" parent="." unique_id=752958868]
+position = Vector2(640, 360)
+texture = ExtResource("4_1xa0r")
+
+[node name="score" type="Label" parent="." unique_id=1559486896]
+offset_left = 861.0
+offset_top = 59.0
+offset_right = 927.0
+offset_bottom = 82.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"
+horizontal_alignment = 1
 
 [node name="board" type="Node2D" parent="." unique_id=1517738671]
 script = ExtResource("3_1xa0r")
 
 [node name="currentPiece" type="Node2D" parent="board" unique_id=1422034233]
 script = ExtResource("2_e6ufj")
+
+[node name="Timer" type="Timer" parent="." unique_id=1490297218]
+wait_time = 15.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="board/currentPiece" method="onTimerTimeout"]

@@ -1,5 +1,6 @@
 extends Node2D
 
+@export var genericScene: PackedScene
 @onready var board = $board
 @onready var currentPieceNode = $board/currentPiece
 
@@ -31,7 +32,27 @@ func spawnNewPiece():
 	piece.position = Vector2(spawnX, 0) * blockSize
 	piece.setup(shape)
 	currentPieceNode.setActivePiece(piece)
+	checkCollision()
 
+func checkCollision():
 	if currentPieceNode.activePiece != null and currentPieceNode.isColliding():
 		print("Game Over")
-		get_tree().paused = true
+		GameState.beatFourthPuzzle = false
+		GameState.setScore(0)
+		get_tree().set_pause(true)
+		var popup = genericScene.instantiate()
+		get_tree().root.add_child(popup)
+		popup.setMessage("Não foi dessa vez, tente novamente.")
+
+func showPopup():
+	var popup = genericScene.instantiate()
+	get_tree().root.add_child(popup)
+	popup.setMessage("Parabens, voce conquistou o maior tesouro dos sete mares, voce salvou todo arquipelago de ser extinto! 
+	Converse com os nativos sobre seus feitos, eles com certeza vão te agradecer muito.")
+	popup.setButtonText("OK")
+
+func endGame():
+	GameState.beatFourthPuzzle = true
+	get_tree().set_pause(true)
+	for child in get_children():
+		child.queue_free()

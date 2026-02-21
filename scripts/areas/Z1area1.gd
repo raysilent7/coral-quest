@@ -7,6 +7,7 @@ func _ready() -> void:
 	var shrinePoint = get_node_or_null(GameState.lastShrineId)
 	var fromPortal = GameState.fromPortal
 
+	get_tree().set_pause(false)
 	GameState.isDark = false
 
 	if fromPortal and spawnPoint:

@@ -11,13 +11,11 @@ func _process(delta):
 	
 	if position.x <= -1290:
 		print("morri fishingLine.tscn")
-		print(position.x)
 		queue_free()
 
 func onBodyEntered(body):
 	if body is CharacterBody2D:
 		print("aconteci fishingLine.tscn")
-		GameState.points += 1
+		GameState.addScore(1)
 		GameState.bonusSpeed = 50
 		queue_free()
-		print(GameState.points)
