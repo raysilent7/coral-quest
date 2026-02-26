@@ -20,6 +20,10 @@ size = Vector2(631.5, 40)
 [node name="Z2area6" type="Node2D" unique_id=992039470]
 script = ExtResource("1_sxjpa")
 
+[node name="diver" parent="." unique_id=386879663 instance=ExtResource("9_da3fi")]
+z_index = 10
+position = Vector2(10, 577)
+
 [node name="HUD" type="CanvasLayer" parent="." unique_id=95305608]
 
 [node name="MainHud" parent="HUD" unique_id=485201413 instance=ExtResource("1_3c2a8")]
@@ -196,7 +200,3 @@ texture = ExtResource("8_28ind")
 position = Vector2(87, 580.99994)
 scale = Vector2(0.22960068, 0.22960068)
 texture = ExtResource("8_28ind")
-
-[node name="diver" parent="." unique_id=386879663 instance=ExtResource("9_da3fi")]
-z_index = 10
-position = Vector2(10, 577)
