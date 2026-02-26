@@ -9,6 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://b4eylr45tguxj" path="res://objects/islands/map/deep ocean.png" id="5_p4jbe"]
 [ext_resource type="Script" uid="uid://d26etb7naen5k" path="res://scripts/mechanics/shrine.gd" id="8_uqf38"]
 [ext_resource type="Texture2D" uid="uid://7ilfyed42x5h" path="res://objects/islands/mapObjects/shrine3.png" id="10_828ot"]
+[ext_resource type="Texture2D" uid="uid://ced6vyl2b6g4h" path="res://objects/islands/mapObjects/algae dark.png" id="10_p4jbe"]
+[ext_resource type="Texture2D" uid="uid://du6cxsiedklra" path="res://objects/islands/mapObjects/big algae dark.png" id="11_t10mm"]
+[ext_resource type="Texture2D" uid="uid://b4y6am1nt6vup" path="res://objects/islands/mapObjects/big algae.png" id="12_nw2ti"]
+[ext_resource type="Texture2D" uid="uid://b7x0fkjhu8sc2" path="res://objects/islands/mapObjects/rock2.png" id="13_to5m2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhrft"]
 size = Vector2(66, 230)
@@ -151,25 +155,6 @@ position = Vector2(17, 212)
 [node name="area5Exit" type="Marker2D" parent="." unique_id=713787439]
 position = Vector2(1257, 213)
 
-[node name="BG" type="Node2D" parent="." unique_id=1457862832]
-
-[node name="BG0" type="Parallax2D" parent="BG" unique_id=769917363]
-scroll_scale = Vector2(0.3, 0.3)
-limit_begin = Vector2(0, 0)
-limit_end = Vector2(1280, 720)
-
-[node name="BG" type="Sprite2D" parent="BG/BG0" unique_id=1531766478]
-z_index = -10
-position = Vector2(640, 360)
-texture = ExtResource("5_p4jbe")
-metadata/_edit_lock_ = true
-
-[node name="BG1" type="Parallax2D" parent="BG" unique_id=1676479150]
-z_index = -5
-scroll_scale = Vector2(0.6, 0.6)
-
-[node name="BG2" type="Parallax2D" parent="BG" unique_id=1901125769]
-
 [node name="shrine2" type="Area2D" parent="." unique_id=471767086]
 position = Vector2(642, 551)
 script = ExtResource("8_uqf38")
@@ -192,3 +177,118 @@ offset_right = 19.0
 offset_bottom = -15.0
 text = "Pressione E"
 label_settings = SubResource("LabelSettings_t10mm")
+
+[node name="BG" type="Node2D" parent="." unique_id=1117280566]
+
+[node name="BG0" type="Parallax2D" parent="BG" unique_id=596988469]
+scroll_scale = Vector2(0.3, 0.3)
+limit_begin = Vector2(0, 0)
+limit_end = Vector2(1280, 720)
+
+[node name="BG" type="Sprite2D" parent="BG/BG0" unique_id=1619132395]
+z_index = -10
+position = Vector2(640, 360)
+texture = ExtResource("5_p4jbe")
+metadata/_edit_lock_ = true
+
+[node name="BG1" type="Parallax2D" parent="BG" unique_id=1475651169]
+z_index = -5
+scroll_scale = Vector2(0.6, 0.6)
+
+[node name="AlgaeDark" type="Sprite2D" parent="BG/BG1" unique_id=1582773415]
+position = Vector2(129, 533)
+texture = ExtResource("10_p4jbe")
+
+[node name="AlgaeDark2" type="Sprite2D" parent="BG/BG1" unique_id=244687267]
+position = Vector2(365, 592)
+texture = ExtResource("10_p4jbe")
+
+[node name="AlgaeDark3" type="Sprite2D" parent="BG/BG1" unique_id=741036455]
+position = Vector2(256, 651)
+texture = ExtResource("10_p4jbe")
+
+[node name="AlgaeDark4" type="Sprite2D" parent="BG/BG1" unique_id=70306163]
+position = Vector2(722, 598)
+texture = ExtResource("10_p4jbe")
+
+[node name="AlgaeDark5" type="Sprite2D" parent="BG/BG1" unique_id=778897950]
+position = Vector2(651, 684)
+texture = ExtResource("10_p4jbe")
+
+[node name="AlgaeDark6" type="Sprite2D" parent="BG/BG1" unique_id=1924651321]
+position = Vector2(1085, 680)
+texture = ExtResource("10_p4jbe")
+
+[node name="AlgaeDark7" type="Sprite2D" parent="BG/BG1" unique_id=750110647]
+position = Vector2(977, 587)
+texture = ExtResource("10_p4jbe")
+
+[node name="BigAlgaeDark" type="Sprite2D" parent="BG/BG1" unique_id=1463745409]
+position = Vector2(43, 421)
+texture = ExtResource("11_t10mm")
+
+[node name="BigAlgaeDark2" type="Sprite2D" parent="BG/BG1" unique_id=975710574]
+position = Vector2(454, 349)
+texture = ExtResource("11_t10mm")
+
+[node name="BigAlgaeDark3" type="Sprite2D" parent="BG/BG1" unique_id=1900364611]
+position = Vector2(543, 500)
+texture = ExtResource("11_t10mm")
+
+[node name="BigAlgaeDark4" type="Sprite2D" parent="BG/BG1" unique_id=2138881075]
+position = Vector2(828, 391)
+texture = ExtResource("11_t10mm")
+
+[node name="BigAlgaeDark5" type="Sprite2D" parent="BG/BG1" unique_id=1084516287]
+position = Vector2(1158, 334)
+texture = ExtResource("11_t10mm")
+
+[node name="BG2" type="Parallax2D" parent="BG" unique_id=1536188340]
+
+[node name="BigAlgae8" type="Sprite2D" parent="BG/BG2" unique_id=1919220572]
+position = Vector2(1031, 266)
+texture = ExtResource("12_nw2ti")
+
+[node name="BigAlgae7" type="Sprite2D" parent="BG/BG2" unique_id=563450491]
+position = Vector2(909, 292)
+texture = ExtResource("12_nw2ti")
+
+[node name="BigAlgae4" type="Sprite2D" parent="BG/BG2" unique_id=1749132821]
+position = Vector2(614, 332)
+texture = ExtResource("12_nw2ti")
+
+[node name="BigAlgae" type="Sprite2D" parent="BG/BG2" unique_id=473765228]
+position = Vector2(98, 276)
+texture = ExtResource("12_nw2ti")
+
+[node name="BigAlgae2" type="Sprite2D" parent="BG/BG2" unique_id=818624885]
+z_index = -1
+position = Vector2(233, 332)
+texture = ExtResource("12_nw2ti")
+
+[node name="BigAlgae3" type="Sprite2D" parent="BG/BG2" unique_id=216346214]
+position = Vector2(340, 319)
+texture = ExtResource("12_nw2ti")
+
+[node name="BigAlgae5" type="Sprite2D" parent="BG/BG2" unique_id=872268436]
+z_index = -1
+position = Vector2(503, 343)
+texture = ExtResource("12_nw2ti")
+
+[node name="BigAlgae6" type="Sprite2D" parent="BG/BG2" unique_id=1903350850]
+position = Vector2(757, 289)
+texture = ExtResource("12_nw2ti")
+
+[node name="BigAlgae10" type="Sprite2D" parent="BG/BG2" unique_id=1856343529]
+position = Vector2(1223, 323)
+texture = ExtResource("12_nw2ti")
+
+[node name="rock2" type="Sprite2D" parent="BG/BG2" unique_id=823105271]
+position = Vector2(1020.0001, 637.00006)
+scale = Vector2(0.47916666, 0.47916666)
+texture = ExtResource("13_to5m2")
+
+[node name="rock3" type="Sprite2D" parent="BG/BG2" unique_id=1015088772]
+position = Vector2(289, 621)
+scale = Vector2(0.81640625, 0.7847222)
+texture = ExtResource("13_to5m2")
