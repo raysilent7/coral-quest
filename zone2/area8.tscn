@@ -42,7 +42,7 @@ shape = SubResource("RectangleShape2D_aqbhe")
 position = Vector2(746, 758)
 rotation = 1.5707964
 script = ExtResource("3_fvu6w")
-nextScenePath = "res://zone3/area1.tscn"
+nextScenePath = "res://zone4/area1.tscn"
 spawnId = "area1Entrance"
 
 [node name="next" type="CollisionShape2D" parent="nextArea" unique_id=1881220479]
