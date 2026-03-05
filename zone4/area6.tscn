@@ -53,11 +53,11 @@ tile_map_data = PackedByteArray("AAAAAAAAAQAHAA0AAAAAAAEAAQAHAA4AAAABAAAAAQAIAA0
 tile_set = ExtResource("4_kxsls")
 metadata/_edit_lock_ = true
 
-[node name="area3Entrance" type="Marker2D" parent="." unique_id=1351780848]
+[node name="area6Entrance" type="Marker2D" parent="." unique_id=1351780848]
 z_index = 1
 position = Vector2(122, 43)
 
-[node name="area3Exit" type="Marker2D" parent="." unique_id=153297049]
+[node name="area6Exit" type="Marker2D" parent="." unique_id=153297049]
 position = Vector2(1255, 663)
 
 [node name="BG" type="Sprite2D" parent="." unique_id=795767678]
