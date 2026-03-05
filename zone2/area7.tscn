@@ -62,7 +62,7 @@ tile_set = ExtResource("4_5o165")
 position = Vector2(501, -29)
 
 [node name="area7Exit" type="Marker2D" parent="." unique_id=1742589820]
-position = Vector2(1158, 17)
+position = Vector2(1168, 16)
 
 [node name="area7Entrance" type="Marker2D" parent="." unique_id=401159239]
 position = Vector2(10.04068, 577.0059)

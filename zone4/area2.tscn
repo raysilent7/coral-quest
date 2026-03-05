@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://bf01fersldv6x"]
 
+[ext_resource type="Script" uid="uid://cnpuptjnlioeu" path="res://scripts/areas/Z4area2.gd" id="1_fchac"]
 [ext_resource type="PackedScene" uid="uid://bo786ln2pkfef" path="res://HUD/mainHUD.tscn" id="1_rxdb1"]
 [ext_resource type="PackedScene" uid="uid://cgskhua4x4gwv" path="res://diver/diver.tscn" id="2_fchac"]
 [ext_resource type="Script" uid="uid://d0jy5rwijm04x" path="res://scripts/mechanics/portal.gd" id="3_r7yx0"]
@@ -13,6 +14,7 @@ size = Vector2(31, 127)
 size = Vector2(194.25, 47.749985)
 
 [node name="area2" type="Node2D" unique_id=1714571727]
+script = ExtResource("1_fchac")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1999282015]
 

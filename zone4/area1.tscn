@@ -8,51 +8,52 @@
 [ext_resource type="Texture2D" uid="uid://bub266dmxvm8t" path="res://objects/islands/map/sky.webp" id="5_qj7ew"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xecv"]
-size = Vector2(31, 142.5)
+size = Vector2(613, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qej2r"]
-size = Vector2(32, 606.99994)
+size = Vector2(146, 31.99997)
 
 [node name="area1" type="Node2D" unique_id=696893653]
 script = ExtResource("1_p0dud")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=66137478]
+visible = false
 
 [node name="MainHud" parent="CanvasLayer" unique_id=485201413 instance=ExtResource("1_a5vb4")]
 
 [node name="diver" parent="." unique_id=386879663 instance=ExtResource("2_p0dud")]
 z_index = 10
-position = Vector2(1260, 609)
+position = Vector2(1254, 607)
 
 [node name="previousArea" type="Area2D" parent="." unique_id=171061737]
-position = Vector2(1266, 587)
+position = Vector2(218, 767)
 script = ExtResource("3_e5wfc")
 nextScenePath = "res://zone2/area8.tscn"
 spawnId = "area8Exit"
 
 [node name="back" type="CollisionShape2D" parent="previousArea" unique_id=1818684232]
 z_index = 1
-position = Vector2(30, -34.75)
+position = Vector2(87.5, -31)
 shape = SubResource("RectangleShape2D_0xecv")
 
 [node name="nextArea" type="Area2D" parent="." unique_id=1804928009]
-position = Vector2(74, 758)
+position = Vector2(1267, 555)
 rotation = 1.5707964
 script = ExtResource("3_e5wfc")
 nextScenePath = "res://zone4/area2.tscn"
 spawnId = "area2Entrance"
 
 [node name="next" type="CollisionShape2D" parent="nextArea" unique_id=1550428058]
-position = Vector2(-22, -230.5)
+position = Vector2(-3, -29)
 shape = SubResource("RectangleShape2D_qej2r")
 
 [node name="area1Entrance" type="Marker2D" parent="." unique_id=1910445418]
 z_index = 1
-position = Vector2(1259, 610)
+position = Vector2(632, 655)
 
 [node name="area1Exit" type="Marker2D" parent="." unique_id=1886541902]
 z_index = 1
-position = Vector2(605, 701)
+position = Vector2(1255, 604)
 
 [node name="waterLevel" type="Marker2D" parent="." unique_id=899388472]
 position = Vector2(794, 672)
