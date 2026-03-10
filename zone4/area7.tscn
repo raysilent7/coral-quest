@@ -156,12 +156,11 @@ offset_bottom = -15.0
 text = "Pressione E"
 label_settings = SubResource("LabelSettings_xrc0e")
 
-[node name="BG" type="Sprite2D" parent="." unique_id=980347136]
-z_index = -1
-position = Vector2(565, 360)
-scale = Vector2(1.3057381, 0.99809974)
-texture = ExtResource("5_535gc")
-metadata/_edit_lock_ = true
-
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1868821742]
 color = Color(0.2884384, 0.2022881, 0, 1)
+
+[node name="BG" type="Sprite2D" parent="." unique_id=1983220493]
+z_index = -1
+position = Vector2(640, 360)
+texture = ExtResource("5_535gc")
+metadata/_edit_lock_ = true

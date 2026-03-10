@@ -60,12 +60,11 @@ position = Vector2(686, 16)
 [node name="area4Exit" type="Marker2D" parent="." unique_id=1059489775]
 position = Vector2(1024, 663)
 
-[node name="BG" type="Sprite2D" parent="." unique_id=487689100]
-z_index = -1
-position = Vector2(565, 360)
-scale = Vector2(1.3057381, 0.99809974)
-texture = ExtResource("5_whkej")
-metadata/_edit_lock_ = true
-
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=2108495592]
 color = Color(0.2884384, 0.2022881, 0, 1)
+
+[node name="BG" type="Sprite2D" parent="." unique_id=577377388]
+z_index = -1
+position = Vector2(640, 360)
+texture = ExtResource("5_whkej")
+metadata/_edit_lock_ = true

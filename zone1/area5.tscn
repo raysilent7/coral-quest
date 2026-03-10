@@ -70,12 +70,11 @@ position = Vector2(12, 650)
 [node name="waterLevel" type="Marker2D" parent="." unique_id=2067629099]
 position = Vector2(448, 314)
 
-[node name="BG" type="Sprite2D" parent="." unique_id=81995413]
-z_index = -1
-position = Vector2(565, 360)
-scale = Vector2(1.3057381, 0.99809974)
-texture = ExtResource("5_yvxuw")
-metadata/_edit_lock_ = true
-
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=2096417831]
 color = Color(0.2884384, 0.2022881, 0, 1)
+
+[node name="BG" type="Sprite2D" parent="." unique_id=1872201219]
+z_index = -1
+position = Vector2(640, 360)
+texture = ExtResource("5_yvxuw")
+metadata/_edit_lock_ = true

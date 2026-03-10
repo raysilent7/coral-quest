@@ -43,12 +43,11 @@ metadata/_edit_lock_ = true
 z_index = 1
 position = Vector2(17, 543)
 
-[node name="BG" type="Sprite2D" parent="." unique_id=864904510]
-z_index = -1
-position = Vector2(565, 360)
-scale = Vector2(1.3057381, 0.99809974)
-texture = ExtResource("5_k0c16")
-metadata/_edit_lock_ = true
-
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=502336062]
 color = Color(0.2884384, 0.2022881, 0, 1)
+
+[node name="BG" type="Sprite2D" parent="." unique_id=1745330984]
+z_index = -1
+position = Vector2(640, 360)
+texture = ExtResource("5_k0c16")
+metadata/_edit_lock_ = true

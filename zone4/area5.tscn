@@ -61,13 +61,6 @@ position = Vector2(1223, 32)
 [node name="area5Exit" type="Marker2D" parent="." unique_id=328782954]
 position = Vector2(157, 657)
 
-[node name="BG" type="Sprite2D" parent="." unique_id=1179111023]
-z_index = -1
-position = Vector2(565, 360)
-scale = Vector2(1.3057381, 0.99809974)
-texture = ExtResource("5_fxwm5")
-metadata/_edit_lock_ = true
-
 [node name="stonePlatform1" parent="." unique_id=298335051 instance=ExtResource("6_od7eo")]
 position = Vector2(194, 671)
 pointA = Vector2(1010, 468)
@@ -76,3 +69,9 @@ fromFirstMinigame = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=730247771]
 color = Color(0.2884384, 0.2022881, 0, 1)
+
+[node name="BG" type="Sprite2D" parent="." unique_id=894178792]
+z_index = -1
+position = Vector2(640, 360)
+texture = ExtResource("5_fxwm5")
+metadata/_edit_lock_ = true
