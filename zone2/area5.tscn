@@ -15,10 +15,10 @@
 [ext_resource type="Texture2D" uid="uid://b7x0fkjhu8sc2" path="res://objects/islands/mapObjects/rock2.png" id="13_to5m2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vhrft"]
-size = Vector2(66, 230)
+size = Vector2(55, 230)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sg6ne"]
-size = Vector2(228, 71)
+size = Vector2(228, 50)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yj0v8"]
 texture = ExtResource("5_egktr")
@@ -113,25 +113,25 @@ z_index = 10
 position = Vector2(18, 206)
 
 [node name="previousArea" type="Area2D" parent="." unique_id=1714487048]
-position = Vector2(-94, 345)
+position = Vector2(-72, 129)
 script = ExtResource("2_uqf38")
 nextScenePath = "res://zone2/area4.tscn"
 spawnId = "area4Exit"
 
 [node name="back" type="CollisionShape2D" parent="previousArea" unique_id=1606090290]
 z_index = 1
-position = Vector2(60, -230)
+position = Vector2(44, -15)
 shape = SubResource("RectangleShape2D_vhrft")
 
 [node name="nextArea" type="Area2D" parent="." unique_id=366290675]
-position = Vector2(1368, 425)
+position = Vector2(1345, 167)
 rotation = 1.5707964
 script = ExtResource("2_uqf38")
 nextScenePath = "res://zone2/area6.tscn"
 spawnId = "area6Entrance"
 
 [node name="next" type="CollisionShape2D" parent="nextArea" unique_id=1459426688]
-position = Vector2(-312, 51.5)
+position = Vector2(-56, 38.99999)
 shape = SubResource("RectangleShape2D_sg6ne")
 
 [node name="ground" type="TileMapLayer" parent="." unique_id=531820]
