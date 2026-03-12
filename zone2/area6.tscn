@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b4y6am1nt6vup" path="res://objects/islands/mapObjects/big algae.png" id="7_6hq61"]
 [ext_resource type="Texture2D" uid="uid://b7x0fkjhu8sc2" path="res://objects/islands/mapObjects/rock2.png" id="8_28ind"]
 [ext_resource type="PackedScene" uid="uid://cgskhua4x4gwv" path="res://diver/diver.tscn" id="9_da3fi"]
+[ext_resource type="PackedScene" uid="uid://b4xjuqqomfysn" path="res://objects/islands/mapObjects/bubbles.tscn" id="11_7bx3b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_svw77"]
 size = Vector2(37, 595.5)
@@ -17,7 +18,7 @@ size = Vector2(37, 595.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fuxpm"]
 size = Vector2(631.5, 40)
 
-[node name="Z2area6" type="Node2D" unique_id=992039470]
+[node name="area6" type="Node2D" unique_id=992039470]
 script = ExtResource("1_sxjpa")
 
 [node name="diver" parent="." unique_id=386879663 instance=ExtResource("9_da3fi")]
@@ -200,3 +201,7 @@ texture = ExtResource("8_28ind")
 position = Vector2(87, 580.99994)
 scale = Vector2(0.22960068, 0.22960068)
 texture = ExtResource("8_28ind")
+
+[node name="bubbles" parent="." unique_id=139928518 instance=ExtResource("11_7bx3b")]
+position = Vector2(838, 446)
+scale = Vector2(0.6, 0.6)
