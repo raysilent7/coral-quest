@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://b4xjuqqomfysn"]
+
+[ext_resource type="Script" uid="uid://d4lyo2hbqhgwo" path="res://scripts/mechanics/bubbles.gd" id="1_7d74d"]
+[ext_resource type="Texture2D" uid="uid://dgromv3r3g3s8" path="res://objects/islands/mapObjects/bubbles.png" id="1_hjafh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7d74d"]
+atlas = ExtResource("1_hjafh")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7j5ba"]
+atlas = ExtResource("1_hjafh")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t3sik"]
+atlas = ExtResource("1_hjafh")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ke8am"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7d74d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7j5ba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t3sik")
+}],
+"loop": true,
+"name": &"bubbles",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hjafh"]
+size = Vector2(173, 281)
+
+[node name="bubbles" type="Node2D" unique_id=139928518]
+
+[node name="bubblesArea" type="Area2D" parent="." unique_id=1197810852]
+script = ExtResource("1_7d74d")
+
+[node name="bubblesAnim" type="AnimatedSprite2D" parent="bubblesArea" unique_id=1155445772]
+sprite_frames = SubResource("SpriteFrames_ke8am")
+animation = &"bubbles"
+frame_progress = 0.7337481
+
+[node name="bubblesCol" type="CollisionShape2D" parent="bubblesArea" unique_id=255182199]
+position = Vector2(-0.5, 1.5)
+shape = SubResource("RectangleShape2D_hjafh")

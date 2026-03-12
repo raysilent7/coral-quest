@@ -49,14 +49,14 @@ func updatePollution():
 func onOxygenTimerTimeout():
 	if GameState.isInWater and GameState.oxygenTime > 0:
 		GameState.oxygenTime -= 1
-	elif not GameState.isInWater and GameState.oxygenTime < 90:
+	elif (not GameState.isInWater or GameState.isInsideBubbles) and GameState.oxygenTime < 90:
 		GameState.oxygenTime += 1
 
 	oxygenBar.value = GameState.oxygenTime
 	updateOxygenBarColor()
 
 	if GameState.oxygenTime <= 0:
-		print("voce morreu!")
+		GameState.movePlayer()
 
 func updateOxygenBarColor():
 	var styleOxygen = oxygenBar.get_theme_stylebox("fill")

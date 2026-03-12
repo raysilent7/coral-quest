@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://b7x0fkjhu8sc2" path="res://objects/islands/mapObjects/rock2.png" id="8_3ny6m"]
 [ext_resource type="Texture2D" uid="uid://du6cxsiedklra" path="res://objects/islands/mapObjects/big algae dark.png" id="8_513m2"]
 [ext_resource type="Texture2D" uid="uid://b4y6am1nt6vup" path="res://objects/islands/mapObjects/big algae.png" id="9_513m2"]
+[ext_resource type="PackedScene" uid="uid://b4xjuqqomfysn" path="res://objects/islands/mapObjects/bubbles.tscn" id="12_513m2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j2xnp"]
 size = Vector2(1186, 45)
@@ -204,3 +205,7 @@ texture = ExtResource("8_3ny6m")
 position = Vector2(1086, 594)
 scale = Vector2(0.81640625, 0.7847222)
 texture = ExtResource("8_3ny6m")
+
+[node name="bubbles" parent="." unique_id=139928518 instance=ExtResource("12_513m2")]
+position = Vector2(880, 513)
+scale = Vector2(0.6, 0.6)

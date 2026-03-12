@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://d0jy5rwijm04x" path="res://scripts/mechanics/portal.gd" id="3_3i5wb"]
 [ext_resource type="TileSet" uid="uid://ckt5tk41ienfr" path="res://objects/islands/map/map tileset.tres" id="4_xo16l"]
 [ext_resource type="Texture2D" uid="uid://ddlbvnh72bytc" path="res://objects/caves/sea cave bg.png" id="6_tekt1"]
+[ext_resource type="PackedScene" uid="uid://b4xjuqqomfysn" path="res://objects/islands/mapObjects/bubbles.tscn" id="7_3i5wb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s2q7j"]
 size = Vector2(231, 45)
@@ -78,3 +79,7 @@ z_index = -1
 position = Vector2(640, 360)
 texture = ExtResource("6_tekt1")
 metadata/_edit_lock_ = true
+
+[node name="bubbles" parent="." unique_id=139928518 instance=ExtResource("7_3i5wb")]
+position = Vector2(608, 538)
+scale = Vector2(0.6, 0.6)

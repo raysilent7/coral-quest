@@ -1,12 +1,14 @@
 extends Node
 
 func _process(delta: float) -> void:
-	verifyEndGame()
+	verifyEndGameByPollution()
 
 #environment
 var lastSpawnId: String = ""
+var lastSurfaceScenePath: String = "res://zone1/shipArea.tscn"
 var fromPortal: bool = true #padrao TRUE
 var isInWater: bool = false #padrao FALSE
+var isInsideBubbles: bool = false #padrao FALSE
 var oxygenTime: int  = 90
 var pollutionValue: int = 85
 var totalPollution: int = 95
@@ -44,6 +46,12 @@ func subtractScore(givenScore: int):
 func getScore() -> int:
 	return score
 
+func movePlayer():
+	call_deferred("changeScene")
+
+func changeScene():
+	get_tree().change_scene_to_file(lastSurfaceScenePath)
+
 #inventory
 var selectedItem: String = "nothing"
 var inventory = {
@@ -54,7 +62,7 @@ var inventory = {
 	"5": "nothing"
 }
 
-func verifyEndGame():
+func verifyEndGameByPollution():
 	if pollutionValue >= 100:
 		print("voce perdeu!")
 	elif pollutionValue <= 0:
