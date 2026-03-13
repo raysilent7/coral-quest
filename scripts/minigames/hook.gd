@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var nextScenePath: String = "res://zone1/area2.tscn"
+@export var nextScenePath: String = "res://zone2/area5.tscn"
 
 func _ready() -> void:
 	body_entered.connect(onBodyEntered)

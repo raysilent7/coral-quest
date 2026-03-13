@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var nextScenePath: String = "res://zone1/area2.tscn"
+@export var nextScenePath: String = "res://zone2/area5.tscn"
 @export var speed: float = 80.0
 
 func _ready() -> void:

@@ -3,7 +3,7 @@ extends Node2D
 @export var fishingLineScene: PackedScene
 @export var obstacleScene: PackedScene
 @export var backgroundScene: PackedScene
-@export var nextScenePath: String = "res://zone1/area2.tscn"
+@export var nextScenePath: String = "res://zone2/area5.tscn"
 @onready var diver: CharacterBody2D = $diver/diver
 @onready var scoreLabel: Label = $score
 
