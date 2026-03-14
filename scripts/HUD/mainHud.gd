@@ -11,11 +11,12 @@ func _ready():
 
 func _process(delta: float) -> void:
 	updatePollution()
+	oxygenBar.value = GameState.oxygenTime
+	pollutionBar.value = GameState.pollutionValue
 
 func onPollutionTimerTimeout():
 	if GameState.pollutionValue <= GameState.totalPollution:
 		GameState.pollutionValue += GameState.pollutionFactor
-		pollutionBar.value = GameState.pollutionValue
 
 func updatePollution():	
 	if GameState.beatFirstPuzzle and GameState.executeFirst:
@@ -52,7 +53,6 @@ func onOxygenTimerTimeout():
 	elif (not GameState.isInWater or GameState.isInsideBubbles) and GameState.oxygenTime < 90:
 		GameState.oxygenTime += 1
 
-	oxygenBar.value = GameState.oxygenTime
 	updateOxygenBarColor()
 
 	if GameState.oxygenTime <= 0:
