@@ -6,16 +6,27 @@
 [ext_resource type="Script" uid="uid://d0jy5rwijm04x" path="res://scripts/mechanics/portal.gd" id="4_ut8fn"]
 [ext_resource type="TileSet" uid="uid://ckt5tk41ienfr" path="res://objects/islands/map/map tileset.tres" id="5_d00mc"]
 [ext_resource type="Texture2D" uid="uid://bu234kfpwug3u" path="res://objects/islands/map/bg forest.jpg" id="6_neau2"]
+[ext_resource type="Script" uid="uid://cm13x4rlmskbl" path="res://scripts/mechanics/collectFruit.gd" id="7_6b0ti"]
+[ext_resource type="Texture2D" uid="uid://cmx5r6xqyqnm5" path="res://objects/fruits/star fruit.png" id="7_c3onu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qnl0u"]
 size = Vector2(31, 228)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6b0ti"]
+size = Vector2(88, 80.999985)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ut8fn"]
+font_size = 11
+font_color = Color(1, 0.6901961, 0, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
 
 [node name="area4" type="Node2D" unique_id=313355557]
 script = ExtResource("1_07puq")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2017734721]
 
-[node name="MainHud" parent="CanvasLayer" unique_id=485201413 instance=ExtResource("2_c3onu")]
+[node name="mainHud" parent="CanvasLayer" unique_id=485201413 instance=ExtResource("2_c3onu")]
 
 [node name="diver" parent="." unique_id=386879663 instance=ExtResource("3_6b0ti")]
 z_index = 10
@@ -49,3 +60,23 @@ position = Vector2(640, 308)
 scale = Vector2(2.2695038, 1.7347976)
 texture = ExtResource("6_neau2")
 metadata/_edit_lock_ = true
+
+[node name="starFruit" type="Area2D" parent="." unique_id=1274253398]
+position = Vector2(938, 619)
+script = ExtResource("7_6b0ti")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="starFruit" unique_id=892875795]
+position = Vector2(-0.6846924, -0.50494385)
+shape = SubResource("RectangleShape2D_6b0ti")
+
+[node name="Sprite2D" type="Sprite2D" parent="starFruit" unique_id=1535495641]
+texture = ExtResource("7_c3onu")
+
+[node name="pressE" type="Label" parent="starFruit" unique_id=918673645]
+visible = false
+offset_left = -42.0
+offset_top = -31.0
+offset_right = 19.0
+offset_bottom = -15.0
+text = "Pressione E"
+label_settings = SubResource("LabelSettings_ut8fn")

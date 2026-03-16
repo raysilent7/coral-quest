@@ -14,6 +14,7 @@ var pollutionValue: int = 85
 var totalPollution: int = 95
 var pollutionFactor: int = 5
 var isDark: bool = false
+var selectedItem: String = ""
 
 #control variables
 var executeFirst: bool = true
@@ -51,16 +52,6 @@ func movePlayer():
 
 func changeScene():
 	get_tree().change_scene_to_file(lastSurfaceScenePath)
-
-#inventory
-var selectedItem: String = "nothing"
-var inventory = {
-	"1": "nothing",
-	"2": "nothing",
-	"3": "nothing",
-	"4": "nothing",
-	"5": "nothing"
-}
 
 func verifyEndGameByPollution():
 	if pollutionValue >= 100:
