@@ -40,8 +40,8 @@ shape = SubResource("RectangleShape2D_1t41v")
 position = Vector2(-68, 675)
 rotation = 1.5707964
 script = ExtResource("3_0wryp")
-nextScenePath = "res://zone1/area6.tscn"
-spawnId = "area6Entrance"
+nextScenePath = "res://zone1/area7.tscn"
+spawnId = "area7Entrance"
 
 [node name="next" type="CollisionShape2D" parent="nextArea" unique_id=1250602957]
 position = Vector2(-76, -38.499992)
@@ -60,11 +60,11 @@ tile_map_data = PackedByteArray("AABOACsAAQAXAAQAAABOACwAAQAXAAUAAABPACsAAQAYAAQ
 tile_set = ExtResource("4_skthg")
 metadata/_edit_lock_ = true
 
-[node name="area5Entrance" type="Marker2D" parent="." unique_id=1711602445]
+[node name="area6Entrance" type="Marker2D" parent="." unique_id=1711602445]
 z_index = 1
 position = Vector2(1256, 588)
 
-[node name="area5Exit" type="Marker2D" parent="." unique_id=622372576]
+[node name="area6Exit" type="Marker2D" parent="." unique_id=622372576]
 position = Vector2(18, 649)
 
 [node name="waterLevel" type="Marker2D" parent="." unique_id=1242910887]

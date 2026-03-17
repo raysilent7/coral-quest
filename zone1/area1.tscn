@@ -38,7 +38,7 @@ z_index = -1
 
 [node name="diver" parent="." unique_id=634985619 instance=ExtResource("3_ipdce")]
 z_index = 10
-position = Vector2(840, 414)
+position = Vector2(90, 614)
 
 [node name="previousArea" type="Area2D" parent="." unique_id=1344770191]
 position = Vector2(-45, 594)
@@ -63,8 +63,8 @@ shape = SubResource("RectangleShape2D_eq7it")
 [node name="nextArea2" type="Area2D" parent="." unique_id=1555295334]
 position = Vector2(675, 754)
 script = ExtResource("4_jvlkc")
-nextScenePath = "res://zone1/area5.tscn"
-spawnId = "area5Entrance"
+nextScenePath = "res://zone1/area4.tscn"
+spawnId = "area4Entrance"
 
 [node name="next" type="CollisionShape2D" parent="nextArea2" unique_id=1917692972]
 position = Vector2(31, 78.875)
@@ -110,6 +110,9 @@ position = Vector2(16, 608)
 [node name="area1Exit" type="Marker2D" parent="." unique_id=1227550903]
 position = Vector2(1263, 608)
 
+[node name="area1Exit2" type="Marker2D" parent="." unique_id=363210653]
+position = Vector2(680, 679)
+
 [node name="stonePlatform1" parent="." unique_id=1819612557 instance=ExtResource("8_4exl7")]
 position = Vector2(1010, 800)
 pointA = Vector2(1010, 468)
@@ -124,21 +127,10 @@ fromFirstMinigame = true
 
 [node name="stonePlatform3" parent="." unique_id=400988008 instance=ExtResource("8_4exl7")]
 position = Vector2(512, 608)
-pointA = Vector2(512, 576)
-pointB = Vector2(512, 576)
-fromThirdMinigame = true
-
-[node name="stonePlatform4" parent="." unique_id=1236618870 instance=ExtResource("8_4exl7")]
-position = Vector2(544, 608)
-pointA = Vector2(544, 576)
-pointB = Vector2(544, 576)
-fromThirdMinigame = true
-
-[node name="stonePlatform5" parent="." unique_id=349428279 instance=ExtResource("8_4exl7")]
-position = Vector2(576, 608)
-pointA = Vector2(576, 576)
-pointB = Vector2(576, 576)
-fromThirdMinigame = true
+rotation = -1.5707964
+pointA = Vector2(512, 608)
+pointB = Vector2(512, 575)
+fromKikoFruit = true
 
 [node name="ground" type="TileMapLayer" parent="." unique_id=883085363]
 z_index = -1

@@ -5,8 +5,9 @@
 [ext_resource type="Script" uid="uid://d0jy5rwijm04x" path="res://scripts/mechanics/portal.gd" id="2_sy81p"]
 [ext_resource type="TileSet" uid="uid://ckt5tk41ienfr" path="res://objects/islands/map/map tileset.tres" id="4_kelwv"]
 [ext_resource type="Texture2D" uid="uid://bu234kfpwug3u" path="res://objects/islands/map/bg forest.jpg" id="5_kelwv"]
-[ext_resource type="Texture2D" uid="uid://coiuh8ir38ao0" path="res://objects/islands/mapObjects/cave entrance1.png" id="6_nkc80"]
 [ext_resource type="PackedScene" uid="uid://bo786ln2pkfef" path="res://HUD/mainHUD.tscn" id="7_v5mfe"]
+[ext_resource type="Script" uid="uid://cm13x4rlmskbl" path="res://scripts/mechanics/collectFruit.gd" id="8_me05n"]
+[ext_resource type="Texture2D" uid="uid://batjyikyq5kf5" path="res://objects/fruits/nababa fruit.png" id="9_sp8v7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b37xf"]
 size = Vector2(31, 112.5)
@@ -14,12 +15,21 @@ size = Vector2(31, 112.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2xxcu"]
 size = Vector2(194.25, 47.749985)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w6ymm"]
+size = Vector2(40, 80.999985)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3ejh6"]
+font_size = 11
+font_color = Color(1, 0.6901961, 0, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
 [node name="area2" type="Node2D" unique_id=92383332]
 script = ExtResource("1_sy81p")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1800697701]
 
-[node name="MainHud" parent="CanvasLayer" unique_id=485201413 instance=ExtResource("7_v5mfe")]
+[node name="mainHud" parent="CanvasLayer" unique_id=485201413 instance=ExtResource("7_v5mfe")]
 
 [node name="diver" parent="." unique_id=1229420874 instance=ExtResource("1_sf2y4")]
 z_index = 10
@@ -68,6 +78,25 @@ scale = Vector2(2.2695038, 1.7347976)
 texture = ExtResource("5_kelwv")
 metadata/_edit_lock_ = true
 
-[node name="CaveEntrance1" type="Sprite2D" parent="." unique_id=412896319]
-position = Vector2(638, 585)
-texture = ExtResource("6_nkc80")
+[node name="nababaFruit" type="Area2D" parent="." unique_id=1849038975]
+position = Vector2(1075, 282)
+script = ExtResource("8_me05n")
+fruitName = "nababaFruit"
+
+[node name="fruitCol" type="CollisionShape2D" parent="nababaFruit" unique_id=1915712422]
+position = Vector2(-18, -0.50494385)
+shape = SubResource("RectangleShape2D_w6ymm")
+
+[node name="starFruit" type="Sprite2D" parent="nababaFruit" unique_id=526976044]
+position = Vector2(-18.5, -18.5)
+scale = Vector2(0.421875, 0.421875)
+texture = ExtResource("9_sp8v7")
+
+[node name="pressE" type="Label" parent="nababaFruit" unique_id=2125253373]
+visible = false
+offset_left = -42.0
+offset_top = -31.0
+offset_right = 19.0
+offset_bottom = -15.0
+text = "Pressione E"
+label_settings = SubResource("LabelSettings_3ejh6")

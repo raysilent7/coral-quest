@@ -41,7 +41,7 @@ func updatePollution():
 		GameState.executeThird = false
 		GameState.pollutionFactor = 2
 	if GameState.beatFourthPuzzle and GameState.executeFourth:
-		GameState.totallPolution = 0
+		GameState.totalPollution = 0
 		pollutionBar.value = GameState.pollutionValue
 		GameState.executeFourth = false
 		GameState.updateFourth = false
@@ -66,5 +66,5 @@ func updateOxygenBarColor():
 	styleOxygen.bg_color = Color(0, 1, 0)
 
 func refillOxygen():
-	GameState.oxygenTime += 90
+	GameState.oxygenTime = 60
 	oxygenBar.value = GameState.oxygenTime

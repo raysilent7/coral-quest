@@ -28,8 +28,8 @@ position = Vector2(686, 16)
 z_index = 1
 position = Vector2(545, -45)
 script = ExtResource("3_tgwhn")
-nextScenePath = "res://zone1/area2.tscn"
-spawnId = "area2Exit2"
+nextScenePath = "res://zone1/area1.tscn"
+spawnId = "area1Exit2"
 
 [node name="back" type="CollisionShape2D" parent="previousArea" unique_id=46068264]
 z_index = 1

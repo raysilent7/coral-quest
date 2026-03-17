@@ -6,16 +6,27 @@
 [ext_resource type="Script" uid="uid://d0jy5rwijm04x" path="res://scripts/mechanics/portal.gd" id="3_nvq4j"]
 [ext_resource type="TileSet" uid="uid://ckt5tk41ienfr" path="res://objects/islands/map/map tileset.tres" id="4_12whm"]
 [ext_resource type="Texture2D" uid="uid://ddlbvnh72bytc" path="res://objects/caves/sea cave bg.png" id="5_k0c16"]
+[ext_resource type="Script" uid="uid://cm13x4rlmskbl" path="res://scripts/mechanics/collectFruit.gd" id="7_12whm"]
+[ext_resource type="Texture2D" uid="uid://dkuems22848jr" path="res://objects/fruits/kiko fruit.png" id="8_k0c16"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1o88c"]
 size = Vector2(31, 282)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c8d6e"]
+size = Vector2(40, 80.999985)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8aekp"]
+font_size = 11
+font_color = Color(1, 0.6901961, 0, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
 
 [node name="area5" type="Node2D" unique_id=365644027]
 script = ExtResource("1_fnb31")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=697312291]
 
-[node name="MainHud" parent="CanvasLayer" unique_id=485201413 instance=ExtResource("1_wy6b7")]
+[node name="mainHud" parent="CanvasLayer" unique_id=485201413 instance=ExtResource("1_wy6b7")]
 
 [node name="diver" parent="." unique_id=386879663 instance=ExtResource("2_fnb31")]
 z_index = 10
@@ -51,3 +62,26 @@ z_index = -1
 position = Vector2(640, 360)
 texture = ExtResource("5_k0c16")
 metadata/_edit_lock_ = true
+
+[node name="starFruit" type="Area2D" parent="." unique_id=835534940]
+position = Vector2(598, 554)
+script = ExtResource("7_12whm")
+fruitName = "kikoFruit"
+
+[node name="fruitCol" type="CollisionShape2D" parent="starFruit" unique_id=1826287270]
+position = Vector2(-18, -0.50494385)
+shape = SubResource("RectangleShape2D_c8d6e")
+
+[node name="starFruit" type="Sprite2D" parent="starFruit" unique_id=1425718955]
+position = Vector2(-18.5, -18.5)
+scale = Vector2(0.421875, 0.421875)
+texture = ExtResource("8_k0c16")
+
+[node name="pressE" type="Label" parent="starFruit" unique_id=2098063803]
+visible = false
+offset_left = -42.0
+offset_top = -31.0
+offset_right = 19.0
+offset_bottom = -15.0
+text = "Pressione E"
+label_settings = SubResource("LabelSettings_8aekp")

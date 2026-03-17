@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b800kvxmsyy21" path="res://HUD/HUD.png" id="1_7gufm"]
 [ext_resource type="Script" uid="uid://dm317n16s8lyb" path="res://scripts/HUD/mainHud.gd" id="1_pe4oa"]
-[ext_resource type="Script" uid="uid://csuagi72ay0m0" path="res://scripts/HUD/actionBar.gd" id="3_rihrp"]
+[ext_resource type="Script" uid="uid://csuagi72ay0m0" path="res://scripts/HUD/actionBar.gd" id="2_rihrp"]
 
 [node name="mainHud" type="Control" unique_id=485201413]
 layout_mode = 3
@@ -22,7 +22,7 @@ offset_top = 672.0
 offset_right = 752.0
 offset_bottom = 705.0
 theme_override_constants/separation = 15
-script = ExtResource("3_rihrp")
+script = ExtResource("2_rihrp")
 
 [node name="item1" type="TextureRect" parent="actionBar" unique_id=1696171980]
 layout_mode = 2
@@ -69,9 +69,9 @@ offset_right = 783.0
 offset_bottom = 706.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 8
-max_value = 90.0
+max_value = 60.0
 step = 0.1
-value = 90.0
+value = 60.0
 rounded = true
 fill_mode = 3
 

@@ -4,9 +4,8 @@ extends Node2D
 @export var pointB: Vector2
 @export var speed: float = 0.7
 @export var fromFirstMinigame: bool
-@export var fromSecondMinigame: bool
+@export var fromKikoFruit: bool
 @export var fromThirdMinigame: bool
-@export var fromFourthMinigame: bool
 
 var movingToB: bool = true
 var lastPosition: Vector2
@@ -24,28 +23,33 @@ func _process(delta):
 		player.global_position += movement
 	
 	moveFromFirstMinigame()
+	moveFromKikoFruit()
+	moveFromThirdMinigame()
 
 func moveFromFirstMinigame():
 	if fromFirstMinigame:
 		if movingToB and GameState.beatFirstPuzzle:
-			global_position = global_position.move_toward(pointB, speed)
+			moveToB()
 			if global_position == pointB:
 				movingToB = false
 		elif not movingToB and GameState.beatFirstPuzzle:
-			global_position = global_position.move_toward(pointA, speed)
+			moveToA()
 			if global_position == pointA:
 				movingToB = true
 
-func moveFromSecondMinigame():
-	if fromSecondMinigame:
-		if movingToB and GameState.beatSecondPuzzle:
-			global_position = global_position.move_toward(pointB, speed)
-			if global_position == pointB:
-				movingToB = false
-		elif not movingToB and GameState.beatFirstPuzzle:
-			global_position = global_position.move_toward(pointA, speed)
-			if global_position == pointA:
-				movingToB = true
+func moveFromKikoFruit():
+	if fromKikoFruit and player and GameState.selectedItem == "kikoFruit":
+		moveToB()
+
+func moveFromThirdMinigame():
+	if fromThirdMinigame and GameState.beatThirdPuzzle:
+		moveToB()
+
+func moveToA():
+	global_position = global_position.move_toward(pointA, speed)
+
+func moveToB():
+	global_position = global_position.move_toward(pointB, speed)
 
 func _onBodyEntered(body):
 	if body is CharacterBody2D:
