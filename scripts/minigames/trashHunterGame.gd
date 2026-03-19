@@ -13,10 +13,12 @@ var trashs = ["bottle", "can", "hook", "straw"]
 
 func _ready() -> void:
 	GameState.setScore(0)
+	GameState.gameTime = 120
+	GameState.bonusSpeed = 0
 
 func _process(delta: float) -> void:
 	scoreLabel.text = str(GameState.getScore())
-	GameState.bonusSpeed += delta * 5
+	GameState.bonusSpeed += delta * 4
 
 	if GameState.getScore() >= 50:
 		endGame()
@@ -56,7 +58,6 @@ func onTimerGameTimeout() -> void:
 	timerLabel.text = str(GameState.gameTime/60)+":"+str(GameState.gameTime%60)
 	if GameState.gameTime == 0:
 		GameState.beatThirdPuzzle = false
-		GameState.setScore(0)
 		get_tree().set_pause(true)
 		var popup = genericScene.instantiate()
 		get_tree().root.add_child(popup)

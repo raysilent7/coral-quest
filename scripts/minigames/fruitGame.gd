@@ -5,15 +5,14 @@ extends Node2D
 @export var fruit: String = "grubble"
 
 const speed: float = 60.0
-const maxSpeed: float = 300.0
+const maxSpeed: float = 200.0
 
 func _ready() -> void:
 	anim.play(fruit)
 	button.pressed.connect(changeFruit)	
 
 func _process(delta: float) -> void:
-	var bonusSpeed = GameState.bonusSpeed
-	var actualSpeed = (speed + bonusSpeed) * delta
+	var actualSpeed = (speed + GameState.bonusSpeed) * delta
 	position.y += min(actualSpeed, maxSpeed)
 	
 	if position.y >= 500.0:
