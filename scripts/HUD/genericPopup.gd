@@ -11,6 +11,7 @@ func _ready():
 	label.text = "Parabens! Voce venceu o quebra cabeça. Continue para desvendar mais mistérios do arquipelago e salva-lo da extinção."
 
 func onButtonPressed() -> void:
+	get_tree().current_scene.queue_free()
 	get_tree().change_scene_to_file(GameState.lastMapPath)
 	queue_free()
 

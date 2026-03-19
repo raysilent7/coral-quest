@@ -18,7 +18,7 @@ var isDark: bool = false
 #inventario
 var actionBarTextures: Array = [null, null, null, null, null]
 var actionBarNames: Array = ["nada", "nada", "nada", "nada", "nada"]
-var selectedItem: String = "starFruit"
+var selectedItem: String = ""
 
 #control variables
 var executeFirst: bool = true
